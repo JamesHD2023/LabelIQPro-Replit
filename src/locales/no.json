@@ -1,0 +1,153 @@
+{
+  "app": {
+    "name": "LabelIQ",
+    "tagline": "Smart ingrediensanalyse",
+    "loading": "Laster...",
+    "error": "En feil oppstod",
+    "retry": "Prøv igjen",
+    "initError": "Initialiseringsfeil"
+  },
+  "navigation": {
+    "home": "Hjem",
+    "camera": "Skann",
+    "history": "Historikk",
+    "profile": "Profil",
+    "insights": "Innsikt",
+    "learning": "Lær",
+    "dashboard": "Dashbord"
+  },
+  "home": {
+    "welcome": "Velkommen til LabelIQ",
+    "subtitle": "Skann hvilket som helst produkt for å analysere ingredienser og få helseinnsikt",
+    "scanProduct": "Skann produkt",
+    "quickStart": "Hurtigstartveiledning",
+    "recentScans": "Nylige skanninger",
+    "noRecentScans": "Ingen nylige skanninger",
+    "categories": {
+      "food": "Matvarer",
+      "cosmetics": "Kosmetikk",
+      "household": "Husholdningsprodukter"
+    }
+  },
+  "camera": {
+    "title": "Skann produktetikett",
+    "instruction": "Rett kameraet mot ingredienslisten",
+    "capture": "Ta bilde",
+    "gallery": "Velg fra galleri",
+    "analyzing": "Analyserer ingredienser...",
+    "permission": "Kameratillatelse påkrevd",
+    "error": "Kamerafeil oppstod"
+  },
+  "results": {
+    "title": "Analyseresultater",
+    "overallScore": "Samlet sikkerhetsscore",
+    "ingredients": "Ingredienser",
+    "detectedIngredients": "Oppdagede ingredienser",
+    "healthAssessment": "Helsevurdering",
+    "warnings": "Advarsler",
+    "recommendations": "Anbefalinger",
+    "nutritionInfo": "Ernæringsinformasjon",
+    "share": "Del resultater",
+    "saveToHistory": "Lagre i historikk",
+    "errors": {
+      "notFound": "Skanningsresultater ikke funnet",
+      "loadFailed": "Kunne ikke laste skanningsresultater"
+    }
+  },
+  "ingredients": {
+    "unknown": "Ukjent ingrediens",
+    "safetyScore": "Sikkerhetsscore: {{score}}",
+    "clickForDetails": "Klikk for detaljer om {{name}}",
+    "eNumber": "E-nummer",
+    "function": "Funksjon",
+    "sources": "Kilder",
+    "healthConcerns": "Helsebekymringer",
+    "regulatoryStatus": "Regulatorisk status"
+  },
+  "scoring": {
+    "excellent": "Utmerket",
+    "good": "Bra",
+    "fair": "Greit",
+    "poor": "Dårlig",
+    "danger": "Bekymringsfullt"
+  },
+  "profile": {
+    "title": "Min profil",
+    "personalInfo": "Personlig informasjon",
+    "allergies": "Allergier",
+    "dietaryRestrictions": "Kostrestriksjoner",
+    "healthGoals": "Helsemål",
+    "preferences": "Preferanser",
+    "language": "Språk",
+    "notifications": "Varsler",
+    "privacy": "Personverninnstillinger",
+    "dataExport": "Eksporter data",
+    "deleteAccount": "Slett konto"
+  },
+  "history": {
+    "title": "Skanningshistorikk",
+    "recent": "Nylige skanninger",
+    "filter": "Filter",
+    "search": "Søk...",
+    "noResults": "Ingen skanningsresultater funnet",
+    "deleteAll": "Slett alle",
+    "export": "Eksporter historikk"
+  },
+  "insights": {
+    "title": "Helseinnsikt",
+    "overview": "Oversikt",
+    "trends": "Trender",
+    "recommendations": "Anbefalinger",
+    "progress": "Fremgang",
+    "dailyStats": "Daglig statistikk",
+    "weeklyReport": "Ukentlig rapport"
+  },
+  "learning": {
+    "title": "Læringssenter",
+    "topics": "Emner",
+    "progress": "Din fremgang",
+    "articles": "Artikler",
+    "videos": "Videoer",
+    "quiz": "Ta quiz",
+    "completed": "Fullført",
+    "inProgress": "Pågående"
+  },
+  "sharing": {
+    "title": "Del resultater",
+    "platforms": "Velg plattform",
+    "message": "Sjekk ut min ingrediensanalyse fra LabelIQ!",
+    "success": "Delt vellykket",
+    "error": "Kunne ikke dele"
+  },
+  "calories": {
+    "title": "Daglige kalorier",
+    "consumed": "Konsumert",
+    "remaining": "Gjenstående",
+    "goal": "Daglig mål",
+    "track": "Spor måltid",
+    "history": "Kalorihistorikk"
+  },
+  "additives": {
+    "title": "Mattilsetninger",
+    "categories": {
+      "coloring": "Fargestoff",
+      "preservative": "Konserveringsmiddel",
+      "emulsifier": "Emulgator",
+      "sweetener": "Søtningsstoff",
+      "antioxidant": "Antioksidant",
+      "flavor_enhancer": "Smaksforsterker"
+    },
+    "regulatory": {
+      "approved": "Godkjent",
+      "banned": "Forbudt",
+      "restricted": "Begrenset"
+    }
+  },
+  "hazardLevels": {
+    "safe": "Trygg",
+    "low": "Lav risiko",
+    "medium": "Middels risiko",
+    "high": "Høy risiko",
+    "danger": "Farlig"
+  }
+}

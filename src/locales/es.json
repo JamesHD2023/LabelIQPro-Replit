@@ -1,0 +1,153 @@
+{
+  "app": {
+    "name": "LabelIQ",
+    "tagline": "Análisis inteligente de ingredientes",
+    "loading": "Cargando...",
+    "error": "Ha ocurrido un error",
+    "retry": "Intentar de nuevo",
+    "initError": "Error de inicialización"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "camera": "Escanear",
+    "history": "Historial",
+    "profile": "Perfil",
+    "insights": "Perspectivas",
+    "learning": "Aprender",
+    "dashboard": "Panel"
+  },
+  "home": {
+    "welcome": "Bienvenido a LabelIQ",
+    "subtitle": "Escanea cualquier producto para analizar ingredientes y obtener información de salud",
+    "scanProduct": "Escanear producto",
+    "quickStart": "Guía de inicio rápido",
+    "recentScans": "Escaneos recientes",
+    "noRecentScans": "No hay escaneos recientes",
+    "categories": {
+      "food": "Productos alimentarios",
+      "cosmetics": "Cosméticos",
+      "household": "Productos del hogar"
+    }
+  },
+  "camera": {
+    "title": "Escanear etiqueta del producto",
+    "instruction": "Apunta tu cámara a la lista de ingredientes",
+    "capture": "Capturar",
+    "gallery": "Elegir de la galería",
+    "analyzing": "Analizando ingredientes...",
+    "permission": "Se requiere permiso de cámara",
+    "error": "Error de cámara ocurrido"
+  },
+  "results": {
+    "title": "Resultados del análisis",
+    "overallScore": "Puntuación de seguridad general",
+    "ingredients": "Ingredientes",
+    "detectedIngredients": "Ingredientes detectados",
+    "healthAssessment": "Evaluación de salud",
+    "warnings": "Advertencias",
+    "recommendations": "Recomendaciones",
+    "nutritionInfo": "Información nutricional",
+    "share": "Compartir resultados",
+    "saveToHistory": "Guardar en historial",
+    "errors": {
+      "notFound": "Resultados de escaneo no encontrados",
+      "loadFailed": "Error al cargar los resultados del escaneo"
+    }
+  },
+  "ingredients": {
+    "unknown": "Ingrediente desconocido",
+    "safetyScore": "Puntuación de seguridad: {{score}}",
+    "clickForDetails": "Haz clic para detalles sobre {{name}}",
+    "eNumber": "Número E",
+    "function": "Función",
+    "sources": "Fuentes",
+    "healthConcerns": "Preocupaciones de salud",
+    "regulatoryStatus": "Estado regulatorio"
+  },
+  "scoring": {
+    "excellent": "Excelente",
+    "good": "Bueno",
+    "fair": "Regular",
+    "poor": "Malo",
+    "danger": "Preocupante"
+  },
+  "profile": {
+    "title": "Mi perfil",
+    "personalInfo": "Información personal",
+    "allergies": "Alergias",
+    "dietaryRestrictions": "Restricciones dietéticas",
+    "healthGoals": "Objetivos de salud",
+    "preferences": "Preferencias",
+    "language": "Idioma",
+    "notifications": "Notificaciones",
+    "privacy": "Configuración de privacidad",
+    "dataExport": "Exportar datos",
+    "deleteAccount": "Eliminar cuenta"
+  },
+  "history": {
+    "title": "Historial de escaneos",
+    "recent": "Escaneos recientes",
+    "filter": "Filtrar",
+    "search": "Buscar...",
+    "noResults": "No se encontraron resultados de escaneo",
+    "deleteAll": "Eliminar todo",
+    "export": "Exportar historial"
+  },
+  "insights": {
+    "title": "Perspectivas de salud",
+    "overview": "Vista general",
+    "trends": "Tendencias",
+    "recommendations": "Recomendaciones",
+    "progress": "Progreso",
+    "dailyStats": "Estadísticas diarias",
+    "weeklyReport": "Informe semanal"
+  },
+  "learning": {
+    "title": "Centro de aprendizaje",
+    "topics": "Temas",
+    "progress": "Tu progreso",
+    "articles": "Artículos",
+    "videos": "Videos",
+    "quiz": "Hacer cuestionario",
+    "completed": "Completado",
+    "inProgress": "En progreso"
+  },
+  "sharing": {
+    "title": "Compartir resultados",
+    "platforms": "Elegir plataforma",
+    "message": "¡Mira mi análisis de ingredientes de LabelIQ!",
+    "success": "Compartido exitosamente",
+    "error": "Error al compartir"
+  },
+  "calories": {
+    "title": "Calorías diarias",
+    "consumed": "Consumidas",
+    "remaining": "Restantes",
+    "goal": "Objetivo diario",
+    "track": "Rastrear comida",
+    "history": "Historial de calorías"
+  },
+  "additives": {
+    "title": "Aditivos alimentarios",
+    "categories": {
+      "coloring": "Colorante",
+      "preservative": "Conservante",
+      "emulsifier": "Emulsificante",
+      "sweetener": "Edulcorante",
+      "antioxidant": "Antioxidante",
+      "flavor_enhancer": "Potenciador de sabor"
+    },
+    "regulatory": {
+      "approved": "Aprobado",
+      "banned": "Prohibido",
+      "restricted": "Restringido"
+    }
+  },
+  "hazardLevels": {
+    "safe": "Seguro",
+    "low": "Riesgo bajo",
+    "medium": "Riesgo medio",
+    "high": "Riesgo alto",
+    "danger": "Peligroso"
+  }
+}

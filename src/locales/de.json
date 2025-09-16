@@ -1,0 +1,153 @@
+{
+  "app": {
+    "name": "LabelIQ",
+    "tagline": "Intelligente Inhaltsstoffanalyse",
+    "loading": "Wird geladen...",
+    "error": "Ein Fehler ist aufgetreten",
+    "retry": "Erneut versuchen",
+    "initError": "Initialisierungsfehler"
+  },
+  "navigation": {
+    "home": "Start",
+    "camera": "Scannen",
+    "history": "Verlauf",
+    "profile": "Profil",
+    "insights": "Einblicke",
+    "learning": "Lernen",
+    "dashboard": "Dashboard"
+  },
+  "home": {
+    "welcome": "Willkommen bei LabelIQ",
+    "subtitle": "Scannen Sie jedes Produkt, um Inhaltsstoffe zu analysieren und Gesundheitseinblicke zu erhalten",
+    "scanProduct": "Produkt scannen",
+    "quickStart": "Schnellstart-Anleitung",
+    "recentScans": "Letzte Scans",
+    "noRecentScans": "Keine letzten Scans",
+    "categories": {
+      "food": "Lebensmittel",
+      "cosmetics": "Kosmetik",
+      "household": "Haushaltsprodukte"
+    }
+  },
+  "camera": {
+    "title": "Produktetikett scannen",
+    "instruction": "Richten Sie Ihre Kamera auf die Zutatenliste",
+    "capture": "Aufnehmen",
+    "gallery": "Aus Galerie wählen",
+    "analyzing": "Inhaltsstoffe werden analysiert...",
+    "permission": "Kameraberechtigung erforderlich",
+    "error": "Kamerafehler aufgetreten"
+  },
+  "results": {
+    "title": "Analyseergebnisse",
+    "overallScore": "Gesamtsicherheitsbewertung",
+    "ingredients": "Inhaltsstoffe",
+    "detectedIngredients": "Erkannte Inhaltsstoffe",
+    "healthAssessment": "Gesundheitsbewertung",
+    "warnings": "Warnungen",
+    "recommendations": "Empfehlungen",
+    "nutritionInfo": "Nährwertinformationen",
+    "share": "Ergebnisse teilen",
+    "saveToHistory": "Im Verlauf speichern",
+    "errors": {
+      "notFound": "Scan-Ergebnisse nicht gefunden",
+      "loadFailed": "Laden der Scan-Ergebnisse fehlgeschlagen"
+    }
+  },
+  "ingredients": {
+    "unknown": "Unbekannter Inhaltsstoff",
+    "safetyScore": "Sicherheitsbewertung: {{score}}",
+    "clickForDetails": "Klicken für Details über {{name}}",
+    "eNumber": "E-Nummer",
+    "function": "Funktion",
+    "sources": "Quellen",
+    "healthConcerns": "Gesundheitsbedenken",
+    "regulatoryStatus": "Regulierungsstatus"
+  },
+  "scoring": {
+    "excellent": "Ausgezeichnet",
+    "good": "Gut",
+    "fair": "Mittelmäßig",
+    "poor": "Schlecht",
+    "danger": "Bedenklich"
+  },
+  "profile": {
+    "title": "Mein Profil",
+    "personalInfo": "Persönliche Informationen",
+    "allergies": "Allergien",
+    "dietaryRestrictions": "Ernährungseinschränkungen",
+    "healthGoals": "Gesundheitsziele",
+    "preferences": "Einstellungen",
+    "language": "Sprache",
+    "notifications": "Benachrichtigungen",
+    "privacy": "Datenschutzeinstellungen",
+    "dataExport": "Daten exportieren",
+    "deleteAccount": "Konto löschen"
+  },
+  "history": {
+    "title": "Scan-Verlauf",
+    "recent": "Letzte Scans",
+    "filter": "Filter",
+    "search": "Suchen...",
+    "noResults": "Keine Scan-Ergebnisse gefunden",
+    "deleteAll": "Alle löschen",
+    "export": "Verlauf exportieren"
+  },
+  "insights": {
+    "title": "Gesundheitseinblicke",
+    "overview": "Übersicht",
+    "trends": "Trends",
+    "recommendations": "Empfehlungen",
+    "progress": "Fortschritt",
+    "dailyStats": "Tägliche Statistiken",
+    "weeklyReport": "Wöchentlicher Bericht"
+  },
+  "learning": {
+    "title": "Lernzentrum",
+    "topics": "Themen",
+    "progress": "Ihr Fortschritt",
+    "articles": "Artikel",
+    "videos": "Videos",
+    "quiz": "Quiz machen",
+    "completed": "Abgeschlossen",
+    "inProgress": "In Bearbeitung"
+  },
+  "sharing": {
+    "title": "Ergebnisse teilen",
+    "platforms": "Plattform wählen",
+    "message": "Schauen Sie sich meine Inhaltsstoffanalyse von LabelIQ an!",
+    "success": "Erfolgreich geteilt",
+    "error": "Teilen fehlgeschlagen"
+  },
+  "calories": {
+    "title": "Tägliche Kalorien",
+    "consumed": "Verbraucht",
+    "remaining": "Verbleibend",
+    "goal": "Tagesziel",
+    "track": "Mahlzeit verfolgen",
+    "history": "Kalorien-Verlauf"
+  },
+  "additives": {
+    "title": "Lebensmittelzusatzstoffe",
+    "categories": {
+      "coloring": "Farbstoff",
+      "preservative": "Konservierungsmittel",
+      "emulsifier": "Emulgator",
+      "sweetener": "Süßstoff",
+      "antioxidant": "Antioxidans",
+      "flavor_enhancer": "Geschmacksverstärker"
+    },
+    "regulatory": {
+      "approved": "Zugelassen",
+      "banned": "Verboten",
+      "restricted": "Eingeschränkt"
+    }
+  },
+  "hazardLevels": {
+    "safe": "Sicher",
+    "low": "Geringes Risiko",
+    "medium": "Mittleres Risiko",
+    "high": "Hohes Risiko",
+    "danger": "Gefährlich"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "app": {
+    "name": "LabelIQ",
+    "tagline": "Smart ingrediensanalys",
+    "loading": "Laddar...",
+    "error": "Ett fel har uppstått",
+    "retry": "Försök igen",
+    "initError": "Initieringsfel"
+  },
+  "navigation": {
+    "home": "Hem",
+    "camera": "Skanna",
+    "history": "Historik",
+    "profile": "Profil",
+    "insights": "Insikter",
+    "learning": "Lära",
+    "dashboard": "Instrumentpanel"
+  },
+  "home": {
+    "welcome": "Välkommen till LabelIQ",
+    "subtitle": "Skanna vilken produkt som helst för att analysera ingredienser och få hälsoinsikter",
+    "scanProduct": "Skanna produkt",
+    "quickStart": "Snabbstartsguide",
+    "recentScans": "Senaste skanningar",
+    "noRecentScans": "Inga senaste skanningar",
+    "categories": {
+      "food": "Livsmedelsprodukter",
+      "cosmetics": "Kosmetika",
+      "household": "Hushållsprodukter"
+    }
+  },
+  "camera": {
+    "title": "Skanna produktetikett",
+    "instruction": "Rikta din kamera mot ingredienslistan",
+    "capture": "Fånga",
+    "gallery": "Välj från galleri",
+    "analyzing": "Analyserar ingredienser...",
+    "permission": "Kameratillstånd krävs",
+    "error": "Kamerafel uppstod"
+  },
+  "results": {
+    "title": "Analysresultat",
+    "overallScore": "Övergripande säkerhetspoäng",
+    "ingredients": "Ingredienser",
+    "detectedIngredients": "Upptäckta ingredienser",
+    "healthAssessment": "Hälsobedömning",
+    "warnings": "Varningar",
+    "recommendations": "Rekommendationer",
+    "nutritionInfo": "Näringsinformation",
+    "share": "Dela resultat",
+    "saveToHistory": "Spara i historik",
+    "errors": {
+      "notFound": "Skanningsresultat inte funna",
+      "loadFailed": "Misslyckades att ladda skanningsresultat"
+    }
+  },
+  "ingredients": {
+    "unknown": "Okänd ingrediens",
+    "safetyScore": "Säkerhetspoäng: {{score}}",
+    "clickForDetails": "Klicka för detaljer om {{name}}",
+    "eNumber": "E-nummer",
+    "function": "Funktion",
+    "sources": "Källor",
+    "healthConcerns": "Hälsobekymmer",
+    "regulatoryStatus": "Regulatorisk status"
+  },
+  "scoring": {
+    "excellent": "Utmärkt",
+    "good": "Bra",
+    "fair": "Hyfsad",
+    "poor": "Dålig",
+    "danger": "Oroväckande"
+  },
+  "profile": {
+    "title": "Min profil",
+    "personalInfo": "Personlig information",
+    "allergies": "Allergier",
+    "dietaryRestrictions": "Kostbegränsningar",
+    "healthGoals": "Hälsomål",
+    "preferences": "Inställningar",
+    "language": "Språk",
+    "notifications": "Notifieringar",
+    "privacy": "Integritetsinställningar",
+    "dataExport": "Exportera data",
+    "deleteAccount": "Radera konto"
+  },
+  "history": {
+    "title": "Skanningshistorik",
+    "recent": "Senaste skanningar",
+    "filter": "Filter",
+    "search": "Sök...",
+    "noResults": "Inga skanningsresultat funna",
+    "deleteAll": "Radera alla",
+    "export": "Exportera historik"
+  },
+  "insights": {
+    "title": "Hälsoinsikter",
+    "overview": "Översikt",
+    "trends": "Trender",
+    "recommendations": "Rekommendationer",
+    "progress": "Framsteg",
+    "dailyStats": "Daglig statistik",
+    "weeklyReport": "Veckorapport"
+  },
+  "learning": {
+    "title": "Lärcentrum",
+    "topics": "Ämnen",
+    "progress": "Dina framsteg",
+    "articles": "Artiklar",
+    "videos": "Videor",
+    "quiz": "Ta quiz",
+    "completed": "Slutförd",
+    "inProgress": "Pågående"
+  },
+  "sharing": {
+    "title": "Dela resultat",
+    "platforms": "Välj plattform",
+    "message": "Kolla in min ingrediensanalys från LabelIQ!",
+    "success": "Delat framgångsrikt",
+    "error": "Misslyckades att dela"
+  },
+  "calories": {
+    "title": "Dagliga kalorier",
+    "consumed": "Konsumerat",
+    "remaining": "Återstående",
+    "goal": "Dagligt mål",
+    "track": "Spåra måltid",
+    "history": "Kalorihistorik"
+  },
+  "additives": {
+    "title": "Livsmedelstillsatser",
+    "categories": {
+      "coloring": "Färgämne",
+      "preservative": "Konserveringsmedel",
+      "emulsifier": "Emulgeringsmedel",
+      "sweetener": "Sötningsmedel",
+      "antioxidant": "Antioxidant",
+      "flavor_enhancer": "Smakförstärkare"
+    },
+    "regulatory": {
+      "approved": "Godkänd",
+      "banned": "Förbjuden",
+      "restricted": "Begränsad"
+    }
+  },
+  "hazardLevels": {
+    "safe": "Säker",
+    "low": "Låg risk",
+    "medium": "Medelhög risk",
+    "high": "Hög risk",
+    "danger": "Farlig"
+  }
+}

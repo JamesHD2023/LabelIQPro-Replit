@@ -1,0 +1,153 @@
+{
+  "app": {
+    "name": "LabelIQ",
+    "tagline": "Slimme ingrediëntenanalyse",
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden",
+    "retry": "Opnieuw proberen",
+    "initError": "Initialisatiefout"
+  },
+  "navigation": {
+    "home": "Thuis",
+    "camera": "Scannen",
+    "history": "Geschiedenis",
+    "profile": "Profiel",
+    "insights": "Inzichten",
+    "learning": "Leren",
+    "dashboard": "Dashboard"
+  },
+  "home": {
+    "welcome": "Welkom bij LabelIQ",
+    "subtitle": "Scan elk product om ingrediënten te analyseren en gezondheidsinzichten te krijgen",
+    "scanProduct": "Product scannen",
+    "quickStart": "Snelstartgids",
+    "recentScans": "Recente scans",
+    "noRecentScans": "Geen recente scans",
+    "categories": {
+      "food": "Voedingsproducten",
+      "cosmetics": "Cosmetica",
+      "household": "Huishoudproducten"
+    }
+  },
+  "camera": {
+    "title": "Productlabel scannen",
+    "instruction": "Richt je camera op de ingrediëntenlijst",
+    "capture": "Vastleggen",
+    "gallery": "Kiezen uit galerij",
+    "analyzing": "Ingrediënten analyseren...",
+    "permission": "Cameramachtiging vereist",
+    "error": "Camerafout opgetreden"
+  },
+  "results": {
+    "title": "Analyseresultaten",
+    "overallScore": "Algemene veiligheidsscore",
+    "ingredients": "Ingrediënten",
+    "detectedIngredients": "Gedetecteerde ingrediënten",
+    "healthAssessment": "Gezondheidsbeoordeling",
+    "warnings": "Waarschuwingen",
+    "recommendations": "Aanbevelingen",
+    "nutritionInfo": "Voedingsinformatie",
+    "share": "Resultaten delen",
+    "saveToHistory": "Opslaan in geschiedenis",
+    "errors": {
+      "notFound": "Scanresultaten niet gevonden",
+      "loadFailed": "Laden van scanresultaten mislukt"
+    }
+  },
+  "ingredients": {
+    "unknown": "Onbekend ingrediënt",
+    "safetyScore": "Veiligheidsscore: {{score}}",
+    "clickForDetails": "Klik voor details over {{name}}",
+    "eNumber": "E-nummer",
+    "function": "Functie",
+    "sources": "Bronnen",
+    "healthConcerns": "Gezondheidszorgen",
+    "regulatoryStatus": "Regulatoire status"
+  },
+  "scoring": {
+    "excellent": "Uitstekend",
+    "good": "Goed",
+    "fair": "Redelijk",
+    "poor": "Slecht",
+    "danger": "Zorgwekkend"
+  },
+  "profile": {
+    "title": "Mijn profiel",
+    "personalInfo": "Persoonlijke informatie",
+    "allergies": "Allergieën",
+    "dietaryRestrictions": "Dieetbeperkingen",
+    "healthGoals": "Gezondheidsdoelen",
+    "preferences": "Voorkeuren",
+    "language": "Taal",
+    "notifications": "Notificaties",
+    "privacy": "Privacy-instellingen",
+    "dataExport": "Gegevens exporteren",
+    "deleteAccount": "Account verwijderen"
+  },
+  "history": {
+    "title": "Scangeschiedenis",
+    "recent": "Recente scans",
+    "filter": "Filter",
+    "search": "Zoeken...",
+    "noResults": "Geen scanresultaten gevonden",
+    "deleteAll": "Alles verwijderen",
+    "export": "Geschiedenis exporteren"
+  },
+  "insights": {
+    "title": "Gezondheidsinzichten",
+    "overview": "Overzicht",
+    "trends": "Trends",
+    "recommendations": "Aanbevelingen",
+    "progress": "Voortgang",
+    "dailyStats": "Dagelijkse statistieken",
+    "weeklyReport": "Weekrapport"
+  },
+  "learning": {
+    "title": "Leercentrum",
+    "topics": "Onderwerpen",
+    "progress": "Je voortgang",
+    "articles": "Artikelen",
+    "videos": "Video's",
+    "quiz": "Quiz maken",
+    "completed": "Voltooid",
+    "inProgress": "In uitvoering"
+  },
+  "sharing": {
+    "title": "Resultaten delen",
+    "platforms": "Platform kiezen",
+    "message": "Bekijk mijn ingrediëntenanalyse van LabelIQ!",
+    "success": "Succesvol gedeeld",
+    "error": "Delen mislukt"
+  },
+  "calories": {
+    "title": "Dagelijkse calorieën",
+    "consumed": "Geconsumeerd",
+    "remaining": "Resterend",
+    "goal": "Dagelijks doel",
+    "track": "Maaltijd bijhouden",
+    "history": "Caloriegeschiedenis"
+  },
+  "additives": {
+    "title": "Voedseladditieven",
+    "categories": {
+      "coloring": "Kleurstof",
+      "preservative": "Conserveermiddel",
+      "emulsifier": "Emulgator",
+      "sweetener": "Zoetmiddel",
+      "antioxidant": "Antioxidant",
+      "flavor_enhancer": "Smaakversterker"
+    },
+    "regulatory": {
+      "approved": "Goedgekeurd",
+      "banned": "Verboden",
+      "restricted": "Beperkt"
+    }
+  },
+  "hazardLevels": {
+    "safe": "Veilig",
+    "low": "Laag risico",
+    "medium": "Gemiddeld risico",
+    "high": "Hoog risico",
+    "danger": "Gevaarlijk"
+  }
+}

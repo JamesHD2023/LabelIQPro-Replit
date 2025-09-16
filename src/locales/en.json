@@ -1,0 +1,153 @@
+{
+  "app": {
+    "name": "LabelIQ",
+    "tagline": "Smart ingredient analysis",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try Again",
+    "initError": "Initialization Error"
+  },
+  "navigation": {
+    "home": "Home",
+    "camera": "Scan",
+    "history": "History",
+    "profile": "Profile",
+    "insights": "Insights",
+    "learning": "Learn",
+    "dashboard": "Dashboard"
+  },
+  "home": {
+    "welcome": "Welcome to LabelIQ",
+    "subtitle": "Scan any product to analyze ingredients and get health insights",
+    "scanProduct": "Scan Product",
+    "quickStart": "Quick Start Guide",
+    "recentScans": "Recent Scans",
+    "noRecentScans": "No recent scans",
+    "categories": {
+      "food": "Food Products",
+      "cosmetics": "Cosmetics",
+      "household": "Household Products"
+    }
+  },
+  "camera": {
+    "title": "Scan Product Label",
+    "instruction": "Point your camera at the ingredient list",
+    "capture": "Capture",
+    "gallery": "Choose from Gallery",
+    "analyzing": "Analyzing ingredients...",
+    "permission": "Camera permission required",
+    "error": "Camera error occurred"
+  },
+  "results": {
+    "title": "Analysis Results",
+    "overallScore": "Overall Safety Score",
+    "ingredients": "Ingredients",
+    "detectedIngredients": "Detected Ingredients",
+    "healthAssessment": "Health Assessment",
+    "warnings": "Warnings",
+    "recommendations": "Recommendations",
+    "nutritionInfo": "Nutrition Information",
+    "share": "Share Results",
+    "saveToHistory": "Save to History",
+    "errors": {
+      "notFound": "Scan results not found",
+      "loadFailed": "Failed to load scan results"
+    }
+  },
+  "ingredients": {
+    "unknown": "Unknown ingredient",
+    "safetyScore": "Safety Score: {{score}}",
+    "clickForDetails": "Click for details about {{name}}",
+    "eNumber": "E-Number",
+    "function": "Function",
+    "sources": "Sources",
+    "healthConcerns": "Health Concerns",
+    "regulatoryStatus": "Regulatory Status"
+  },
+  "scoring": {
+    "excellent": "Excellent",
+    "good": "Good",
+    "fair": "Fair",
+    "poor": "Poor",
+    "danger": "Concerning"
+  },
+  "profile": {
+    "title": "My Profile",
+    "personalInfo": "Personal Information",
+    "allergies": "Allergies",
+    "dietaryRestrictions": "Dietary Restrictions",
+    "healthGoals": "Health Goals",
+    "preferences": "Preferences",
+    "language": "Language",
+    "notifications": "Notifications",
+    "privacy": "Privacy Settings",
+    "dataExport": "Export Data",
+    "deleteAccount": "Delete Account"
+  },
+  "history": {
+    "title": "Scan History",
+    "recent": "Recent Scans",
+    "filter": "Filter",
+    "search": "Search...",
+    "noResults": "No scan results found",
+    "deleteAll": "Delete All",
+    "export": "Export History"
+  },
+  "insights": {
+    "title": "Health Insights",
+    "overview": "Overview",
+    "trends": "Trends",
+    "recommendations": "Recommendations",
+    "progress": "Progress",
+    "dailyStats": "Daily Statistics",
+    "weeklyReport": "Weekly Report"
+  },
+  "learning": {
+    "title": "Learning Center",
+    "topics": "Topics",
+    "progress": "Your Progress",
+    "articles": "Articles",
+    "videos": "Videos",
+    "quiz": "Take Quiz",
+    "completed": "Completed",
+    "inProgress": "In Progress"
+  },
+  "sharing": {
+    "title": "Share Results",
+    "platforms": "Choose Platform",
+    "message": "Check out my ingredient analysis from LabelIQ!",
+    "success": "Shared successfully",
+    "error": "Failed to share"
+  },
+  "calories": {
+    "title": "Daily Calories",
+    "consumed": "Consumed",
+    "remaining": "Remaining",
+    "goal": "Daily Goal",
+    "track": "Track Meal",
+    "history": "Calorie History"
+  },
+  "additives": {
+    "title": "Food Additives",
+    "categories": {
+      "coloring": "Coloring",
+      "preservative": "Preservative",
+      "emulsifier": "Emulsifier",
+      "sweetener": "Sweetener",
+      "antioxidant": "Antioxidant",
+      "flavor_enhancer": "Flavor Enhancer"
+    },
+    "regulatory": {
+      "approved": "Approved",
+      "banned": "Banned",
+      "restricted": "Restricted"
+    }
+  },
+  "hazardLevels": {
+    "safe": "Safe",
+    "low": "Low Risk",
+    "medium": "Medium Risk",
+    "high": "High Risk",
+    "danger": "Dangerous"
+  }
+}
