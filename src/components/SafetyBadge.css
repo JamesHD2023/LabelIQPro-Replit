@@ -1,0 +1,125 @@
+.safety-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.badge-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-circle {
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.score-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.score-number {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.score-max {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.badge-label {
+  text-align: center;
+}
+
+.safety-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Size variants */
+.safety-badge.small {
+  gap: var(--space-xs);
+}
+
+.safety-badge.small .progress-ring {
+  width: 60px;
+  height: 60px;
+}
+
+.safety-badge.small .score-number {
+  font-size: 1rem;
+}
+
+.safety-badge.small .score-max {
+  font-size: 0.625rem;
+}
+
+.safety-badge.small .safety-text {
+  font-size: 0.75rem;
+}
+
+.safety-badge.medium {
+  gap: var(--space-sm);
+}
+
+.safety-badge.medium .progress-ring {
+  width: 100px;
+  height: 100px;
+}
+
+.safety-badge.large {
+  gap: var(--space-md);
+}
+
+.safety-badge.large .progress-ring {
+  width: 120px;
+  height: 120px;
+}
+
+.safety-badge.large .score-number {
+  font-size: 2rem;
+}
+
+.safety-badge.large .score-max {
+  font-size: 1rem;
+}
+
+.safety-badge.large .safety-text {
+  font-size: 1rem;
+}
+
+/* Safety level colors */
+.safety-badge.excellent .safety-text {
+  color: var(--success-color);
+}
+
+.safety-badge.good .safety-text {
+  color: #84cc16;
+}
+
+.safety-badge.fair .safety-text {
+  color: var(--warning-color);
+}
+
+.safety-badge.poor .safety-text {
+  color: #f97316;
+}
+
+.safety-badge.danger .safety-text {
+  color: var(--error-color);
+}

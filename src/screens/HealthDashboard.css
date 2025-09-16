@@ -1,0 +1,823 @@
+/* HealthDashboard.css - Comprehensive styling for health dashboard */
+
+.health-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header Styles */
+.dashboard-header {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.health-score-section {
+  flex: 1;
+}
+
+.score-display {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--score-color, #4CAF50) 0deg,
+    var(--score-color, #4CAF50) calc(var(--score, 75) * 3.6deg),
+    #e0e0e0 calc(var(--score, 75) * 3.6deg),
+    #e0e0e0 360deg
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: scoreReveal 2s ease-out;
+}
+
+.score-circle::before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--score-color, #4CAF50);
+  z-index: 2;
+}
+
+.score-info h2 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.trend-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trend-icon {
+  font-size: 1.2rem;
+}
+
+.trend-text {
+  color: #666;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.refresh-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refresh-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.refresh-btn.refreshing {
+  animation: spin 1s linear infinite;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.tab-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 1rem 0.5rem;
+  border: none;
+  background: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.tab-btn:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.tab-icon {
+  font-size: 1.5rem;
+}
+
+.tab-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Time Range Selector */
+.time-range-selector {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.range-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.range-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.range-btn.active {
+  background: white;
+  color: #667eea;
+  border-color: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab Content */
+.tab-content {
+  min-height: 400px;
+}
+
+/* Overview Tab */
+.overview-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color, #333);
+  line-height: 1;
+}
+
+.stat-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  margin: 0.25rem 0;
+}
+
+.stat-subtitle {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-color, #667eea), var(--accent-color, #764ba2));
+  border-radius: 2px;
+  transition: width 1s ease;
+  animation: progressGrow 1s ease;
+}
+
+/* Chart Section */
+.chart-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.chart-section h3 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.chart-container {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.trend-chart {
+  flex: 1;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.trend-point {
+  flex: 1;
+  background: linear-gradient(to top, #667eea, #764ba2);
+  border-radius: 4px 4px 0 0;
+  min-height: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: chartGrow 0.8s ease forwards;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+.trend-point:hover {
+  filter: brightness(1.2);
+  transform: scaleY(1) scale(1.1);
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* Quick Actions */
+.quick-actions {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.quick-actions h3 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  border: none;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.action-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(240, 147, 251, 0.3);
+}
+
+.action-icon {
+  font-size: 2rem;
+}
+
+.action-label {
+  font-size: 0.9rem;
+}
+
+/* Nutrition Tab */
+.nutrition-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nutrition-overview {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.nutrition-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--color, #667eea);
+}
+
+.nutrition-card h4 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.nutrition-values {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.current {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color, #667eea);
+}
+
+.separator {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.target {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.unit {
+  font-size: 0.9rem;
+  color: #999;
+  margin-left: 0.2rem;
+}
+
+/* Macro Distribution Chart */
+.macro-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pie-chart {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #FF6B35 0deg 120deg,
+    #4ECDC4 120deg 240deg,
+    #45B7D1 240deg 360deg
+  );
+  position: relative;
+}
+
+.macro-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legend-item.protein .legend-color { background: #FF6B35; }
+.legend-item.carbs .legend-color { background: #4ECDC4; }
+.legend-item.fat .legend-color { background: #45B7D1; }
+
+/* Safety Tab */
+.safety-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.concerning-ingredients,
+.improvements,
+.alternatives,
+.risk-analysis,
+.nutrient-goals,
+.meal-patterns {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.concerning-ingredients h3,
+.improvements h3,
+.alternatives h3,
+.risk-analysis h3,
+.nutrient-goals h3,
+.meal-patterns h3 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.ingredients-list,
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.alternatives-grid,
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.ingredient-card,
+.suggestion-card,
+.alternative-card,
+.nutrient-goal-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 3px solid #f44336;
+  transition: all 0.3s ease;
+}
+
+.alternative-card,
+.nutrient-goal-card {
+  border-left-color: #4CAF50;
+}
+
+.ingredient-card:hover,
+.suggestion-card:hover,
+.alternative-card:hover,
+.nutrient-goal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Health Impact Tab */
+.health-impact-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.risk-factors,
+.goal-progress,
+.recommendations,
+.behavior-patterns {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.risk-cards,
+.progress-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.risk-factor-card,
+.goal-progress-card,
+.recommendation-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #FF9800;
+  transition: all 0.3s ease;
+}
+
+.goal-progress-card {
+  border-left-color: #4CAF50;
+}
+
+.recommendation-card {
+  border-left-color: #2196F3;
+}
+
+.risk-factor-card:hover,
+.goal-progress-card:hover,
+.recommendation-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Utility Classes */
+.no-data {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 3rem;
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.chart-placeholder {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  font-weight: 500;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-spinner p {
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes scoreReveal {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes progressGrow {
+  0% { width: 0; }
+  100% { width: var(--progress, 0%); }
+}
+
+@keyframes chartGrow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .health-dashboard {
+    padding: 0.5rem;
+  }
+
+  .dashboard-header {
+    padding: 1.5rem;
+  }
+
+  .score-display {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .score-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .score-circle::before {
+    width: 75px;
+    height: 75px;
+  }
+
+  .score-value {
+    font-size: 1.5rem;
+  }
+
+  .quick-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .action-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nutrition-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-navigation {
+    padding: 0.3rem;
+  }
+
+  .tab-btn {
+    padding: 0.8rem 0.3rem;
+    min-width: 60px;
+  }
+
+  .tab-icon {
+    font-size: 1.2rem;
+  }
+
+  .tab-label {
+    font-size: 0.8rem;
+  }
+
+  .chart-container {
+    height: 150px;
+  }
+
+  .alternatives-grid,
+  .goals-grid,
+  .risk-cards,
+  .progress-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .score-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .score-circle::before {
+    width: 60px;
+    height: 60px;
+  }
+
+  .score-value {
+    font-size: 1.2rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .range-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .action-button {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .health-dashboard {
+    background: white !important;
+    padding: 0 !important;
+  }
+
+  .refresh-btn,
+  .tab-navigation,
+  .time-range-selector,
+  .quick-actions {
+    display: none !important;
+  }
+
+  .dashboard-header,
+  .chart-section,
+  .overview-tab > *,
+  .nutrition-tab > *,
+  .safety-tab > *,
+  .health-impact-tab > * {
+    background: white !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    margin-bottom: 1rem !important;
+    break-inside: avoid !important;
+  }
+}

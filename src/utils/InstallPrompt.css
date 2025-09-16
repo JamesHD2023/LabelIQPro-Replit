@@ -1,0 +1,142 @@
+.install-prompt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.install-prompt {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  max-width: 400px;
+  width: 100%;
+  box-shadow: var(--shadow-xl);
+  animation: slideUp 0.3s ease;
+}
+
+.prompt-icon {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: var(--space-lg);
+}
+
+.prompt-content {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.prompt-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--gray-800);
+}
+
+.prompt-content p {
+  color: var(--gray-600);
+  margin-bottom: var(--space-lg);
+}
+
+.prompt-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-align: left;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--gray-700);
+}
+
+.feature-icon {
+  font-size: 1.25rem;
+}
+
+.prompt-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.dismiss-button {
+  flex: 1;
+  padding: var(--space-md);
+  background: var(--gray-100);
+  color: var(--gray-700);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dismiss-button:hover {
+  background: var(--gray-200);
+}
+
+.install-button {
+  flex: 1;
+  padding: var(--space-md);
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
+}
+
+.install-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .install-prompt {
+    padding: var(--space-lg);
+  }
+
+  .prompt-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .prompt-features {
+    gap: var(--space-xs);
+  }
+
+  .feature {
+    font-size: 0.875rem;
+  }
+
+  .prompt-actions {
+    flex-direction: column;
+  }
+}

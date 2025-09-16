@@ -1,0 +1,67 @@
+{
+  "short_name": "LabelIQ",
+  "name": "LabelIQ - AI Ingredient Scanner",
+  "description": "AI-powered ingredient scanner for food, cosmetics, and household products",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#667eea",
+  "background_color": "#f8fafc",
+  "orientation": "portrait",
+  "categories": ["health", "lifestyle", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "type": "image/png",
+      "sizes": "540x720"
+    },
+    {
+      "src": "screenshot2.png",
+      "type": "image/png",
+      "sizes": "540x720"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Scan Food Label",
+      "short_name": "Scan Food",
+      "description": "Quickly scan a food ingredient label",
+      "url": "/camera?category=food",
+      "icons": [{ "src": "food-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Scan Cosmetic",
+      "short_name": "Scan Cosmetic",
+      "description": "Scan cosmetic or personal care product",
+      "url": "/camera?category=cosmetic",
+      "icons": [{ "src": "cosmetic-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "View History",
+      "short_name": "History",
+      "description": "View scan history",
+      "url": "/history",
+      "icons": [{ "src": "history-icon.png", "sizes": "96x96" }]
+    }
+  ]
+}

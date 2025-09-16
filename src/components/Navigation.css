@@ -1,0 +1,17 @@
+/* Navigation styles are in App.css */
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  .nav-item {
+    padding: var(--space-xs);
+    min-height: 52px;
+  }
+
+  .nav-icon {
+    font-size: 1rem;
+  }
+
+  .nav-label {
+    font-size: 0.625rem;
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#667eea" />
+    <meta name="description" content="LabelIQ - AI-powered ingredient scanner for food, cosmetics, and household products" />
+
+    <!-- PWA Meta Tags -->
+    <meta name="application-name" content="LabelIQ">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="LabelIQ">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="%PUBLIC_URL%/apple-touch-icon-167x167.png" />
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileImage" content="%PUBLIC_URL%/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="%PUBLIC_URL%/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="%PUBLIC_URL%/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="%PUBLIC_URL%/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="%PUBLIC_URL%/mstile-310x310.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>LabelIQ - AI Ingredient Scanner</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://norm.internal.liq">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Critical CSS for app shell -->
+    <style>
+      #root {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+      }
+      .app-shell {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="app-shell">
+        <div class="loading">
+          <div>Loading LabelIQ...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

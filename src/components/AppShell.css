@@ -1,0 +1,19 @@
+/* Component CSS files are imported by their parent components */
+
+/* AppShell specific overrides */
+.app-shell .app-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.app-shell.fullscreen .app-content {
+  overflow: hidden;
+}
+
+/* Ensure proper scrolling on mobile */
+@media (max-width: 768px) {
+  .app-shell .app-content {
+    -webkit-overflow-scrolling: touch;
+  }
+}

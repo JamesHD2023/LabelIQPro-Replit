@@ -1,0 +1,392 @@
+/* AR Overlay Component Styles */
+
+.ar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 15;
+}
+
+/* AR Mode Indicator */
+.ar-mode-indicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.ar-mode-indicator.menu-mode {
+  border-color: #FF9800;
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.3);
+}
+
+.ar-mode-indicator.plate-mode {
+  border-color: #4CAF50;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+}
+
+.mode-icon {
+  font-size: 1.2rem;
+}
+
+.mode-text {
+  font-size: 0.8rem;
+}
+
+.detection-count {
+  background: #2196F3;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* AR Instructions */
+.ar-instructions {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-width: 250px;
+}
+
+.instruction-content {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.instruction-content p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.scanning-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.scanning-pulse {
+  width: 8px;
+  height: 8px;
+  background: #4CAF50;
+  border-radius: 50%;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Detection Feedback */
+.detection-feedback {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: slideUpFade 0.5s ease-out;
+}
+
+.feedback-content {
+  background: rgba(76, 175, 80, 0.9);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+}
+
+.feedback-icon {
+  font-size: 1.1rem;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* AR Tutorial */
+.ar-tutorial {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.tutorial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.tutorial-animation {
+  position: relative;
+}
+
+.scanning-frame {
+  width: 200px;
+  height: 150px;
+  position: relative;
+  border: 2px dashed rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+
+.scanning-frame .corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+}
+
+.scanning-frame .corner.top-left {
+  top: -3px;
+  left: -3px;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 8px;
+}
+
+.scanning-frame .corner.top-right {
+  top: -3px;
+  right: -3px;
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: 8px;
+}
+
+.scanning-frame .corner.bottom-left {
+  bottom: -3px;
+  left: -3px;
+  border-right: none;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+}
+
+.scanning-frame .corner.bottom-right {
+  bottom: -3px;
+  right: -3px;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 8px;
+}
+
+.scan-line {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4CAF50, transparent);
+  animation: scanLine 2s ease-in-out infinite;
+}
+
+@keyframes scanLine {
+  0% {
+    top: 10px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: calc(100% - 12px);
+    opacity: 0;
+  }
+}
+
+.tutorial-text h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tutorial-text p {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  max-width: 300px;
+  line-height: 1.4;
+}
+
+/* Quick Actions */
+.ar-quick-actions {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quick-action-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.quick-action-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+.quick-action-btn.help {
+  font-weight: bold;
+}
+
+.quick-action-btn.recalibrate {
+  font-size: 1rem;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ar-mode-indicator {
+    top: 15px;
+    right: 15px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .ar-instructions {
+    top: 15px;
+    left: 15px;
+    max-width: 200px;
+  }
+
+  .instruction-content {
+    padding: 0.8rem;
+  }
+
+  .instruction-content p {
+    font-size: 0.8rem;
+  }
+
+  .tutorial-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .tutorial-text p {
+    font-size: 0.9rem;
+    max-width: 250px;
+  }
+
+  .scanning-frame {
+    width: 160px;
+    height: 120px;
+  }
+
+  .quick-action-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ar-mode-indicator {
+    top: 10px;
+    right: 10px;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  .mode-icon {
+    font-size: 1rem;
+  }
+
+  .ar-instructions {
+    top: 10px;
+    left: 10px;
+    max-width: 180px;
+  }
+
+  .detection-feedback {
+    bottom: 100px;
+  }
+
+  .feedback-content {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .tutorial-text h3 {
+    font-size: 1rem;
+  }
+
+  .tutorial-text p {
+    font-size: 0.8rem;
+    max-width: 220px;
+  }
+
+  .scanning-frame {
+    width: 140px;
+    height: 100px;
+  }
+
+  .quick-action-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
