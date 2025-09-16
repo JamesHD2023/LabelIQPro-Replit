@@ -139,10 +139,15 @@ LabelIQ-PWA/
 │   ├── styles/           # Global styles
 │   │   ├── App.css       # Main styles
 │   │   └── variables.css # CSS variables
-│   ├── locales/          # Internationalization
-│   │   ├── en.json       # English translations
-│   │   ├── es.json       # Spanish translations
-│   │   └── fr.json       # French translations
+│   ├── locales/          # Internationalization (8 languages)
+│   │   ├── en.json       # English translations (default)
+│   │   ├── de.json       # German translations (Deutsch)
+│   │   ├── fr.json       # French translations (Français)
+│   │   ├── es.json       # Spanish translations (Español)
+│   │   ├── nl.json       # Dutch translations (Nederlands)
+│   │   ├── sv.json       # Swedish translations (Svenska)
+│   │   ├── no.json       # Norwegian translations (Norsk)
+│   │   └── pt.json       # Portuguese translations (Português)
 │   └── tests/            # Test files
 │       └── additive-test.js # Additive database tests
 ├── docs/                 # Documentation
@@ -304,20 +309,30 @@ Deploy to any static hosting service:
 
 ## 🌍 Internationalization
 
-### Supported Languages
-- English (en) - Default
-- Spanish (es)
-- French (fr)
-- German (de)
-- Portuguese (pt)
-- Swedish (sv)
-- Danish (da)
-- Norwegian (no)
+### Supported Languages (8 Total)
+- **English** (en) - Default language with comprehensive translations
+- **German** (de) - Deutsch - Full European market support
+- **French** (fr) - Français - Complete localization
+- **Spanish** (es) - Español - Global Spanish-speaking markets
+- **Dutch** (nl) - Nederlands - Netherlands/Belgium support
+- **Swedish** (sv) - Svenska - Nordic market coverage
+- **Norwegian** (no) - Norsk - Complete Norwegian localization
+- **Portuguese** (pt) - Português - Brazil/Portugal markets
+
+### Implementation Features
+- **Automatic Language Detection**: Browser language auto-detection with English fallback
+- **Comprehensive Coverage**: All app sections fully translated including UI, safety scores, and additive database
+- **Modular Architecture**: Separate JSON files for each language in `/src/locales/` directory
+- **Development Support**: Debug mode for translation testing
+- **Smart Fallbacks**: Graceful degradation to English for unsupported languages
 
 ### Adding New Languages
-1. Add translations to `src/utils/i18n.js`
-2. Update language selector in ProfileScreen
-3. Test RTL languages if applicable
+1. Create new translation file in `src/locales/[lang].json` following existing structure
+2. Import the translation file in `src/utils/i18n.js`
+3. Add language entry to `supportedLanguages` object with display names
+4. Update language selector in ProfileScreen component
+5. Test language switching and fallback behavior
+6. For RTL languages, add CSS direction support
 
 ## 📊 Analytics & Monitoring
 
