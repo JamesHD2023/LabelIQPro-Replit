@@ -14,7 +14,8 @@
     "profile": "Profil",
     "insights": "Innsikt",
     "learning": "Lær",
-    "dashboard": "Dashbord"
+    "dashboard": "Dashbord",
+    "expert": "Spør ekspert"
   },
   "home": {
     "welcome": "Velkommen til LabelIQ",
@@ -36,7 +37,16 @@
     "gallery": "Velg fra galleri",
     "analyzing": "Analyserer ingredienser...",
     "permission": "Kameratillatelse påkrevd",
-    "error": "Kamerafeil oppstod"
+    "error": "Kamerafeil oppstod",
+    "processing": {
+      "preparing": "Forbereder bilde...",
+      "analyzing": "Analyserer måltid...",
+      "nutrition": "Beregner næring...",
+      "health": "Vurderer helsepåvirkning...",
+      "extracting": "Trekker ut tekst...",
+      "parsing": "Tolker ingredienser...",
+      "complete": "Ferdig!"
+    }
   },
   "results": {
     "title": "Analyseresultater",
@@ -73,16 +83,42 @@
   },
   "profile": {
     "title": "Min profil",
-    "personalInfo": "Personlig informasjon",
-    "allergies": "Allergier",
+    "personalInfo": {
+      "title": "Personlig informasjon",
+      "name": "Navn",
+      "email": "E-post",
+      "age": "Alder",
+      "gender": "Kjønn"
+    },
+    "allergies": {
+      "title": "Allergier",
+      "common": "Vanlige allergener",
+      "custom": "Tilpassede allergier",
+      "severity": "Alvorlighetsgrad"
+    },
     "dietaryRestrictions": "Kostrestriksjoner",
     "healthGoals": "Helsemål",
     "preferences": "Preferanser",
     "language": "Språk",
     "notifications": "Varsler",
-    "privacy": "Personverninnstillinger",
+    "privacy": {
+      "title": "Personverninnstillinger",
+      "dataSharing": "Datadeling",
+      "analytics": "Analyse",
+      "marketing": "Markedsføring"
+    },
     "dataExport": "Eksporter data",
-    "deleteAccount": "Slett konto"
+    "deleteAccount": "Slett konto",
+    "clearData": {
+      "confirm": "Er du sikker på at du vil slette all data? Denne handlingen kan ikke angres."
+    },
+    "loading": "Laster profil...",
+    "about": {
+      "version": "Versjon",
+      "support": "Støtte",
+      "privacy": "Personvernerklæring",
+      "terms": "Vilkår for bruk"
+    }
   },
   "history": {
     "title": "Skanningshistorikk",
@@ -91,16 +127,71 @@
     "search": "Søk...",
     "noResults": "Ingen skanningsresultater funnet",
     "deleteAll": "Slett alle",
-    "export": "Eksporter historikk"
+    "export": "Eksporter historikk",
+    "loading": "Laster historikk...",
+    "filters": {
+      "all": "Alle",
+      "food": "Mat",
+      "cosmetic": "Kosmetikk",
+      "household": "Husholdning"
+    },
+    "retry": "Prøv igjen",
+    "empty": {
+      "title": "Ingen historikk ennå",
+      "description": "Begynn å skanne produkter for å se din historikk her",
+      "startScanning": "Begynn å skanne"
+    },
+    "delete": "Slett",
+    "confirmDelete": "Er du sikker på at du vil slette denne skanningen?",
+    "ingredients": "ingredienser",
+    "errors": {
+      "loadFailed": "Kunne ikke laste historikk"
+    }
   },
   "insights": {
     "title": "Helseinnsikt",
-    "overview": "Oversikt",
+    "overview": {
+      "totalScans": "Totale skanninger",
+      "averageScore": "Gjennomsnittlig score",
+      "trend": "Trend"
+    },
     "trends": "Trender",
-    "recommendations": "Anbefalinger",
+    "recommendations": {
+      "title": "Anbefalinger",
+      "lowScore": {
+        "title": "Forbedre produktvalg",
+        "description": "Dine nylige skanninger viser lave sikkerhetsscorer. Vurder å velge produkter med færre tilsetningsstoffer."
+      },
+      "concerns": {
+        "title": "Vanlig problematisk ingrediens",
+        "description": "{{ingredient}} forekommer ofte i dine skanninger. Se etter alternativer."
+      },
+      "foodFocus": {
+        "title": "Fokuser på mat",
+        "description": "Du skanner mest mat. Bra! Fortsett å gjøre bevisste matvalg."
+      }
+    },
     "progress": "Fremgang",
     "dailyStats": "Daglig statistikk",
-    "weeklyReport": "Ukentlig rapport"
+    "weeklyReport": "Ukentlig rapport",
+    "loading": "Laster innsikt...",
+    "timeRange": {
+      "week": "Siste uke",
+      "month": "Siste måned",
+      "quarter": "Siste kvartal"
+    },
+    "noData": {
+      "title": "Ingen data tilgjengelig",
+      "description": "Begynn å skanne produkter for å se din helseinnsikt",
+      "startScanning": "Begynn å skanne"
+    },
+    "categories": {
+      "title": "Kategorifordeling"
+    },
+    "concerns": {
+      "title": "Største bekymringer",
+      "found": "Funnet {{count}} ganger"
+    }
   },
   "learning": {
     "title": "Læringssenter",
@@ -110,7 +201,85 @@
     "videos": "Videoer",
     "quiz": "Ta quiz",
     "completed": "Fullført",
-    "inProgress": "Pågående"
+    "inProgress": "Pågående",
+    "loading": "Laster læringsinnhold...",
+    "types": {
+      "basic_skill": "Grunnleggende ferdigheter",
+      "safety_awareness": "Sikkerhetsbevissthet",
+      "practical_advice": "Praktiske råd",
+      "science_education": "Vitenskapsutdanning",
+      "safety_science": "Sikkerhetsvitenskap",
+      "advanced_knowledge": "Avansert kunnskap"
+    },
+    "levels": {
+      "beginner": "Nybegynner",
+      "intermediate": "Mellomnivå",
+      "advanced": "Avansert",
+      "expert": "Ekspert"
+    },
+    "tabs": {
+      "today": "I dag",
+      "progress": "Fremgang",
+      "library": "Bibliotek"
+    },
+    "dailyCard": {
+      "title": "Dagens læring",
+      "subtitle": "Utvid kunnskapen din med dagens anbefalte innhold"
+    },
+    "stats": {
+      "dayStreak": "Dager på rad",
+      "points": "Kunnskapspoeng",
+      "scans": "Skanninger"
+    },
+    "tips": {
+      "title": "Læringstips",
+      "scanDaily": {
+        "title": "Skann daglig",
+        "description": "Gjør det til en vane å skanne produkter for kontinuerlig læring"
+      },
+      "readCards": {
+        "title": "Les kunnskapskort",
+        "description": "Ta deg tid til å lese og forstå hvert daglige kunnskapskort"
+      },
+      "research": {
+        "title": "Forsk videre",
+        "description": "Fordyp deg i emner som interesserer deg mest"
+      }
+    },
+    "progress": {
+      "level": "Nivå",
+      "experience": "Erfaring",
+      "achievements": "Prestasjoner"
+    },
+    "library": {
+      "title": "Kunnskapsbibliotek",
+      "subtitle": "Utforsk dyptgående artikler og ressurser",
+      "categories": {
+        "ingredients": {
+          "title": "Ingredienskunnskap",
+          "description": "Lær om vanlige og uvanlige ingredienser"
+        },
+        "safety": {
+          "title": "Sikkerhetsinformasjon",
+          "description": "Forstå sikkerhetsrisiker og vurderinger"
+        },
+        "research": {
+          "title": "Forskning & Studier",
+          "description": "Oppdag den nyeste forskningen innen området"
+        }
+      },
+      "completed": "fullførte",
+      "comingSoon": {
+        "title": "Kommer snart",
+        "description": "Vi jobber med å legge til flere læringsressurser"
+      }
+    },
+    "motivation": {
+      "streak": "Fantastisk {{days}} dagers rekke! Fortsett sånn!",
+      "knowledgeExpert": "Du er en ekte kunnskapsekspert! Imponerende fremgang.",
+      "expertLevel": "Ekspertnivå oppnådd! Du er nå en mester i ingrediensanalyse.",
+      "keepLearning": "Fortsett å lære noe nytt hver dag!"
+    }
   },
   "sharing": {
     "title": "Del resultater",
@@ -149,5 +318,45 @@
     "medium": "Middels risiko",
     "high": "Høy risiko",
     "danger": "Farlig"
+  },
+  "safetyLevels": {
+    "safe": "Trygg",
+    "low": "Lav risiko",
+    "medium": "Middels risiko",
+    "high": "Høy risiko",
+    "danger": "Farlig"
+  },
+  "categories": {
+    "food": "Mat",
+    "cosmetic": "Kosmetikk",
+    "household": "Husholdning",
+    "unknown": "Ukjent"
+  },
+  "install": {
+    "title": "Installer LabelIQ",
+    "description": "Få den beste opplevelsen ved å installere appen på enheten din",
+    "features": {
+      "offline": "Fungerer offline",
+      "camera": "Rask kameratilgang",
+      "notifications": "Påminnelser & tips"
+    },
+    "install": "Installer",
+    "dismiss": "Ikke nå"
+  },
+  "common": {
+    "close": "Lukk",
+    "back": "Tilbake",
+    "next": "Neste",
+    "previous": "Forrige",
+    "loading": "Laster...",
+    "error": "Feil",
+    "retry": "Prøv igjen",
+    "save": "Lagre",
+    "cancel": "Avbryt",
+    "delete": "Slett",
+    "edit": "Rediger",
+    "done": "Ferdig",
+    "yes": "Ja",
+    "no": "Nei"
   }
 }

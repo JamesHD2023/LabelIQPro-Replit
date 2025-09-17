@@ -14,7 +14,8 @@
     "profile": "Profil",
     "insights": "Insikter",
     "learning": "Lära",
-    "dashboard": "Instrumentpanel"
+    "dashboard": "Instrumentpanel",
+    "expert": "Fråga expert"
   },
   "home": {
     "welcome": "Välkommen till LabelIQ",
@@ -36,7 +37,16 @@
     "gallery": "Välj från galleri",
     "analyzing": "Analyserar ingredienser...",
     "permission": "Kameratillstånd krävs",
-    "error": "Kamerafel uppstod"
+    "error": "Kamerafel uppstod",
+    "processing": {
+      "preparing": "Förbereder bild...",
+      "analyzing": "Analyserar måltid...",
+      "nutrition": "Beräknar näring...",
+      "health": "Bedömer hälsopåverkan...",
+      "extracting": "Extraherar text...",
+      "parsing": "Tolkar ingredienser...",
+      "complete": "Klar!"
+    }
   },
   "results": {
     "title": "Analysresultat",
@@ -73,16 +83,42 @@
   },
   "profile": {
     "title": "Min profil",
-    "personalInfo": "Personlig information",
-    "allergies": "Allergier",
+    "personalInfo": {
+      "title": "Personlig information",
+      "name": "Namn",
+      "email": "E-post",
+      "age": "Ålder",
+      "gender": "Kön"
+    },
+    "allergies": {
+      "title": "Allergier",
+      "common": "Vanliga allergener",
+      "custom": "Anpassade allergier",
+      "severity": "Allvarlighetsgrad"
+    },
     "dietaryRestrictions": "Kostbegränsningar",
     "healthGoals": "Hälsomål",
     "preferences": "Inställningar",
     "language": "Språk",
     "notifications": "Notifieringar",
-    "privacy": "Integritetsinställningar",
+    "privacy": {
+      "title": "Integritetsinställningar",
+      "dataSharing": "Datadelning",
+      "analytics": "Analytik",
+      "marketing": "Marknadsföring"
+    },
     "dataExport": "Exportera data",
-    "deleteAccount": "Radera konto"
+    "deleteAccount": "Radera konto",
+    "clearData": {
+      "confirm": "Är du säker på att du vill rensa all data? Denna åtgärd kan inte ångras."
+    },
+    "loading": "Laddar profil...",
+    "about": {
+      "version": "Version",
+      "support": "Support",
+      "privacy": "Integritetspolicy",
+      "terms": "Användarvillkor"
+    }
   },
   "history": {
     "title": "Skanningshistorik",
@@ -91,16 +127,71 @@
     "search": "Sök...",
     "noResults": "Inga skanningsresultat funna",
     "deleteAll": "Radera alla",
-    "export": "Exportera historik"
+    "export": "Exportera historik",
+    "loading": "Laddar historik...",
+    "filters": {
+      "all": "Alla",
+      "food": "Mat",
+      "cosmetic": "Kosmetika",
+      "household": "Hushåll"
+    },
+    "retry": "Försök igen",
+    "empty": {
+      "title": "Ingen historik än",
+      "description": "Börja skanna produkter för att se din historik här",
+      "startScanning": "Börja skanna"
+    },
+    "delete": "Radera",
+    "confirmDelete": "Är du säker på att du vill radera denna skanning?",
+    "ingredients": "ingredienser",
+    "errors": {
+      "loadFailed": "Misslyckades att ladda historik"
+    }
   },
   "insights": {
     "title": "Hälsoinsikter",
-    "overview": "Översikt",
+    "overview": {
+      "totalScans": "Totala skanningar",
+      "averageScore": "Genomsnittlig poäng",
+      "trend": "Trend"
+    },
     "trends": "Trender",
-    "recommendations": "Rekommendationer",
+    "recommendations": {
+      "title": "Rekommendationer",
+      "lowScore": {
+        "title": "Förbättra produktval",
+        "description": "Dina senaste skanningar visar låga säkerhetspoäng. Överväg att välja produkter med färre tillsatser."
+      },
+      "concerns": {
+        "title": "Vanlig problematisk ingrediens",
+        "description": "{{ingredient}} förekommer ofta i dina skanningar. Kolla upp alternativ."
+      },
+      "foodFocus": {
+        "title": "Fokusera på mat",
+        "description": "Du skannar mest mat. Bra! Fortsätt att göra medvetna matval."
+      }
+    },
     "progress": "Framsteg",
     "dailyStats": "Daglig statistik",
-    "weeklyReport": "Veckorapport"
+    "weeklyReport": "Veckorapport",
+    "loading": "Laddar insikter...",
+    "timeRange": {
+      "week": "Senaste veckan",
+      "month": "Senaste månaden",
+      "quarter": "Senaste kvartalet"
+    },
+    "noData": {
+      "title": "Ingen data tillgänglig",
+      "description": "Börja skanna produkter för att se dina hälsoinsikter",
+      "startScanning": "Börja skanna"
+    },
+    "categories": {
+      "title": "Kategorifördelning"
+    },
+    "concerns": {
+      "title": "Största bekymmer",
+      "found": "Hittad {{count}} gånger"
+    }
   },
   "learning": {
     "title": "Lärcentrum",
@@ -110,7 +201,85 @@
     "videos": "Videor",
     "quiz": "Ta quiz",
     "completed": "Slutförd",
-    "inProgress": "Pågående"
+    "inProgress": "Pågående",
+    "loading": "Laddar lärinnehåll...",
+    "types": {
+      "basic_skill": "Grundläggande kunskaper",
+      "safety_awareness": "Säkerhetsmedvetenhet",
+      "practical_advice": "Praktiska råd",
+      "science_education": "Vetenskapsutbildning",
+      "safety_science": "Säkerhetsvetenskap",
+      "advanced_knowledge": "Avancerad kunskap"
+    },
+    "levels": {
+      "beginner": "Nybörjare",
+      "intermediate": "Mellannivå",
+      "advanced": "Avancerad",
+      "expert": "Expert"
+    },
+    "tabs": {
+      "today": "Idag",
+      "progress": "Framsteg",
+      "library": "Bibliotek"
+    },
+    "dailyCard": {
+      "title": "Dagens lärande",
+      "subtitle": "Utöka din kunskap med dagens rekommenderade innehåll"
+    },
+    "stats": {
+      "dayStreak": "Dagar i rad",
+      "points": "Kunskapspoäng",
+      "scans": "Skanningar"
+    },
+    "tips": {
+      "title": "Läringstips",
+      "scanDaily": {
+        "title": "Skanna dagligen",
+        "description": "Gör det till en vana att skanna produkter för kontinuerlig lärande"
+      },
+      "readCards": {
+        "title": "Läs kunskapskort",
+        "description": "Ta dig tid att läsa och förstå varje dagligt kunskapskort"
+      },
+      "research": {
+        "title": "Forska vidare",
+        "description": "Fördjupa dig i ämnen som intresserar dig mest"
+      }
+    },
+    "progress": {
+      "level": "Nivå",
+      "experience": "Erfarenhet",
+      "achievements": "Prestationer"
+    },
+    "library": {
+      "title": "Kunskapsbibliotek",
+      "subtitle": "Utforska djupgående artiklar och resurser",
+      "categories": {
+        "ingredients": {
+          "title": "Ingredienskunskap",
+          "description": "Lär dig om vanliga och ovanliga ingredienser"
+        },
+        "safety": {
+          "title": "Säkerhetsinformation",
+          "description": "Förstå säkerhetsrisker och bedömningar"
+        },
+        "research": {
+          "title": "Forskning & Studier",
+          "description": "Upptäck den senaste forskningen inom området"
+        }
+      },
+      "completed": "slutförda",
+      "comingSoon": {
+        "title": "Kommer snart",
+        "description": "Vi arbetar på att lägga till fler lärresurser"
+      }
+    },
+    "motivation": {
+      "streak": "Fantastisk {{days}} dagars serie! Fortsätt så!",
+      "knowledgeExpert": "Du är en riktig kunskapsexpert! Imponerande framsteg.",
+      "expertLevel": "Expertivå uppnådd! Du är nu en mästare inom ingrediensanalys.",
+      "keepLearning": "Fortsätt lära dig något nytt varje dag!"
+    }
   },
   "sharing": {
     "title": "Dela resultat",
@@ -149,5 +318,45 @@
     "medium": "Medelhög risk",
     "high": "Hög risk",
     "danger": "Farlig"
+  },
+  "safetyLevels": {
+    "safe": "Säker",
+    "low": "Låg risk",
+    "medium": "Medelhög risk",
+    "high": "Hög risk",
+    "danger": "Farlig"
+  },
+  "categories": {
+    "food": "Mat",
+    "cosmetic": "Kosmetika",
+    "household": "Hushåll",
+    "unknown": "Okänd"
+  },
+  "install": {
+    "title": "Installera LabelIQ",
+    "description": "Få den bästa upplevelsen genom att installera appen på din enhet",
+    "features": {
+      "offline": "Fungerar offline",
+      "camera": "Snabb kameraåtkomst",
+      "notifications": "Påminnelser & tips"
+    },
+    "install": "Installera",
+    "dismiss": "Inte nu"
+  },
+  "common": {
+    "close": "Stäng",
+    "back": "Tillbaka",
+    "next": "Nästa",
+    "previous": "Föregående",
+    "loading": "Laddar...",
+    "error": "Fel",
+    "retry": "Försök igen",
+    "save": "Spara",
+    "cancel": "Avbryt",
+    "delete": "Radera",
+    "edit": "Redigera",
+    "done": "Klar",
+    "yes": "Ja",
+    "no": "Nej"
   }
 }
