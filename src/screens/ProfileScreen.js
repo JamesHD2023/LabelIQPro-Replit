@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { offlineService } from '../services/OfflineService';
 import { dailyCalorieTracker } from '../services/DailyCalorieTracker';
+import { supportedLanguages } from '../utils/i18n';
 import './ProfileScreen.css';
 
 const ProfileScreen = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [profile, setProfile] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
@@ -19,7 +20,7 @@ const ProfileScreen = () => {
   const loadProfile = async () => {
     try {
       const userProfile = await offlineService.getUserProfile();
-      setProfile(userProfile || {
+      const defaultProfile = {
         // Personal/Biometric Data
         age: '',
         weight: '',
@@ -35,9 +36,17 @@ const ProfileScreen = () => {
         dietaryPreferences: [],
 
         // App Settings
-        language: 'en',
+        language: i18n.language || 'en',
         notifications: true
-      });
+      };
+
+      const finalProfile = userProfile || defaultProfile;
+      setProfile(finalProfile);
+
+      // Set language if it differs from current
+      if (finalProfile.language && finalProfile.language !== i18n.language) {
+        await i18n.changeLanguage(finalProfile.language);
+      }
     } catch (error) {
       console.error('Failed to load profile:', error);
     } finally {
@@ -82,6 +91,22 @@ const ProfileScreen = () => {
       allergies: profile.allergies.filter((_, i) => i !== index)
     };
     saveProfile(updatedProfile);
+  };
+
+  const changeLanguage = async (languageCode) => {
+    try {
+      // Change language in i18n
+      await i18n.changeLanguage(languageCode);
+
+      // Save to profile
+      const updatedProfile = {
+        ...profile,
+        language: languageCode
+      };
+      saveProfile(updatedProfile);
+    } catch (error) {
+      console.error('Failed to change language:', error);
+    }
   };
 
   const toggleNotifications = async () => {
@@ -131,17 +156,18 @@ const ProfileScreen = () => {
 
           <div className="setting-group">
             <label className="setting-label">
-              {t('profile.personalInfo.language')}
+              {t('profile.language')}
             </label>
             <select
               value={profile.language || 'en'}
-              onChange={(e) => saveProfile({ ...profile, language: e.target.value })}
+              onChange={(e) => changeLanguage(e.target.value)}
               className="setting-select"
             >
-              <option value="en">English</option>
-              <option value="es">Español</option>
-              <option value="fr">Français</option>
-              <option value="de">Deutsch</option>
+              {Object.entries(supportedLanguages).map(([code, lang]) => (
+                <option key={code} value={code}>
+                  {lang.nativeName} ({lang.name})
+                </option>
+              ))}
             </select>
           </div>
 
