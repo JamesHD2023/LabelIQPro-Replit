@@ -15,36 +15,21 @@ const HomeScreen = () => {
       title: t('home.scanOptions.food.title'),
       subtitle: t('home.scanOptions.food.subtitle'),
       icon: '🍎',
-      gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      examples: [
-        t('home.scanOptions.food.examples.0'),
-        t('home.scanOptions.food.examples.1'),
-        t('home.scanOptions.food.examples.2')
-      ]
+      gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
     },
     {
       id: 'cosmetic',
       title: t('home.scanOptions.cosmetic.title'),
       subtitle: t('home.scanOptions.cosmetic.subtitle'),
       icon: '💄',
-      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-      examples: [
-        t('home.scanOptions.cosmetic.examples.0'),
-        t('home.scanOptions.cosmetic.examples.1'),
-        t('home.scanOptions.cosmetic.examples.2')
-      ]
+      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
     },
     {
       id: 'household',
       title: t('home.scanOptions.household.title'),
       subtitle: t('home.scanOptions.household.subtitle'),
       icon: '🧽',
-      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-      examples: [
-        t('home.scanOptions.household.examples.0'),
-        t('home.scanOptions.household.examples.1'),
-        t('home.scanOptions.household.examples.2')
-      ]
+      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
     }
   ];
 
