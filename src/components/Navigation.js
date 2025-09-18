@@ -12,37 +12,37 @@ const Navigation = () => {
     {
       path: '/',
       icon: '🏠',
-      label: t('navigation.home') || 'Home',
+      label: t('navigation.home', { defaultValue: 'Home' }),
       id: 'home'
     },
     {
       path: '/camera',
       icon: '📷',
-      label: t('navigation.scan') || 'Scan',
+      label: t('navigation.scan', { defaultValue: 'Scan' }),
       id: 'camera'
     },
     {
       path: '/expert',
       icon: '🩺',
-      label: t('navigation.expert') || 'Expert',
+      label: t('navigation.expert', { defaultValue: 'Expert' }),
       id: 'expert'
     },
     {
       path: '/history',
       icon: '📋',
-      label: t('navigation.history') || 'History',
+      label: t('navigation.history', { defaultValue: 'History' }),
       id: 'history'
     },
     {
       path: '/dashboard',
       icon: '💊',
-      label: t('navigation.dashboard') || 'Dashboard',
+      label: t('navigation.dashboard', { defaultValue: 'Dashboard' }),
       id: 'dashboard'
     },
     {
       path: '/profile',
       icon: '👤',
-      label: t('navigation.profile') || 'Profile',
+      label: t('navigation.profile', { defaultValue: 'Profile' }),
       id: 'profile'
     }
   ];
