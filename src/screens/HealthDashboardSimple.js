@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../utils/translations';
 import './HealthDashboard.css';
 
 /**
  * Simplified HealthDashboard - Shows intended functionality without complex service dependencies
  */
 const HealthDashboardSimple = () => {
+  const { currentLanguage } = useLanguage();
   const [activeTab, setActiveTab] = useState('overview');
 
   // Demo data to show what dashboard should display
   const demoData = {
     healthScore: 82,
-    trendDirection: 'improving',
+    trendDirection: t('dashboard.improving', currentLanguage),
     scanSummary: { total: 45, ingredients: 32, meals: 13, improvement: 12 },
     goalProgress: { calories: 95, nutrition: 88, safety: 76 },
     weeklyTrend: [78, 80, 75, 82, 85, 79, 83]
@@ -27,7 +30,7 @@ const HealthDashboardSimple = () => {
                 <span className="score-value">{demoData.healthScore}</span>
               </div>
               <div className="score-info">
-                <h2>Health Score</h2>
+                <h2>{t('dashboard.healthScore', currentLanguage)}</h2>
                 <div className="trend-indicator">
                   <span className="trend-icon">📈</span>
                   <span className="trend-text">{demoData.trendDirection}</span>
@@ -42,10 +45,10 @@ const HealthDashboardSimple = () => {
       {/* Tab Navigation */}
       <nav className="tab-navigation">
         {[
-          { id: 'overview', label: 'Overview', icon: '📊' },
-          { id: 'nutrition', label: 'Nutrition', icon: '🥗' },
-          { id: 'safety', label: 'Safety', icon: '🛡️' },
-          { id: 'impact', label: 'Impact', icon: '💡' }
+          { id: 'overview', label: t('dashboard.overview', currentLanguage), icon: '📊' },
+          { id: 'nutrition', label: t('dashboard.nutrition', currentLanguage), icon: '🥗' },
+          { id: 'safety', label: t('dashboard.safety', currentLanguage), icon: '🛡️' },
+          { id: 'impact', label: t('dashboard.impact', currentLanguage), icon: '💡' }
         ].map(tab => (
           <button
             key={tab.id}
@@ -64,46 +67,46 @@ const HealthDashboardSimple = () => {
           <div className="overview-tab">
             <section className="stats-grid">
               <div className="stat-card">
-                <h3>Total Scans</h3>
+                <h3>{t('dashboard.totalScans', currentLanguage)}</h3>
                 <div className="stat-value">{demoData.scanSummary.total}</div>
-                <div className="stat-subtitle">This month</div>
+                <div className="stat-subtitle">{t('dashboard.thisMonth', currentLanguage)}</div>
               </div>
               <div className="stat-card">
-                <h3>Ingredient Scans</h3>
+                <h3>{t('dashboard.ingredientScans', currentLanguage)}</h3>
                 <div className="stat-value">{demoData.scanSummary.ingredients}</div>
-                <div className="stat-subtitle">Products analyzed</div>
+                <div className="stat-subtitle">{t('dashboard.productsAnalyzed', currentLanguage)}</div>
               </div>
               <div className="stat-card">
-                <h3>Meal Analysis</h3>
+                <h3>{t('dashboard.mealAnalysis', currentLanguage)}</h3>
                 <div className="stat-value">{demoData.scanSummary.meals}</div>
-                <div className="stat-subtitle">Foods identified</div>
+                <div className="stat-subtitle">{t('dashboard.foodsIdentified', currentLanguage)}</div>
               </div>
               <div className="stat-card">
-                <h3>Health Improvement</h3>
+                <h3>{t('dashboard.healthImprovement', currentLanguage)}</h3>
                 <div className="stat-value">+{demoData.scanSummary.improvement}%</div>
-                <div className="stat-subtitle">This week</div>
+                <div className="stat-subtitle">{t('dashboard.thisWeek', currentLanguage)}</div>
               </div>
             </section>
 
             <section className="goal-progress-section">
-              <h3>Goal Progress</h3>
+              <h3>{t('dashboard.goalProgress', currentLanguage)}</h3>
               <div className="progress-cards">
                 <div className="progress-card">
-                  <div className="progress-label">Calorie Goals</div>
+                  <div className="progress-label">{t('dashboard.calorieGoals', currentLanguage)}</div>
                   <div className="progress-bar">
                     <div className="progress-fill" style={{width: `${demoData.goalProgress.calories}%`}}></div>
                   </div>
                   <div className="progress-value">{demoData.goalProgress.calories}%</div>
                 </div>
                 <div className="progress-card">
-                  <div className="progress-label">Nutrition Quality</div>
+                  <div className="progress-label">{t('dashboard.nutritionQuality', currentLanguage)}</div>
                   <div className="progress-bar">
                     <div className="progress-fill" style={{width: `${demoData.goalProgress.nutrition}%`}}></div>
                   </div>
                   <div className="progress-value">{demoData.goalProgress.nutrition}%</div>
                 </div>
                 <div className="progress-card">
-                  <div className="progress-label">Safety Score</div>
+                  <div className="progress-label">{t('dashboard.safetyScore', currentLanguage)}</div>
                   <div className="progress-bar">
                     <div className="progress-fill" style={{width: `${demoData.goalProgress.safety}%`}}></div>
                   </div>
@@ -117,27 +120,27 @@ const HealthDashboardSimple = () => {
         {activeTab === 'nutrition' && (
           <div className="nutrition-tab">
             <section className="nutrition-overview">
-              <h3>Daily Nutrition Tracking</h3>
+              <h3>{t('dashboard.dailyNutritionTracking', currentLanguage)}</h3>
               <div className="nutrition-cards">
                 <div className="nutrition-card">
-                  <h4>Calories</h4>
+                  <h4>{t('dashboard.calories', currentLanguage)}</h4>
                   <div className="nutrition-value">2,070 <span>kcal</span></div>
-                  <div className="nutrition-target">Target: 2,000 kcal</div>
+                  <div className="nutrition-target">{t('dashboard.target', currentLanguage)}: 2,000 kcal</div>
                 </div>
                 <div className="nutrition-card">
-                  <h4>Macros Distribution</h4>
+                  <h4>{t('dashboard.macrosDistribution', currentLanguage)}</h4>
                   <div className="macro-chart">
                     <div className="macro-item">
                       <span className="macro-color" style={{background: '#FF6B35'}}></span>
-                      Carbs: 47%
+                      {t('dashboard.carbs', currentLanguage)}: 47%
                     </div>
                     <div className="macro-item">
                       <span className="macro-color" style={{background: '#4ECDC4'}}></span>
-                      Protein: 21%
+                      {t('dashboard.protein', currentLanguage)}: 21%
                     </div>
                     <div className="macro-item">
                       <span className="macro-color" style={{background: '#45B7D1'}}></span>
-                      Fat: 32%
+                      {t('dashboard.fat', currentLanguage)}: 32%
                     </div>
                   </div>
                 </div>
@@ -149,32 +152,32 @@ const HealthDashboardSimple = () => {
         {activeTab === 'safety' && (
           <div className="safety-tab">
             <section className="concerning-ingredients">
-              <h3>Most Concerning Ingredients</h3>
+              <h3>{t('dashboard.mostConcerningIngredients', currentLanguage)}</h3>
               <div className="ingredients-list">
                 <div className="ingredient-item">
                   <div className="ingredient-name">Red Dye #40</div>
-                  <div className="risk-badge high">High Risk</div>
-                  <div className="ingredient-count">Found in 8 products</div>
+                  <div className="risk-badge high">{t('dashboard.highRisk', currentLanguage)}</div>
+                  <div className="ingredient-count">{t('dashboard.foundInProducts', currentLanguage).replace('{count}', '8')}</div>
                 </div>
                 <div className="ingredient-item">
                   <div className="ingredient-name">High Fructose Corn Syrup</div>
-                  <div className="risk-badge medium">Medium Risk</div>
-                  <div className="ingredient-count">Found in 12 products</div>
+                  <div className="risk-badge medium">{t('dashboard.mediumRisk', currentLanguage)}</div>
+                  <div className="ingredient-count">{t('dashboard.foundInProducts', currentLanguage).replace('{count}', '12')}</div>
                 </div>
                 <div className="ingredient-item">
                   <div className="ingredient-name">Sodium Benzoate</div>
-                  <div className="risk-badge medium">Medium Risk</div>
-                  <div className="ingredient-count">Found in 6 products</div>
+                  <div className="risk-badge medium">{t('dashboard.mediumRisk', currentLanguage)}</div>
+                  <div className="ingredient-count">{t('dashboard.foundInProducts', currentLanguage).replace('{count}', '6')}</div>
                 </div>
               </div>
             </section>
 
             <section className="improvements">
-              <h3>Improvement Suggestions</h3>
+              <h3>{t('dashboard.improvementSuggestions', currentLanguage)}</h3>
               <div className="suggestions-list">
-                <div className="suggestion-item">✅ Reduce processed foods consumption</div>
-                <div className="suggestion-item">✅ Choose organic alternatives when possible</div>
-                <div className="suggestion-item">✅ Read ingredient labels more carefully</div>
+                <div className="suggestion-item">✅ {t('dashboard.reduceProcessedFoods', currentLanguage)}</div>
+                <div className="suggestion-item">✅ {t('dashboard.chooseOrganic', currentLanguage)}</div>
+                <div className="suggestion-item">✅ {t('dashboard.readLabels', currentLanguage)}</div>
               </div>
             </section>
           </div>
@@ -183,32 +186,32 @@ const HealthDashboardSimple = () => {
         {activeTab === 'impact' && (
           <div className="health-impact-tab">
             <section className="risk-factors">
-              <h3>Health Impact Analysis</h3>
+              <h3>{t('dashboard.healthImpactAnalysis', currentLanguage)}</h3>
               <div className="impact-cards">
                 <div className="impact-card">
-                  <h4>Cardiovascular Health</h4>
+                  <h4>{t('dashboard.cardiovascularHealth', currentLanguage)}</h4>
                   <div className="impact-score">78 → 82</div>
-                  <div className="impact-trend">Improving trend</div>
+                  <div className="impact-trend">{t('dashboard.improvingTrend', currentLanguage)}</div>
                 </div>
                 <div className="impact-card">
-                  <h4>Metabolic Health</h4>
+                  <h4>{t('dashboard.metabolicHealth', currentLanguage)}</h4>
                   <div className="impact-score">85 → 87</div>
-                  <div className="impact-trend">Stable improvement</div>
+                  <div className="impact-trend">{t('dashboard.stableImprovement', currentLanguage)}</div>
                 </div>
               </div>
             </section>
 
             <section className="recommendations">
-              <h3>Personalized Recommendations</h3>
+              <h3>{t('dashboard.personalizedRecommendations', currentLanguage)}</h3>
               <div className="recommendations-list">
                 <div className="recommendation-item">
-                  🥬 Increase vegetables in your daily meals
+                  🥬 {t('dashboard.increaseVegetables', currentLanguage)}
                 </div>
                 <div className="recommendation-item">
-                  🧂 Reduce sodium intake by 20%
+                  🧂 {t('dashboard.reduceSodium', currentLanguage)}
                 </div>
                 <div className="recommendation-item">
-                  🌾 Add more whole grains to your diet
+                  🌾 {t('dashboard.addWholeGrains', currentLanguage)}
                 </div>
               </div>
             </section>
