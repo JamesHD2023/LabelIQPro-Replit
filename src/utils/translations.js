@@ -2562,6 +2562,202 @@ export const translations = {
 
   // Insights Screen Translations
   insights: {
+    title: {
+      en: 'Health Insights',
+      de: 'Gesundheitseinblicke',
+      fr: 'Informations de santé',
+      es: 'Información de salud',
+      pt: 'Insights de saúde',
+      nl: 'Gezondheidsinzichten',
+      no: 'Helseinnsikt',
+      sv: 'Hälsoinsikter'
+    },
+    loading: {
+      en: 'Loading insights...',
+      de: 'Einblicke werden geladen...',
+      fr: 'Chargement des informations...',
+      es: 'Cargando información...',
+      pt: 'Carregando insights...',
+      nl: 'Inzichten laden...',
+      no: 'Laster innsikt...',
+      sv: 'Laddar insikter...'
+    },
+    timeRange: {
+      week: {
+        en: 'Last Week',
+        de: 'Letzte Woche',
+        fr: 'Semaine dernière',
+        es: 'Última semana',
+        pt: 'Última semana',
+        nl: 'Afgelopen week',
+        no: 'Siste uke',
+        sv: 'Senaste veckan'
+      },
+      month: {
+        en: 'Last Month',
+        de: 'Letzter Monat',
+        fr: 'Mois dernier',
+        es: 'Último mes',
+        pt: 'Último mês',
+        nl: 'Afgelopen maand',
+        no: 'Siste måned',
+        sv: 'Senaste månaden'
+      },
+      quarter: {
+        en: 'Last Quarter',
+        de: 'Letztes Quartal',
+        fr: 'Dernier trimestre',
+        es: 'Último trimestre',
+        pt: 'Último trimestre',
+        nl: 'Afgelopen kwartaal',
+        no: 'Siste kvartal',
+        sv: 'Senaste kvartalet'
+      }
+    },
+    overview: {
+      totalScans: {
+        en: 'Total Scans',
+        de: 'Gesamte Scans',
+        fr: 'Total des scans',
+        es: 'Escaneos totales',
+        pt: 'Total de escaneamentos',
+        nl: 'Totaal scans',
+        no: 'Totale skanninger',
+        sv: 'Totala skanningar'
+      },
+      averageScore: {
+        en: 'Average Score',
+        de: 'Durchschnittliche Bewertung',
+        fr: 'Score moyen',
+        es: 'Puntuación promedio',
+        pt: 'Pontuação média',
+        nl: 'Gemiddelde score',
+        no: 'Gjennomsnittlig poengsum',
+        sv: 'Genomsnittlig poäng'
+      },
+      trend: {
+        en: 'Trend',
+        de: 'Trend',
+        fr: 'Tendance',
+        es: 'Tendencia',
+        pt: 'Tendência',
+        nl: 'Trend',
+        no: 'Trend',
+        sv: 'Trend'
+      }
+    },
+    categories: {
+      title: {
+        en: 'Category Breakdown',
+        de: 'Kategorienaufschlüsselung',
+        fr: 'Répartition par catégorie',
+        es: 'Desglose por categoría',
+        pt: 'Divisão por categoria',
+        nl: 'Categorie-uitsplitsing',
+        no: 'Kategorifordeling',
+        sv: 'Kategorifördelning'
+      }
+    },
+    concerns: {
+      title: {
+        en: 'Top Concerns',
+        de: 'Hauptanliegen',
+        fr: 'Principales préoccupations',
+        es: 'Principales preocupaciones',
+        pt: 'Principais preocupações',
+        nl: 'Belangrijkste zorgen',
+        no: 'Hovedbekymringer',
+        sv: 'Största bekymmer'
+      },
+      found: {
+        en: 'Found {{count}} times',
+        de: '{{count}} mal gefunden',
+        fr: 'Trouvé {{count}} fois',
+        es: 'Encontrado {{count}} veces',
+        pt: 'Encontrado {{count}} vezes',
+        nl: '{{count}} keer gevonden',
+        no: 'Funnet {{count}} ganger',
+        sv: 'Hittades {{count}} gånger'
+      }
+    },
+    recommendations: {
+      title: {
+        en: 'Recommendations',
+        de: 'Empfehlungen',
+        fr: 'Recommandations',
+        es: 'Recomendaciones',
+        pt: 'Recomendações',
+        nl: 'Aanbevelingen',
+        no: 'Anbefalinger',
+        sv: 'Rekommendationer'
+      },
+      lowScore: {
+        title: {
+          en: 'Improve Product Choices',
+          de: 'Produktauswahl verbessern',
+          fr: 'Améliorer les choix de produits',
+          es: 'Mejorar las opciones de productos',
+          pt: 'Melhorar as escolhas de produtos',
+          nl: 'Verbeter productkeuzes',
+          no: 'Forbedre produktvalg',
+          sv: 'Förbättra produktval'
+        },
+        description: {
+          en: 'Your recent scans show low safety scores. Consider choosing products with fewer additives.',
+          de: 'Ihre letzten Scans zeigen niedrige Sicherheitsbewertungen. Erwägen Sie Produkte mit weniger Zusatzstoffen.',
+          fr: 'Vos récents scans montrent de faibles scores de sécurité. Considérez choisir des produits avec moins d\'additifs.',
+          es: 'Sus escaneos recientes muestran puntuaciones de seguridad bajas. Considere elegir productos con menos aditivos.',
+          pt: 'Seus escaneamentos recentes mostram pontuações de segurança baixas. Considere escolher produtos com menos aditivos.',
+          nl: 'Uw recente scans tonen lage veiligheidsscores. Overweeg producten met minder additieven te kiezen.',
+          no: 'Dine nylige skanninger viser lave sikkerhetsscorer. Vurder å velge produkter med færre tilsetningsstoffer.',
+          sv: 'Dina senaste skanningar visar låga säkerhetspoäng. Överväg att välja produkter med färre tillsatser.'
+        }
+      },
+      concerns: {
+        title: {
+          en: 'Common Problematic Ingredient',
+          de: 'Häufiger problematischer Inhaltsstoff',
+          fr: 'Ingrédient problématique commun',
+          es: 'Ingrediente problemático común',
+          pt: 'Ingrediente problemático comum',
+          nl: 'Veelvoorkomend problematisch ingrediënt',
+          no: 'Vanlig problematisk ingrediens',
+          sv: 'Vanlig problematisk ingrediens'
+        },
+        description: {
+          en: 'This ingredient appears frequently in your scans. Look for alternatives.',
+          de: 'Dieser Inhaltsstoff erscheint häufig in Ihren Scans. Suchen Sie nach Alternativen.',
+          fr: 'Cet ingrédient apparaît fréquemment dans vos scans. Cherchez des alternatives.',
+          es: 'Este ingrediente aparece frecuentemente en sus escaneos. Busque alternativas.',
+          pt: 'Este ingrediente aparece frequentemente em seus escaneamentos. Procure por alternativas.',
+          nl: 'Dit ingrediënt verschijnt vaak in uw scans. Zoek naar alternatieven.',
+          no: 'Denne ingrediensen forekommer ofte i dine skanninger. Se etter alternativer.',
+          sv: 'Denna ingrediens förekommer ofta i dina skanningar. Leta efter alternativ.'
+        }
+      },
+      foodFocus: {
+        title: {
+          en: 'Focus on Food',
+          de: 'Fokus auf Lebensmittel',
+          fr: 'Concentration sur la nourriture',
+          es: 'Enfoque en comida',
+          pt: 'Foco na comida',
+          nl: 'Focus op voedsel',
+          no: 'Fokuser på mat',
+          sv: 'Fokus på mat'
+        },
+        description: {
+          en: 'You scan mostly food items. Great! Keep making conscious food choices.',
+          de: 'Sie scannen hauptsächlich Lebensmittel. Großartig! Machen Sie weiterhin bewusste Lebensmittelwahlen.',
+          fr: 'Vous scannez principalement des aliments. Génial ! Continuez à faire des choix alimentaires conscients.',
+          es: 'Escanea principalmente alimentos. ¡Genial! Siga tomando decisiones alimentarias conscientes.',
+          pt: 'Você escaneia principalmente alimentos. Ótimo! Continue fazendo escolhas alimentares conscientes.',
+          nl: 'Je scant voornamelijk voedingsmiddelen. Geweldig! Blijf bewuste voedselkeuzes maken.',
+          no: 'Du skanner mest matvarer. Bra! Fortsett å gjøre bevisste matvalg.',
+          sv: 'Du skannar mest livsmedel. Bra! Fortsätt göra medvetna matval.'
+        }
+      }
+    },
     noData: {
       title: {
         en: 'No Data Available',
@@ -2593,6 +2789,40 @@ export const translations = {
         no: 'Start skanning',
         sv: 'Börja skanna'
       }
+    }
+  },
+
+  // Category Translations
+  categories: {
+    food: {
+      en: 'Food',
+      de: 'Lebensmittel',
+      fr: 'Alimentation',
+      es: 'Comida',
+      pt: 'Alimentos',
+      nl: 'Voedsel',
+      no: 'Mat',
+      sv: 'Mat'
+    },
+    cosmetic: {
+      en: 'Cosmetic',
+      de: 'Kosmetik',
+      fr: 'Cosmétique',
+      es: 'Cosmético',
+      pt: 'Cosmético',
+      nl: 'Cosmetica',
+      no: 'Kosmetikk',
+      sv: 'Kosmetik'
+    },
+    household: {
+      en: 'Household',
+      de: 'Haushalt',
+      fr: 'Ménager',
+      es: 'Doméstico',
+      pt: 'Doméstico',
+      nl: 'Huishouden',
+      no: 'Husholdning',
+      sv: 'Hushåll'
     }
   }
 };

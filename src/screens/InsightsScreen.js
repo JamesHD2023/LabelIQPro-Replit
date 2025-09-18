@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../utils/translations';
 import { offlineService } from '../services/OfflineService';
 import SafetyBadge from '../components/SafetyBadge';
 import './InsightsScreen.css';
 
 const InsightsScreen = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
 
   const [insights, setInsights] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -113,26 +114,24 @@ const InsightsScreen = () => {
     if (averageScore < 60) {
       recommendations.push({
         type: 'warning',
-        title: t('insights.recommendations.lowScore.title'),
-        description: t('insights.recommendations.lowScore.description')
+        title: t('insights.recommendations.lowScore.title', currentLanguage),
+        description: t('insights.recommendations.lowScore.description', currentLanguage)
       });
     }
 
     if (topConcerns.length > 0) {
       recommendations.push({
         type: 'info',
-        title: t('insights.recommendations.concerns.title'),
-        description: t('insights.recommendations.concerns.description', {
-          ingredient: topConcerns[0].name
-        })
+        title: t('insights.recommendations.concerns.title', currentLanguage),
+        description: t('insights.recommendations.concerns.description', currentLanguage)
       });
     }
 
     if (categoryBreakdown.food > (categoryBreakdown.cosmetic || 0) + (categoryBreakdown.household || 0)) {
       recommendations.push({
         type: 'tip',
-        title: t('insights.recommendations.foodFocus.title'),
-        description: t('insights.recommendations.foodFocus.description')
+        title: t('insights.recommendations.foodFocus.title', currentLanguage),
+        description: t('insights.recommendations.foodFocus.description', currentLanguage)
       });
     }
 
@@ -143,7 +142,7 @@ const InsightsScreen = () => {
     return (
       <div className="insights-screen loading">
         <div className="loading-spinner large"></div>
-        <p>{t('insights.loading')}</p>
+        <p>{t('insights.loading', currentLanguage)}</p>
       </div>
     );
   }
@@ -151,16 +150,16 @@ const InsightsScreen = () => {
   return (
     <div className="insights-screen">
       <div className="insights-header">
-        <h1>{t('insights.title')}</h1>
+        <h1>{t('insights.title', currentLanguage)}</h1>
         <div className="time-range-selector">
           <select
             value={timeRange}
             onChange={(e) => setTimeRange(e.target.value)}
             className="time-range-select"
           >
-            <option value="7">{t('insights.timeRange.week')}</option>
-            <option value="30">{t('insights.timeRange.month')}</option>
-            <option value="90">{t('insights.timeRange.quarter')}</option>
+            <option value="7">{t('insights.timeRange.week', currentLanguage)}</option>
+            <option value="30">{t('insights.timeRange.month', currentLanguage)}</option>
+            <option value="90">{t('insights.timeRange.quarter', currentLanguage)}</option>
           </select>
         </div>
       </div>
@@ -169,13 +168,13 @@ const InsightsScreen = () => {
         {insights.totalScans === 0 ? (
           <div className="no-insights">
             <div className="no-insights-icon">📊</div>
-            <h2>{t('insights.noData.title')}</h2>
-            <p>{t('insights.noData.description')}</p>
+            <h2>{t('insights.noData.title', currentLanguage)}</h2>
+            <p>{t('insights.noData.description', currentLanguage)}</p>
             <button
               className="primary-button"
               onClick={() => navigate('/camera')}
             >
-              {t('insights.noData.startScanning')}
+              {t('insights.noData.startScanning', currentLanguage)}
             </button>
           </div>
         ) : (
@@ -186,7 +185,7 @@ const InsightsScreen = () => {
                 <div className="card-icon">📊</div>
                 <div className="card-content">
                   <h3>{insights.totalScans}</h3>
-                  <p>{t('insights.overview.totalScans')}</p>
+                  <p>{t('insights.overview.totalScans', currentLanguage)}</p>
                 </div>
               </div>
 
@@ -197,7 +196,7 @@ const InsightsScreen = () => {
                     size="medium"
                     showLabel={true}
                   />
-                  <p>{t('insights.overview.averageScore')}</p>
+                  <p>{t('insights.overview.averageScore', currentLanguage)}</p>
                 </div>
               </div>
 
@@ -210,20 +209,20 @@ const InsightsScreen = () => {
                     {insights.improvementTrend > 0 ? '+' : ''}
                     {insights.improvementTrend.toFixed(1)}
                   </h3>
-                  <p>{t('insights.overview.trend')}</p>
+                  <p>{t('insights.overview.trend', currentLanguage)}</p>
                 </div>
               </div>
             </div>
 
             {/* Category Breakdown */}
             <section className="insights-section">
-              <h2>{t('insights.categories.title')}</h2>
+              <h2>{t('insights.categories.title', currentLanguage)}</h2>
               <div className="category-chart">
                 {Object.entries(insights.categoryBreakdown).map(([category, count]) => (
                   <div key={category} className="category-bar">
                     <div className="category-info">
                       <span className="category-name">
-                        {t(`categories.${category}`)}
+                        {t(`categories.${category}`, currentLanguage)}
                       </span>
                       <span className="category-count">{count}</span>
                     </div>
@@ -243,14 +242,14 @@ const InsightsScreen = () => {
             {/* Top Concerns */}
             {insights.topConcerns.length > 0 && (
               <section className="insights-section">
-                <h2>{t('insights.concerns.title')}</h2>
+                <h2>{t('insights.concerns.title', currentLanguage)}</h2>
                 <div className="concerns-list">
                   {insights.topConcerns.map((concern, index) => (
                     <div key={concern.name} className="concern-item">
                       <div className="concern-rank">#{index + 1}</div>
                       <div className="concern-info">
                         <h3>{concern.name}</h3>
-                        <p>{t('insights.concerns.found', { count: concern.count })}</p>
+                        <p>{t('insights.concerns.found', currentLanguage).replace('{{count}}', concern.count)}</p>
                       </div>
                       <div className="concern-badge">⚠️</div>
                     </div>
@@ -262,7 +261,7 @@ const InsightsScreen = () => {
             {/* Recommendations */}
             {insights.recommendations.length > 0 && (
               <section className="insights-section">
-                <h2>{t('insights.recommendations.title')}</h2>
+                <h2>{t('insights.recommendations.title', currentLanguage)}</h2>
                 <div className="recommendations-list">
                   {insights.recommendations.map((rec, index) => (
                     <div key={index} className={`recommendation-item ${rec.type}`}>
