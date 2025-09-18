@@ -54,7 +54,8 @@ const HomeScreen = () => {
         <div className="hero-content">
           <h1 className="app-title">
             <span className="app-icon">🔍</span>
-            {t('app.name', currentLanguage)}
+            <span className="app-name-label">Label</span>
+            <span className="app-name-iq">IQ.Pro</span>
           </h1>
           <p className="app-subtitle">
             {t('home.subtitle', currentLanguage)}
