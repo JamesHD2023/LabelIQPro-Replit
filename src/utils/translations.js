@@ -2558,6 +2558,42 @@ export const translations = {
         sv: 'Dela din ingrediensanalys och hjälp andra att göra säkrare produktval!'
       }
     }
+  },
+
+  // Insights Screen Translations
+  insights: {
+    noData: {
+      title: {
+        en: 'No Data Available',
+        de: 'Keine Daten verfügbar',
+        fr: 'Aucune donnée disponible',
+        es: 'No hay datos disponibles',
+        pt: 'Nenhum dado disponível',
+        nl: 'Geen gegevens beschikbaar',
+        no: 'Ingen data tilgjengelig',
+        sv: 'Ingen data tillgänglig'
+      },
+      description: {
+        en: 'Start scanning products to see your health insights and analysis trends',
+        de: 'Beginnen Sie mit dem Scannen von Produkten, um Ihre Gesundheitseinblicke und Analysetrends zu sehen',
+        fr: 'Commencez à scanner des produits pour voir vos informations de santé et tendances d\'analyse',
+        es: 'Comience a escanear productos para ver sus insights de salud y tendencias de análisis',
+        pt: 'Comece a escanear produtos para ver seus insights de saúde e tendências de análise',
+        nl: 'Begin met het scannen van producten om uw gezondheidsinzichten en analysetrends te zien',
+        no: 'Begynn å skanne produkter for å se dine helseinnsikter og analysetrender',
+        sv: 'Börja skanna produkter för att se dina hälsoinsikter och analystrender'
+      },
+      startScanning: {
+        en: 'Start Scanning',
+        de: 'Scannen starten',
+        fr: 'Commencer le scan',
+        es: 'Comenzar escaneo',
+        pt: 'Iniciar escaneamento',
+        nl: 'Begin met scannen',
+        no: 'Start skanning',
+        sv: 'Börja skanna'
+      }
+    }
   }
 };
 
