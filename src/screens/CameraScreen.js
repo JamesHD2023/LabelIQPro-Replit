@@ -63,7 +63,7 @@ const CameraScreen = () => {
       }
     } catch (err) {
       console.error('Camera initialization failed:', err);
-      setError(t('camera.errors.initFailed'));
+      setError('Camera initialization failed. Please check your camera permissions.');
     }
   };
 
@@ -169,7 +169,7 @@ const CameraScreen = () => {
 
     } catch (err) {
       console.error('Capture failed:', err);
-      setError(t('camera.errors.captureFailed'));
+      setError('Failed to capture image. Please try again.');
     } finally {
       setIsCapturing(false);
       setIsProcessing(false);
@@ -442,7 +442,7 @@ const CameraScreen = () => {
           <span className="close-icon">✕</span>
         </button>
         <div className="header-content">
-          <h2>{t(`camera.title.${category}`)}</h2>
+          <h2>{category === 'food' ? 'Scan Food' : 'Scan Label'}</h2>
           {category === 'food' && (
             <div className="mode-selector">
               <button
@@ -476,7 +476,7 @@ const CameraScreen = () => {
               className="retry-button"
               onClick={initializeCamera}
             >
-              {t('camera.retry')}
+              Retry
             </button>
           </div>
         ) : (
