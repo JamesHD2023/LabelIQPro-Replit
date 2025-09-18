@@ -4,9 +4,9 @@
  */
 class SocialSharingService {
   constructor() {
-    this.appName = 'LabelIQ';
-    this.appUrl = 'https://labeliq.app'; // Replace with actual app URL
-    this.hashtags = '#LabelIQ #HealthyEating #FoodScanning #Nutrition';
+    this.appName = 'LabelIQ.Pro';
+    this.appUrl = 'https://labeliq.pro'; // Updated to Pro domain
+    this.hashtags = '#LabelIQPro #HealthyEating #FoodScanning #Nutrition #AIHealth';
 
     // Platform-specific configurations
     this.platforms = {
@@ -112,7 +112,7 @@ class SocialSharingService {
     // Add app attribution if enabled
     if (privacy.includeAppName) {
       content.description += ` 📱 Scanned with ${this.appName}`;
-      content.hashtags.push('LabelIQ');
+      content.hashtags.push('LabelIQPro');
     }
 
     return content;

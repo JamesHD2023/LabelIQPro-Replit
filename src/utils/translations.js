@@ -2321,6 +2321,182 @@ export const translations = {
       nl: 'Voeg meer volkoren producten toe aan je dieet',
       no: 'Legg til mer fullkorn i kostholdet',
       sv: 'Lägg till mer fullkorn i din kost'
+    },
+    
+    // Social sharing translations
+    sharing: {
+      title: {
+        en: 'Share Your Results',
+        de: 'Teilen Sie Ihre Ergebnisse',
+        fr: 'Partagez vos résultats',
+        es: 'Comparte tus resultados',
+        pt: 'Compartilhe seus resultados',
+        nl: 'Deel je resultaten',
+        no: 'Del resultatene dine',
+        sv: 'Dela dina resultat'
+      },
+      button: {
+        en: 'Share',
+        de: 'Teilen',
+        fr: 'Partager',
+        es: 'Compartir',
+        pt: 'Compartilhar',
+        nl: 'Delen',
+        no: 'Del',
+        sv: 'Dela'
+      },
+      privacy: {
+        public: {
+          en: 'Public',
+          de: 'Öffentlich',
+          fr: 'Public',
+          es: 'Público',
+          pt: 'Público',
+          nl: 'Openbaar',
+          no: 'Offentlig',
+          sv: 'Offentlig'
+        },
+        limited: {
+          en: 'Limited',
+          de: 'Begrenzt',
+          fr: 'Limité',
+          es: 'Limitado',
+          pt: 'Limitado',
+          nl: 'Beperkt',
+          no: 'Begrenset',
+          sv: 'Begränsad'
+        },
+        minimal: {
+          en: 'Minimal',
+          de: 'Minimal',
+          fr: 'Minimal',
+          es: 'Mínimo',
+          pt: 'Mínimo',
+          nl: 'Minimaal',
+          no: 'Minimal',
+          sv: 'Minimal'
+        },
+        publicDesc: {
+          en: 'Share with detailed results and app promotion',
+          de: 'Teilen mit detaillierten Ergebnissen und App-Werbung',
+          fr: 'Partager avec des résultats détaillés et la promotion de l\'application',
+          es: 'Compartir con resultados detallados y promoción de la aplicación',
+          pt: 'Compartilhar com resultados detalhados e promoção do aplicativo',
+          nl: 'Delen met gedetailleerde resultaten en app-promotie',
+          no: 'Del med detaljerte resultater og app-markedsføring',
+          sv: 'Dela med detaljerade resultat och app-marknadsföring'
+        },
+        limitedDesc: {
+          en: 'Share basic results without detailed scores',
+          de: 'Grundlegende Ergebnisse ohne detaillierte Bewertungen teilen',
+          fr: 'Partager les résultats de base sans scores détaillés',
+          es: 'Compartir resultados básicos sin puntuaciones detalladas',
+          pt: 'Compartilhar resultados básicos sem pontuações detalhadas',
+          nl: 'Basis resultaten delen zonder gedetailleerde scores',
+          no: 'Del grunnleggende resultater uten detaljerte poengsummer',
+          sv: 'Dela grundläggande resultat utan detaljerade poäng'
+        },
+        minimalDesc: {
+          en: 'Share only general discovery without specifics',
+          de: 'Nur allgemeine Entdeckung ohne Details teilen',
+          fr: 'Partager uniquement la découverte générale sans détails',
+          es: 'Compartir solo descubrimiento general sin detalles',
+          pt: 'Compartilhar apenas descoberta geral sem detalhes',
+          nl: 'Alleen algemene ontdekking delen zonder details',
+          no: 'Del bare generell oppdagelse uten detaljer',
+          sv: 'Dela bara allmän upptäckt utan detaljer'
+        }
+      },
+      choosePlatform: {
+        en: 'Choose Platform',
+        de: 'Plattform wählen',
+        fr: 'Choisir la plateforme',
+        es: 'Elegir plataforma',
+        pt: 'Escolher plataforma',
+        nl: 'Platform kiezen',
+        no: 'Velg plattform',
+        sv: 'Välj plattform'
+      },
+      sharePreview: {
+        en: 'Share Preview',
+        de: 'Vorschau teilen',
+        fr: 'Aperçu du partage',
+        es: 'Vista previa del compartir',
+        pt: 'Prévia do compartilhamento',
+        nl: 'Delen voorbeeld',
+        no: 'Del forhåndsvisning',
+        sv: 'Dela förhandsvisning'
+      },
+      privacyLevel: {
+        en: 'Privacy Level',
+        de: 'Datenschutzstufe',
+        fr: 'Niveau de confidentialité',
+        es: 'Nivel de privacidad',
+        pt: 'Nível de privacidade',
+        nl: 'Privacyniveau',
+        no: 'Personvernnivå',
+        sv: 'Integritetsnivå'
+      },
+      success: {
+        en: 'Shared successfully!',
+        de: 'Erfolgreich geteilt!',
+        fr: 'Partagé avec succès!',
+        es: '¡Compartido exitosamente!',
+        pt: 'Compartilhado com sucesso!',
+        nl: 'Succesvol gedeeld!',
+        no: 'Delt med suksess!',
+        sv: 'Delat framgångsrikt!'
+      },
+      failed: {
+        en: 'Share failed',
+        de: 'Teilen fehlgeschlagen',
+        fr: 'Échec du partage',
+        es: 'Error al compartir',
+        pt: 'Falha ao compartilhar',
+        nl: 'Delen mislukt',
+        no: 'Deling mislyktes',
+        sv: 'Delning misslyckades'
+      },
+      preparing: {
+        en: 'Preparing share...',
+        de: 'Teilen vorbereiten...',
+        fr: 'Préparation du partage...',
+        es: 'Preparando compartir...',
+        pt: 'Preparando compartilhamento...',
+        nl: 'Delen voorbereiden...',
+        no: 'Forbereder deling...',
+        sv: 'Förbereder delning...'
+      },
+      close: {
+        en: 'Close',
+        de: 'Schließen',
+        fr: 'Fermer',
+        es: 'Cerrar',
+        pt: 'Fechar',
+        nl: 'Sluiten',
+        no: 'Lukk',
+        sv: 'Stäng'
+      },
+      mealDescription: {
+        en: 'Share your healthy meal analysis with friends and inspire others to make better food choices!',
+        de: 'Teilen Sie Ihre gesunde Mahlzeitanalyse mit Freunden und inspirieren Sie andere zu besseren Lebensmittelwahlen!',
+        fr: 'Partagez votre analyse de repas sains avec vos amis et inspirez les autres à faire de meilleurs choix alimentaires!',
+        es: '¡Comparte tu análisis de comida saludable con amigos e inspira a otros a tomar mejores decisiones alimentarias!',
+        pt: 'Compartilhe sua análise de refeição saudável com amigos e inspire outros a fazer melhores escolhas alimentares!',
+        nl: 'Deel je gezonde maaltijdanalyse met vrienden en inspireer anderen om betere voedselkeuzes te maken!',
+        no: 'Del din sunne måltidsanalyse med venner og inspirer andre til å ta bedre matvalg!',
+        sv: 'Dela din hälsosamma måltidsanalys med vänner och inspirera andra att göra bättre matval!'
+      },
+      ingredientDescription: {
+        en: 'Share your ingredient analysis and help others make safer product choices!',
+        de: 'Teilen Sie Ihre Inhaltsstoffanalyse und helfen Sie anderen, sicherere Produktentscheidungen zu treffen!',
+        fr: 'Partagez votre analyse d\'ingrédients et aidez les autres à faire des choix de produits plus sûrs!',
+        es: '¡Comparte tu análisis de ingredientes y ayuda a otros a tomar decisiones de productos más seguras!',
+        pt: 'Compartilhe sua análise de ingredientes e ajude outros a fazer escolhas de produtos mais seguras!',
+        nl: 'Deel je ingrediëntenanalyse en help anderen veiligere productkeuses te maken!',
+        no: 'Del ingrediensanalysen din og hjelp andre med å ta tryggere produktvalg!',
+        sv: 'Dela din ingrediensanalys och hjälp andra att göra säkrare produktval!'
+      }
     }
   }
 };

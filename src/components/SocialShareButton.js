@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { socialSharingService } from '../services/SocialSharingService';
 import './SocialShareButton.css';
 
 const SocialShareButton = ({ scanResult, className = '', size = 'medium' }) => {
+  const { t, currentLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [privacyLevel, setPrivacyLevel] = useState('public');
   const [isSharing, setIsSharing] = useState(false);
@@ -43,7 +45,7 @@ const SocialShareButton = ({ scanResult, className = '', size = 'medium' }) => {
 
   const renderPrivacySelector = () => (
     <div className="privacy-selector">
-      <h4>Privacy Level</h4>
+      <h4>{t('sharing.privacyLevel', currentLanguage)}</h4>
       <div className="privacy-options">
         {Object.entries(privacyLevels).map(([level, config]) => (
           <label key={level} className="privacy-option">
@@ -55,8 +57,8 @@ const SocialShareButton = ({ scanResult, className = '', size = 'medium' }) => {
               onChange={(e) => setPrivacyLevel(e.target.value)}
             />
             <div className="privacy-option-content">
-              <span className="privacy-name">{config.name}</span>
-              <span className="privacy-description">{config.description}</span>
+              <span className="privacy-name">{t(`sharing.privacy.${level}`, currentLanguage)}</span>
+              <span className="privacy-description">{t(`sharing.privacy.${level}Desc`, currentLanguage)}</span>
             </div>
           </label>
         ))}
@@ -69,7 +71,7 @@ const SocialShareButton = ({ scanResult, className = '', size = 'medium' }) => {
 
     return (
       <div className="share-preview">
-        <h4>Share Preview</h4>
+        <h4>{t('sharing.sharePreview', currentLanguage)}</h4>
         <div className="preview-content">
           <div className="preview-header">
             <span className="preview-emoji">{preview.emoji}</span>
@@ -111,12 +113,12 @@ const SocialShareButton = ({ scanResult, className = '', size = 'medium' }) => {
         {shareResult.success ? (
           <div className="result-success">
             <span className="result-icon">✅</span>
-            <span>Shared successfully!</span>
+            <span>{t('sharing.success', currentLanguage)}</span>
           </div>
         ) : (
           <div className="result-error">
             <span className="result-icon">❌</span>
-            <span>Share failed: {shareResult.error}</span>
+            <span>{t('sharing.failed', currentLanguage)}: {shareResult.error}</span>
           </div>
         )}
       </div>
@@ -128,21 +130,21 @@ const SocialShareButton = ({ scanResult, className = '', size = 'medium' }) => {
       <button
         className={`share-trigger ${size}`}
         onClick={() => setIsOpen(!isOpen)}
-        aria-label="Share scan result"
+        aria-label={t('sharing.button', currentLanguage)}
       >
         <span className="share-icon">📤</span>
-        <span className="share-text">Share</span>
+        <span className="share-text">{t('sharing.button', currentLanguage)}</span>
       </button>
 
       {isOpen && (
         <div className="share-modal-backdrop" onClick={() => setIsOpen(false)}>
           <div className="share-modal" onClick={(e) => e.stopPropagation()}>
             <div className="share-modal-header">
-              <h3>Share Your Results</h3>
+              <h3>{t('sharing.title', currentLanguage)}</h3>
               <button
                 className="close-button"
                 onClick={() => setIsOpen(false)}
-                aria-label="Close"
+                aria-label={t('sharing.close', currentLanguage)}
               >
                 ✕
               </button>
@@ -153,7 +155,7 @@ const SocialShareButton = ({ scanResult, className = '', size = 'medium' }) => {
               {renderSharePreview()}
 
               <div className="platforms-section">
-                <h4>Choose Platform</h4>
+                <h4>{t('sharing.choosePlatform', currentLanguage)}</h4>
                 {renderPlatforms()}
               </div>
 
@@ -162,7 +164,7 @@ const SocialShareButton = ({ scanResult, className = '', size = 'medium' }) => {
               {isSharing && (
                 <div className="sharing-overlay">
                   <div className="sharing-spinner">⏳</div>
-                  <span>Preparing share...</span>
+                  <span>{t('sharing.preparing', currentLanguage)}</span>
                 </div>
               )}
             </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
 import { offlineService } from '../services/OfflineService';
 import { scoringService } from '../services/ScoringService';
 import { learningJourneyService } from '../services/LearningJourneyService';
@@ -14,7 +14,7 @@ const ResultsScreen = () => {
   const { scanId } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, currentLanguage } = useLanguage();
 
   const [scanResult, setScanResult] = useState(null);
   const [overallScore, setOverallScore] = useState(null);
@@ -277,7 +277,7 @@ const ResultsScreen = () => {
           <section className="share-section">
             <SocialShareButton scanResult={scanResult} size="large" />
             <p className="share-description">
-              Share your healthy meal analysis with friends and inspire others to make better food choices!
+              {t('sharing.mealDescription', currentLanguage)}
             </p>
           </section>
         </main>
@@ -406,7 +406,7 @@ const ResultsScreen = () => {
         <section className="share-section">
           <SocialShareButton scanResult={scanResult} size="large" />
           <p className="share-description">
-            Share your ingredient analysis and help others make safer product choices!
+            {t('sharing.ingredientDescription', currentLanguage)}
           </p>
         </section>
 
