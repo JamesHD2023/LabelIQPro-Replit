@@ -112,37 +112,6 @@
   font-size: 0.9rem;
 }
 
-.selected-category-info {
-  background: var(--surface-color);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  border: 1px solid var(--border-color);
-}
-
-.selected-category-info h3 {
-  margin-top: 0;
-  color: var(--text-primary);
-  font-size: 1.2rem;
-}
-
-.category-examples p {
-  margin: 0.5rem 0;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-.category-examples ul {
-  margin: 0.5rem 0 0 1rem;
-  padding: 0;
-}
-
-.category-examples li {
-  color: var(--text-secondary);
-  margin-bottom: 0.25rem;
-  font-size: 0.9rem;
-}
-
 .scan-button {
   width: 100%;
   background: var(--primary-color);
