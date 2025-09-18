@@ -13,7 +13,7 @@ import HistoryScreen from './screens/HistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import InsightsScreen from './screens/InsightsScreen';
 import LearningScreen from './screens/LearningScreen';
-import HealthDashboard from './screens/HealthDashboard';
+import HealthDashboardSimple from './screens/HealthDashboardSimple';
 import ExpertConsultationScreen from './screens/ExpertConsultationScreen';
 
 // Services
@@ -101,7 +101,7 @@ function App() {
             <Route path="/learning" element={<LearningScreen />} />
             <Route path="/results/:scanId" element={<ResultsScreen />} />
             <Route path="/history" element={<HistoryScreen />} />
-            <Route path="/dashboard" element={<HealthDashboard />} />
+            <Route path="/dashboard" element={<HealthDashboardSimple />} />
             <Route path="/profile" element={<ProfileScreen />} />
             <Route path="/insights" element={<InsightsScreen />} />
             <Route path="*" element={<Navigate to="/" replace />} />

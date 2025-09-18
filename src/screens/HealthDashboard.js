@@ -27,10 +27,10 @@ const HealthDashboard = ({ userId, userProfile }) => {
       else setLoading(true);
 
       const [overview, nutrition, safety, impact] = await Promise.all([
-        healthAnalyticsService.getHealthOverview(userId, timeRange),
-        healthAnalyticsService.getNutritionAnalytics(userId, '30d'),
-        healthAnalyticsService.getIngredientSafetyAnalytics(userId, '30d'),
-        healthAnalyticsService.getHealthImpactAnalysis(userId)
+        healthAnalyticsService.getHealthOverview(userId || 'demo', timeRange),
+        healthAnalyticsService.getNutritionAnalytics(userId || 'demo', '30d'),
+        healthAnalyticsService.getIngredientSafetyAnalytics(userId || 'demo', '30d'),
+        healthAnalyticsService.getHealthImpactAnalysis(userId || 'demo')
       ]);
 
       setHealthOverview(overview);
@@ -46,10 +46,9 @@ const HealthDashboard = ({ userId, userProfile }) => {
   }, [userId, timeRange]);
 
   useEffect(() => {
-    if (userId) {
-      loadDashboardData();
-    }
-  }, [loadDashboardData, userId]);
+    // Load data regardless of userId for demo purposes
+    loadDashboardData();
+  }, [loadDashboardData]);
 
   const handleRefresh = () => {
     loadDashboardData(true);
