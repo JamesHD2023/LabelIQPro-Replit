@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../utils/translations';
 import { dailyCalorieTracker } from '../services/DailyCalorieTracker';
 import './CalorieTracker.css';
 
 const CalorieTracker = ({ onScanRequest }) => {
+  const { currentLanguage } = useLanguage();
   const [dailyTotal, setDailyTotal] = useState(null);
   const [calorieNeed, setCalorieNeed] = useState(null);
   const [warnings, setWarnings] = useState([]);
@@ -86,9 +89,9 @@ const CalorieTracker = ({ onScanRequest }) => {
             <div className="current-calories">
               {dailyTotal ? dailyTotal.totalCalories.toLocaleString() : '0'}
             </div>
-            <div className="calorie-label">calories</div>
+            <div className="calorie-label">{t('calorieTracker.calories', currentLanguage)}</div>
             <div className="target-calories">
-              of {calorieNeed ? calorieNeed.dailyNeed.toLocaleString() : '2000'}
+              {t('calorieTracker.of', currentLanguage)} {calorieNeed ? calorieNeed.dailyNeed.toLocaleString() : '2000'}
             </div>
           </div>
         </div>
@@ -100,33 +103,33 @@ const CalorieTracker = ({ onScanRequest }) => {
           <span className="stat-value">
             {calorieNeed ? Math.max(0, calorieNeed.dailyNeed - (dailyTotal?.totalCalories || 0)).toLocaleString() : '2000'}
           </span>
-          <span className="stat-label">Remaining</span>
+          <span className="stat-label">{t('calorieTracker.remaining', currentLanguage)}</span>
         </div>
         <div className="stat-item">
           <span className="stat-value">{dailyTotal ? dailyTotal.entryCount : 0}</span>
-          <span className="stat-label">Meals</span>
+          <span className="stat-label">{t('calorieTracker.meals', currentLanguage)}</span>
         </div>
         <div className="stat-item">
           <span className="stat-value">
             {dailyTotal && calorieNeed ? Math.round((dailyTotal.totalCalories / calorieNeed.dailyNeed) * 100) : 0}%
           </span>
-          <span className="stat-label">of Goal</span>
+          <span className="stat-label">{t('calorieTracker.ofGoal', currentLanguage)}</span>
         </div>
       </div>
 
       {/* Meal Breakdown */}
       {dailyTotal && dailyTotal.meals && (
         <div className="meals-breakdown">
-          <h3>Today's Meals</h3>
+          <h3>{t('calorieTracker.todaysMeals', currentLanguage)}</h3>
           <div className="meal-items">
             {Object.entries(dailyTotal.meals).map(([mealType, mealData]) => (
               mealData.calories > 0 && (
                 <div key={mealType} className="meal-item">
                   <div className="meal-info">
                     <span className="meal-name">{mealType.charAt(0).toUpperCase() + mealType.slice(1)}</span>
-                    <span className="meal-count">{mealData.entries.length} items</span>
+                    <span className="meal-count">{mealData.entries.length} {t('calorieTracker.items', currentLanguage)}</span>
                   </div>
-                  <div className="meal-calories">{Math.round(mealData.calories)} cal</div>
+                  <div className="meal-calories">{Math.round(mealData.calories)} {t('calorieTracker.cal', currentLanguage)}</div>
                 </div>
               )
             ))}
@@ -156,7 +159,7 @@ const CalorieTracker = ({ onScanRequest }) => {
       {/* Scan Button */}
       <button className="scan-meal-btn" onClick={handleScanMeal}>
         <span className="scan-icon">📸</span>
-        <span>Scan Meal</span>
+        <span>{t('calorieTracker.scanMeal', currentLanguage)}</span>
       </button>
     </div>
   );
@@ -183,12 +186,12 @@ const CalorieTracker = ({ onScanRequest }) => {
     }, [view]);
 
     if (historyLoading) {
-      return <div className="loading">Loading history...</div>;
+      return <div className="loading">{t('calorieTracker.loadingHistory', currentLanguage)}</div>;
     }
 
     return (
       <div className="calorie-history">
-        <h3>7-Day History</h3>
+        <h3>{t('calorieTracker.sevenDayHistory', currentLanguage)}</h3>
         <div className="history-chart">
           {history.map((day, index) => (
             <div key={day.date} className="history-day">
@@ -210,11 +213,11 @@ const CalorieTracker = ({ onScanRequest }) => {
         <div className="history-legend">
           <div className="legend-item">
             <div className="legend-color green" />
-            <span>Within target</span>
+            <span>{t('calorieTracker.withinTarget', currentLanguage)}</span>
           </div>
           <div className="legend-item">
             <div className="legend-color orange" />
-            <span>Over target</span>
+            <span>{t('calorieTracker.overTarget', currentLanguage)}</span>
           </div>
         </div>
       </div>
@@ -248,30 +251,30 @@ const CalorieTracker = ({ onScanRequest }) => {
     }, [view]);
 
     if (insightsLoading) {
-      return <div className="loading">Loading insights...</div>;
+      return <div className="loading">{t('calorieTracker.loadingInsights', currentLanguage)}</div>;
     }
 
     return (
       <div className="calorie-insights">
-        <h3>Weekly Insights</h3>
+        <h3>{t('calorieTracker.weeklyInsights', currentLanguage)}</h3>
 
         {weeklySummary && (
           <div className="weekly-summary">
             <div className="summary-stats">
               <div className="summary-stat">
                 <span className="stat-value">{weeklySummary.weekAverage}</span>
-                <span className="stat-label">Daily Average</span>
+                <span className="stat-label">{t('calorieTracker.dailyAverage', currentLanguage)}</span>
               </div>
               <div className="summary-stat">
                 <span className="stat-value">{weeklySummary.daysTracked}/7</span>
-                <span className="stat-label">Days Tracked</span>
+                <span className="stat-label">{t('calorieTracker.daysTracked', currentLanguage)}</span>
               </div>
               <div className="summary-stat">
                 <span className="stat-value">
                   {weeklySummary.trends.trend === 'stable' ? '→' :
                    weeklySummary.trends.trend === 'increasing' ? '↗' : '↘'}
                 </span>
-                <span className="stat-label">Trend</span>
+                <span className="stat-label">{t('calorieTracker.trend', currentLanguage)}</span>
               </div>
             </div>
           </div>
@@ -279,7 +282,7 @@ const CalorieTracker = ({ onScanRequest }) => {
 
         {insights && (
           <div className="meal-insights">
-            <h4>Meal Distribution</h4>
+            <h4>{t('calorieTracker.mealDistribution', currentLanguage)}</h4>
             <div className="meal-distribution">
               {Object.entries(insights.averageCaloriesByMeal).map(([meal, calories]) => (
                 calories > 0 && (
@@ -291,7 +294,7 @@ const CalorieTracker = ({ onScanRequest }) => {
                         style={{ width: `${(calories / 800) * 100}%` }}
                       />
                     </div>
-                    <span className="meal-calories">{Math.round(calories)} cal</span>
+                    <span className="meal-calories">{Math.round(calories)} {t('calorieTracker.cal', currentLanguage)}</span>
                   </div>
                 )
               ))}
@@ -299,7 +302,7 @@ const CalorieTracker = ({ onScanRequest }) => {
 
             {insights.recommendations.length > 0 && (
               <div className="insights-recommendations">
-                <h4>Recommendations</h4>
+                <h4>{t('calorieTracker.recommendations', currentLanguage)}</h4>
                 {insights.recommendations.map((rec, index) => (
                   <div key={index} className="recommendation">
                     <span className="rec-icon">💡</span>
@@ -318,7 +321,7 @@ const CalorieTracker = ({ onScanRequest }) => {
     return (
       <div className="calorie-tracker loading">
         <div className="loading-spinner">⏳</div>
-        <div>Loading calorie data...</div>
+        <div>{t('calorieTracker.loadingCalorieData', currentLanguage)}</div>
       </div>
     );
   }
@@ -326,25 +329,25 @@ const CalorieTracker = ({ onScanRequest }) => {
   return (
     <div className="calorie-tracker">
       <div className="tracker-header">
-        <h2>Daily Calorie Tracker</h2>
+        <h2>{t('calorieTracker.title', currentLanguage)}</h2>
         <div className="view-selector">
           <button
             className={view === 'today' ? 'active' : ''}
             onClick={() => setView('today')}
           >
-            Today
+            {t('calorieTracker.today', currentLanguage)}
           </button>
           <button
             className={view === 'history' ? 'active' : ''}
             onClick={() => setView('history')}
           >
-            History
+            {t('calorieTracker.history', currentLanguage)}
           </button>
           <button
             className={view === 'insights' ? 'active' : ''}
             onClick={() => setView('insights')}
           >
-            Insights
+            {t('calorieTracker.insights', currentLanguage)}
           </button>
         </div>
       </div>

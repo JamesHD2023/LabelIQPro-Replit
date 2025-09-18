@@ -161,6 +161,260 @@ export const translations = {
     }
   },
 
+  // Calorie Tracker Translations
+  calorieTracker: {
+    title: {
+      en: 'Daily Calorie Tracker',
+      de: 'Täglicher Kalorientracker',
+      fr: 'Suivi Calorique Quotidien',
+      es: 'Rastreador de Calorías Diario',
+      pt: 'Rastreador de Calorias Diário',
+      nl: 'Dagelijkse Calorieënteller',
+      no: 'Daglig Kaloriteller',
+      sv: 'Daglig Kaloriräknare'
+    },
+    today: {
+      en: 'Today',
+      de: 'Heute',
+      fr: 'Aujourd\'hui',
+      es: 'Hoy',
+      pt: 'Hoje',
+      nl: 'Vandaag',
+      no: 'I dag',
+      sv: 'Idag'
+    },
+    history: {
+      en: 'History',
+      de: 'Verlauf',
+      fr: 'Historique',
+      es: 'Historial',
+      pt: 'Histórico',
+      nl: 'Geschiedenis',
+      no: 'Historikk',
+      sv: 'Historik'
+    },
+    insights: {
+      en: 'Insights',
+      de: 'Einblicke',
+      fr: 'Analyses',
+      es: 'Información',
+      pt: 'Insights',
+      nl: 'Inzichten',
+      no: 'Innsikt',
+      sv: 'Insikter'
+    },
+    calories: {
+      en: 'calories',
+      de: 'Kalorien',
+      fr: 'calories',
+      es: 'calorías',
+      pt: 'calorias',
+      nl: 'calorieën',
+      no: 'kalorier',
+      sv: 'kalorier'
+    },
+    cal: {
+      en: 'cal',
+      de: 'kcal',
+      fr: 'cal',
+      es: 'cal',
+      pt: 'cal',
+      nl: 'cal',
+      no: 'kcal',
+      sv: 'kcal'
+    },
+    of: {
+      en: 'of',
+      de: 'von',
+      fr: 'de',
+      es: 'de',
+      pt: 'de',
+      nl: 'van',
+      no: 'av',
+      sv: 'av'
+    },
+    remaining: {
+      en: 'Remaining',
+      de: 'Verbleibend',
+      fr: 'Restant',
+      es: 'Restante',
+      pt: 'Restante',
+      nl: 'Resterend',
+      no: 'Gjenstående',
+      sv: 'Kvar'
+    },
+    meals: {
+      en: 'Meals',
+      de: 'Mahlzeiten',
+      fr: 'Repas',
+      es: 'Comidas',
+      pt: 'Refeições',
+      nl: 'Maaltijden',
+      no: 'Måltider',
+      sv: 'Måltider'
+    },
+    ofGoal: {
+      en: 'of Goal',
+      de: 'vom Ziel',
+      fr: 'de l\'Objectif',
+      es: 'del Objetivo',
+      pt: 'da Meta',
+      nl: 'van Doel',
+      no: 'av Mål',
+      sv: 'av Mål'
+    },
+    todaysMeals: {
+      en: 'Today\'s Meals',
+      de: 'Heutige Mahlzeiten',
+      fr: 'Repas d\'Aujourd\'hui',
+      es: 'Comidas de Hoy',
+      pt: 'Refeições de Hoje',
+      nl: 'Vandaag\'s Maaltijden',
+      no: 'Dagens Måltider',
+      sv: 'Dagens Måltider'
+    },
+    items: {
+      en: 'items',
+      de: 'Artikel',
+      fr: 'articles',
+      es: 'artículos',
+      pt: 'itens',
+      nl: 'items',
+      no: 'elementer',
+      sv: 'objekt'
+    },
+    scanMeal: {
+      en: 'Scan Meal',
+      de: 'Mahlzeit scannen',
+      fr: 'Scanner le repas',
+      es: 'Escanear comida',
+      pt: 'Escanear refeição',
+      nl: 'Maaltijd scannen',
+      no: 'Skann måltid',
+      sv: 'Skanna måltid'
+    },
+    loadingCalorieData: {
+      en: 'Loading calorie data...',
+      de: 'Lade Kaloriendaten...',
+      fr: 'Chargement des données caloriques...',
+      es: 'Cargando datos de calorías...',
+      pt: 'Carregando dados de calorias...',
+      nl: 'Caloriegegevens laden...',
+      no: 'Laster kaloridata...',
+      sv: 'Laddar kaloridata...'
+    },
+    loadingHistory: {
+      en: 'Loading history...',
+      de: 'Lade Verlauf...',
+      fr: 'Chargement de l\'historique...',
+      es: 'Cargando historial...',
+      pt: 'Carregando histórico...',
+      nl: 'Geschiedenis laden...',
+      no: 'Laster historikk...',
+      sv: 'Laddar historik...'
+    },
+    loadingInsights: {
+      en: 'Loading insights...',
+      de: 'Lade Einblicke...',
+      fr: 'Chargement des analyses...',
+      es: 'Cargando información...',
+      pt: 'Carregando insights...',
+      nl: 'Inzichten laden...',
+      no: 'Laster innsikt...',
+      sv: 'Laddar insikter...'
+    },
+    sevenDayHistory: {
+      en: '7-Day History',
+      de: '7-Tage-Verlauf',
+      fr: 'Historique 7 jours',
+      es: 'Historial de 7 días',
+      pt: 'Histórico de 7 dias',
+      nl: '7-dagen geschiedenis',
+      no: '7-dagers historikk',
+      sv: '7-dagars historik'
+    },
+    withinTarget: {
+      en: 'Within target',
+      de: 'Innerhalb des Ziels',
+      fr: 'Dans l\'objectif',
+      es: 'Dentro del objetivo',
+      pt: 'Dentro da meta',
+      nl: 'Binnen doel',
+      no: 'Innenfor mål',
+      sv: 'Inom mål'
+    },
+    overTarget: {
+      en: 'Over target',
+      de: 'Über dem Ziel',
+      fr: 'Au-dessus de l\'objectif',
+      es: 'Sobre el objetivo',
+      pt: 'Acima da meta',
+      nl: 'Boven doel',
+      no: 'Over mål',
+      sv: 'Över mål'
+    },
+    weeklyInsights: {
+      en: 'Weekly Insights',
+      de: 'Wöchentliche Einblicke',
+      fr: 'Analyses Hebdomadaires',
+      es: 'Información Semanal',
+      pt: 'Insights Semanais',
+      nl: 'Wekelijkse Inzichten',
+      no: 'Ukentlig Innsikt',
+      sv: 'Veckoinsikter'
+    },
+    dailyAverage: {
+      en: 'Daily Average',
+      de: 'Tagesdurchschnitt',
+      fr: 'Moyenne Quotidienne',
+      es: 'Promedio Diario',
+      pt: 'Média Diária',
+      nl: 'Dagelijks Gemiddelde',
+      no: 'Daglig Gjennomsnitt',
+      sv: 'Dagligt Genomsnitt'
+    },
+    daysTracked: {
+      en: 'Days Tracked',
+      de: 'Getrackte Tage',
+      fr: 'Jours Suivis',
+      es: 'Días Rastreados',
+      pt: 'Dias Rastreados',
+      nl: 'Dagen Gevolgd',
+      no: 'Dager Sporet',
+      sv: 'Dagar Spårade'
+    },
+    trend: {
+      en: 'Trend',
+      de: 'Trend',
+      fr: 'Tendance',
+      es: 'Tendencia',
+      pt: 'Tendência',
+      nl: 'Trend',
+      no: 'Trend',
+      sv: 'Trend'
+    },
+    mealDistribution: {
+      en: 'Meal Distribution',
+      de: 'Mahlzeitenverteilung',
+      fr: 'Répartition des Repas',
+      es: 'Distribución de Comidas',
+      pt: 'Distribuição de Refeições',
+      nl: 'Maaltijdverdeling',
+      no: 'Måltidsfordeling',
+      sv: 'Måltidsfördelning'
+    },
+    recommendations: {
+      en: 'Recommendations',
+      de: 'Empfehlungen',
+      fr: 'Recommandations',
+      es: 'Recomendaciones',
+      pt: 'Recomendações',
+      nl: 'Aanbevelingen',
+      no: 'Anbefalinger',
+      sv: 'Rekommendationer'
+    }
+  },
+
   // Profile Screen Translations
   profile: {
     // Headers
