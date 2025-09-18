@@ -5,6 +5,14 @@ const isLocalhost = Boolean(
 );
 
 export function register(config) {
+  // Disable service worker in development to prevent caching issues
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Service worker disabled in development mode');
+    // Also unregister any existing service worker
+    unregister();
+    return;
+  }
+  
   if ('serviceWorker' in navigator) {
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
     if (publicUrl.origin !== window.location.origin) {

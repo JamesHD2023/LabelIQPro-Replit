@@ -1,4 +1,4 @@
-const CACHE_NAME = 'labeliq-v1.0.1';
+const CACHE_NAME = 'labeliq-v1.0.2-navigation-fix';
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
