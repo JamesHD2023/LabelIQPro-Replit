@@ -459,39 +459,7 @@ const CameraScreen = () => {
               </button>
             </div>
 
-            {/* AR Mode Controls */}
-            {arSupported && (
-              <div className="ar-controls">
-                <button
-                  className={`ar-toggle ${isARMode ? 'active' : ''}`}
-                  onClick={toggleARMode}
-                  disabled={isProcessing}
-                  title="Toggle AR overlay"
-                >
-                  <span className="ar-icon">🕶️</span>
-                  <span className="ar-text">{isARMode ? 'AR ON' : 'AR OFF'}</span>
-                </button>
-
-                {isARMode && (
-                  <div className="ar-mode-selector">
-                    <button
-                      className={`ar-mode-btn ${arScanMode === 'menu' ? 'active' : ''}`}
-                      onClick={() => switchARScanMode('menu')}
-                      disabled={isProcessing}
-                    >
-                      📋 Menu
-                    </button>
-                    <button
-                      className={`ar-mode-btn ${arScanMode === 'plate' ? 'active' : ''}`}
-                      onClick={() => switchARScanMode('plate')}
-                      disabled={isProcessing}
-                    >
-                      🍽️ Plate
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
+{/* AR Mode Controls - temporarily disabled for testing */}
           )}
         </div>
         <button className="flip-button" onClick={toggleCamera}>
