@@ -30,14 +30,14 @@ export const translations = {
   // Home Screen translations
   home: {
     subtitle: {
-      en: 'Scan any product to analyze ingredients and get health insights',
-      de: 'Scannen Sie jedes Produkt, um Inhaltsstoffe zu analysieren und Gesundheitseinblicke zu erhalten',
-      fr: 'Scannez n\'importe quel produit pour analyser les ingrédients et obtenir des informations de santé',
-      es: 'Escanea cualquier producto para analizar ingredientes y obtener información de salud',
-      pt: 'Escaneie qualquer produto para analisar ingredientes e obter insights de saúde',
-      nl: 'Scan elk product om ingrediënten te analyseren en gezondheidsinzichten te krijgen',
-      no: 'Skann hvilket som helst produkt for å analysere ingredienser og få helseinnsikt',
-      sv: 'Skanna vilken produkt som helst för att analysera ingredienser och få hälsoinsikter'
+      en: 'Smart Ingredient Analysis',
+      de: 'Intelligente Inhaltsstoffanalyse',
+      fr: 'Analyse Intelligente des Ingrédients',
+      es: 'Análisis Inteligente de Ingredientes',
+      pt: 'Análise Inteligente de Ingredientes',
+      nl: 'Slimme Ingrediëntenanalyse',
+      no: 'Smart Ingrediensanalyse',
+      sv: 'Smart Ingrediensanalys'
     },
     selectCategory: {
       en: 'What would you like to scan?',
