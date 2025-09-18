@@ -499,6 +499,369 @@ export const translations = {
     }
   },
 
+  // Expert Consultation Screen Translations
+  expert: {
+    // Header
+    askExpert: {
+      en: 'Ask Expert',
+      de: 'Experten fragen',
+      fr: 'Demander à l\'expert',
+      es: 'Consultar experto',
+      pt: 'Perguntar ao especialista',
+      nl: 'Expert vragen',
+      no: 'Spør ekspert',
+      sv: 'Fråga expert'
+    },
+
+    // Welcome Screen
+    askMedicalExperts: {
+      en: 'Ask Our Medical Experts',
+      de: 'Fragen Sie unsere medizinischen Experten',
+      fr: 'Consultez nos experts médicaux',
+      es: 'Consulte a nuestros expertos médicos',
+      pt: 'Consulte nossos especialistas médicos',
+      nl: 'Raadpleeg onze medische experts',
+      no: 'Spør våre medisinske eksperter',
+      sv: 'Fråga våra medicinska experter'
+    },
+    personalizedAdvice: {
+      en: 'Get personalized advice from AI specialists about ingredient safety, health effects, and more.',
+      de: 'Erhalten Sie personalisierte Beratung von KI-Spezialisten über Inhaltsstoffsicherheit, Gesundheitseffekte und mehr.',
+      fr: 'Obtenez des conseils personnalisés d\'experts IA sur la sécurité des ingrédients, les effets sur la santé, etc.',
+      es: 'Obtenga consejos personalizados de especialistas en IA sobre seguridad de ingredientes, efectos en la salud y más.',
+      pt: 'Obtenha conselhos personalizados de especialistas em IA sobre segurança de ingredientes, efeitos na saúde e muito mais.',
+      nl: 'Krijg gepersonaliseerd advies van AI-specialisten over ingrediëntveiligheid, gezondheidseffecten en meer.',
+      no: 'Få personlig råd fra AI-spesialister om ingredienssikkerhet, helseeffekter og mer.',
+      sv: 'Få personlig rådgivning från AI-specialister om ingredienssäkerhet, hälsoeffekter och mer.'
+    },
+
+    // Quick Questions
+    quickQuestions: {
+      en: 'Quick Questions',
+      de: 'Schnelle Fragen',
+      fr: 'Questions rapides',
+      es: 'Preguntas rápidas',
+      pt: 'Perguntas rápidas',
+      nl: 'Snelle vragen',
+      no: 'Raske spørsmål',
+      sv: 'Snabba frågor'
+    },
+    safeSensitiveSkin: {
+      en: 'Is this ingredient safe for sensitive skin?',
+      de: 'Ist dieser Inhaltsstoff für empfindliche Haut sicher?',
+      fr: 'Cet ingrédient est-il sûr pour les peaux sensibles ?',
+      es: '¿Es seguro este ingrediente para pieles sensibles?',
+      pt: 'Este ingrediente é seguro para peles sensíveis?',
+      nl: 'Is dit ingrediënt veilig voor gevoelige huid?',
+      no: 'Er denne ingrediensen trygg for sensitiv hud?',
+      sv: 'Är denna ingrediens säker för känslig hud?'
+    },
+    allergyRisks: {
+      en: 'What are the allergy risks?',
+      de: 'Was sind die Allergierisiken?',
+      fr: 'Quels sont les risques d\'allergie ?',
+      es: '¿Cuáles son los riesgos de alergia?',
+      pt: 'Quais são os riscos de alergia?',
+      nl: 'Wat zijn de allergierisico\'s?',
+      no: 'Hva er allergirisikoen?',
+      sv: 'Vilka är allergiriskererna?'
+    },
+    digestiveIssues: {
+      en: 'Could this cause digestive issues?',
+      de: 'Könnte dies Verdauungsprobleme verursachen?',
+      fr: 'Cela pourrait-il causer des problèmes digestifs ?',
+      es: '¿Podría esto causar problemas digestivos?',
+      pt: 'Isso poderia causar problemas digestivos?',
+      nl: 'Zou dit spijsverteringsproblemen kunnen veroorzaken?',
+      no: 'Kan dette forårsake fordøyelsesproblemer?',
+      sv: 'Kan detta orsaka matsmältningsproblem?'
+    },
+
+    // Input and Voice
+    inputPlaceholder: {
+      en: 'Ask about ingredient safety, health effects, or get expert advice...',
+      de: 'Fragen Sie nach Inhaltsstoffsicherheit, Gesundheitseffekten oder holen Sie sich Expertenrat...',
+      fr: 'Posez des questions sur la sécurité des ingrédients, les effets sur la santé ou obtenez des conseils d\'experts...',
+      es: 'Pregunte sobre seguridad de ingredientes, efectos en la salud u obtenga consejos de expertos...',
+      pt: 'Pergunte sobre segurança de ingredientes, efeitos na saúde ou obtenha conselhos de especialistas...',
+      nl: 'Vraag naar ingrediëntveiligheid, gezondheidseffecten of krijg deskundig advies...',
+      no: 'Spør om ingredienssikkerhet, helseeffekter eller få ekspertråd...',
+      sv: 'Fråga om ingredienssäkerhet, hälsoeffekter eller få expertrådgivning...'
+    },
+    voiceInput: {
+      en: 'Voice input',
+      de: 'Spracheingabe',
+      fr: 'Saisie vocale',
+      es: 'Entrada de voz',
+      pt: 'Entrada de voz',
+      nl: 'Spraakinvoer',
+      no: 'Taleinngang',
+      sv: 'Röstinmatning'
+    },
+    sendMessage: {
+      en: 'Send message',
+      de: 'Nachricht senden',
+      fr: 'Envoyer le message',
+      es: 'Enviar mensaje',
+      pt: 'Enviar mensagem',
+      nl: 'Bericht verzenden',
+      no: 'Send melding',
+      sv: 'Skicka meddelande'
+    },
+    listening: {
+      en: 'Listening... Speak your question',
+      de: 'Höre zu... Sprechen Sie Ihre Frage',
+      fr: 'Écoute... Posez votre question',
+      es: 'Escuchando... Haga su pregunta',
+      pt: 'Escutando... Faça sua pergunta',
+      nl: 'Luisteren... Stel je vraag',
+      no: 'Lytter... Still spørsmålet ditt',
+      sv: 'Lyssnar... Ställ din fråga'
+    },
+
+    // System Messages
+    multipleExpertsFound: {
+      en: 'I found multiple experts who can help with your question. Which would you prefer?',
+      de: 'Ich habe mehrere Experten gefunden, die bei Ihrer Frage helfen können. Welchen bevorzugen Sie?',
+      fr: 'J\'ai trouvé plusieurs experts qui peuvent vous aider avec votre question. Lequel préférez-vous ?',
+      es: 'Encontré varios expertos que pueden ayudar con su pregunta. ¿Cuál preferiría?',
+      pt: 'Encontrei vários especialistas que podem ajudar com sua pergunta. Qual você preferiria?',
+      nl: 'Ik heb meerdere experts gevonden die kunnen helpen met uw vraag. Welke heeft uw voorkeur?',
+      no: 'Jeg fant flere eksperter som kan hjelpe med spørsmålet ditt. Hvilken foretrekker du?',
+      sv: 'Jag hittade flera experter som kan hjälpa dig med din fråga. Vilken föredrar du?'
+    },
+    noExpertMatch: {
+      en: 'I\'m not sure which expert would be best for your question. Could you provide more details or choose an expert from the list below?',
+      de: 'Ich bin mir nicht sicher, welcher Experte für Ihre Frage am besten wäre. Könnten Sie mehr Details angeben oder einen Experten aus der Liste unten wählen?',
+      fr: 'Je ne suis pas sûr quel expert serait le mieux pour votre question. Pourriez-vous donner plus de détails ou choisir un expert dans la liste ci-dessous ?',
+      es: 'No estoy seguro qué experto sería mejor para su pregunta. ¿Podría proporcionar más detalles o elegir un experto de la lista siguiente?',
+      pt: 'Não tenho certeza de qual especialista seria melhor para sua pergunta. Poderia fornecer mais detalhes ou escolher um especialista da lista abaixo?',
+      nl: 'Ik weet niet zeker welke expert het beste zou zijn voor uw vraag. Kunt u meer details geven of een expert kiezen uit de onderstaande lijst?',
+      no: 'Jeg er ikke sikker på hvilken ekspert som ville være best for spørsmålet ditt. Kan du gi flere detaljer eller velge en ekspert fra listen nedenfor?',
+      sv: 'Jag är inte säker på vilken expert som skulle vara bäst för din fråga. Kan du ge fler detaljer eller välja en expert från listan nedan?'
+    },
+    processingError: {
+      en: 'Sorry, I encountered an error processing your question. Please try again.',
+      de: 'Entschuldigung, beim Verarbeiten Ihrer Frage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.',
+      fr: 'Désolé, j\'ai rencontré une erreur lors du traitement de votre question. Veuillez réessayer.',
+      es: 'Lo siento, encontré un error al procesar su pregunta. Por favor, inténtelo de nuevo.',
+      pt: 'Desculpe, encontrei um erro ao processar sua pergunta. Por favor, tente novamente.',
+      nl: 'Sorry, ik kreeg een fout bij het verwerken van uw vraag. Probeer het opnieuw.',
+      no: 'Beklager, jeg støtte på en feil ved behandling av spørsmålet ditt. Prøv igjen.',
+      sv: 'Ursäkta, jag stötte på ett fel när jag bearbetade din fråga. Försök igen.'
+    },
+    expertUnavailable: {
+      en: 'The expert is currently unavailable. Please try again later.',
+      de: 'Der Experte ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut.',
+      fr: 'L\'expert n\'est actuellement pas disponible. Veuillez réessayer plus tard.',
+      es: 'El experto no está disponible actualmente. Por favor, inténtelo más tarde.',
+      pt: 'O especialista não está disponível no momento. Por favor, tente novamente mais tarde.',
+      nl: 'De expert is momenteel niet beschikbaar. Probeer het later opnieuw.',
+      no: 'Eksperten er for øyeblikket ikke tilgjengelig. Prøv igjen senere.',
+      sv: 'Experten är för närvarande otillgänglig. Försök igen senare.'
+    },
+    voiceNotSupported: {
+      en: 'Voice input not supported in this browser',
+      de: 'Spracheingabe in diesem Browser nicht unterstützt',
+      fr: 'Saisie vocale non supportée dans ce navigateur',
+      es: 'Entrada de voz no compatible con este navegador',
+      pt: 'Entrada de voz não suportada neste navegador',
+      nl: 'Spraakinvoer niet ondersteund in deze browser',
+      no: 'Taleinngang ikke støttet i denne nettleseren',
+      sv: 'Röstinmatning stöds inte i denna webbläsare'
+    },
+
+    // Expert Response Elements
+    recommendations: {
+      en: 'Recommendations:',
+      de: 'Empfehlungen:',
+      fr: 'Recommandations :',
+      es: 'Recomendaciones:',
+      pt: 'Recomendações:',
+      nl: 'Aanbevelingen:',
+      no: 'Anbefalinger:',
+      sv: 'Rekommendationer:'
+    },
+    recommended: {
+      en: 'Recommended',
+      de: 'Empfohlen',
+      fr: 'Recommandé',
+      es: 'Recomendado',
+      pt: 'Recomendado',
+      nl: 'Aanbevolen',
+      no: 'Anbefalt',
+      sv: 'Rekommenderad'
+    },
+    disclaimer: {
+      en: 'This is AI-generated information for educational purposes only and does not replace professional medical advice.',
+      de: 'Dies sind KI-generierte Informationen nur zu Bildungszwecken und ersetzen keine professionelle medizinische Beratung.',
+      fr: 'Il s\'agit d\'informations générées par l\'IA à des fins éducatives uniquement et ne remplacent pas les conseils médicaux professionnels.',
+      es: 'Esta es información generada por IA solo con fines educativos y no reemplaza el consejo médico profesional.',
+      pt: 'Esta é uma informação gerada por IA apenas para fins educacionais e não substitui o conselho médico profissional.',
+      nl: 'Dit is door AI gegenereerde informatie alleen voor educatieve doeleinden en vervangt geen professioneel medisch advies.',
+      no: 'Dette er AI-generert informasjon kun for utdanningsformål og erstatter ikke profesjonelle medisinske råd.',
+      sv: 'Detta är AI-genererad information endast för utbildningsändamål och ersätter inte professionell medicinsk rådgivning.'
+    },
+
+    // Expert Names and Titles
+    experts: {
+      allergist: {
+        name: {
+          en: 'AI Allergist Assistant',
+          de: 'KI-Allergologe-Assistent',
+          fr: 'Assistant allergologue IA',
+          es: 'Asistente alergólogo IA',
+          pt: 'Assistente alergista IA',
+          nl: 'AI allergoloog assistent',
+          no: 'AI allergolog assistent',
+          sv: 'AI allergolog assistent'
+        },
+        title: {
+          en: 'Allergy & Immunology AI',
+          de: 'Allergie & Immunologie KI',
+          fr: 'IA Allergie & Immunologie',
+          es: 'IA Alergia e Inmunología',
+          pt: 'IA Alergia e Imunologia',
+          nl: 'Allergie & Immunologie AI',
+          no: 'Allergi & immunologi AI',
+          sv: 'Allergi & immunologi AI'
+        }
+      },
+      dermatologist: {
+        name: {
+          en: 'AI Dermatology Consultant',
+          de: 'KI-Dermatologie-Berater',
+          fr: 'Consultant dermatologie IA',
+          es: 'Consultor dermatología IA',
+          pt: 'Consultor dermatologia IA',
+          nl: 'AI dermatologie consultant',
+          no: 'AI dermatologi konsulent',
+          sv: 'AI dermatologi konsulent'
+        },
+        title: {
+          en: 'Skin Health AI',
+          de: 'Hautgesundheits-KI',
+          fr: 'IA Santé de la peau',
+          es: 'IA Salud de la piel',
+          pt: 'IA Saúde da pele',
+          nl: 'Huidgezondheid AI',
+          no: 'Hudhelse AI',
+          sv: 'Hudhälsa AI'
+        }
+      },
+      gastroenterologist: {
+        name: {
+          en: 'AI Digestive Health Advisor',
+          de: 'KI-Verdauungsgesundheits-Berater',
+          fr: 'Conseiller santé digestive IA',
+          es: 'Asesor salud digestiva IA',
+          pt: 'Consultor saúde digestiva IA',
+          nl: 'AI spijsvertering gezondheidsadviseur',
+          no: 'AI fordøyelseshelse rådgiver',
+          sv: 'AI matsmältningshälsa rådgivare'
+        },
+        title: {
+          en: 'Gut Health AI',
+          de: 'Darmgesundheits-KI',
+          fr: 'IA Santé intestinale',
+          es: 'IA Salud intestinal',
+          pt: 'IA Saúde intestinal',
+          nl: 'Darmgezondheid AI',
+          no: 'Tarmhelse AI',
+          sv: 'Tarmhälsa AI'
+        }
+      },
+      endocrinologist: {
+        name: {
+          en: 'AI Metabolic Health Specialist',
+          de: 'KI-Stoffwechselgesundheits-Spezialist',
+          fr: 'Spécialiste santé métabolique IA',
+          es: 'Especialista salud metabólica IA',
+          pt: 'Especialista saúde metabólica IA',
+          nl: 'AI metabolische gezondheidsspecialist',
+          no: 'AI metabolsk helse spesialist',
+          sv: 'AI metabolisk hälsa specialist'
+        },
+        title: {
+          en: 'Hormone & Metabolism AI',
+          de: 'Hormon & Stoffwechsel KI',
+          fr: 'IA Hormones & Métabolisme',
+          es: 'IA Hormonas y Metabolismo',
+          pt: 'IA Hormônios e Metabolismo',
+          nl: 'Hormoon & stofwisseling AI',
+          no: 'Hormon & metabolisme AI',
+          sv: 'Hormon & ämnesomsättning AI'
+        }
+      },
+      toxicologist: {
+        name: {
+          en: 'AI Chemical Safety Analyst',
+          de: 'KI-Chemische-Sicherheits-Analyst',
+          fr: 'Analyste sécurité chimique IA',
+          es: 'Analista seguridad química IA',
+          pt: 'Analista segurança química IA',
+          nl: 'AI chemische veiligheidsanalist',
+          no: 'AI kjemisk sikkerhetsanalytiker',
+          sv: 'AI kemisk säkerhetsanalytiker'
+        },
+        title: {
+          en: 'Toxicology AI',
+          de: 'Toxikologie KI',
+          fr: 'IA Toxicologie',
+          es: 'IA Toxicología',
+          pt: 'IA Toxicologia',
+          nl: 'Toxicologie AI',
+          no: 'Toksikologi AI',
+          sv: 'Toxikologi AI'
+        }
+      },
+      nutritionist: {
+        name: {
+          en: 'AI Nutrition Advisor',
+          de: 'KI-Ernährungsberater',
+          fr: 'Conseiller nutrition IA',
+          es: 'Asesor nutrición IA',
+          pt: 'Consultor nutrição IA',
+          nl: 'AI voeding adviseur',
+          no: 'AI ernæringsrådgiver',
+          sv: 'AI näringskonsult'
+        },
+        title: {
+          en: 'Digital Nutritionist',
+          de: 'Digitaler Ernährungsexperte',
+          fr: 'Nutritionniste numérique',
+          es: 'Nutricionista digital',
+          pt: 'Nutricionista digital',
+          nl: 'Digitale voedingskundige',
+          no: 'Digital ernæringsfysiolog',
+          sv: 'Digital näringsexpert'
+        }
+      },
+      pediatrician: {
+        name: {
+          en: 'AI Child Health Specialist',
+          de: 'KI-Kinderarztspezialist',
+          fr: 'Spécialiste santé enfant IA',
+          es: 'Especialista salud infantil IA',
+          pt: 'Especialista saúde infantil IA',
+          nl: 'AI kindergezondheidsspecialist',
+          no: 'AI barnehelse spesialist',
+          sv: 'AI barnhälsa specialist'
+        },
+        title: {
+          en: 'Pediatric Safety AI',
+          de: 'Pädiatrische Sicherheits-KI',
+          fr: 'IA Sécurité pédiatrique',
+          es: 'IA Seguridad pediátrica',
+          pt: 'IA Segurança pediátrica',
+          nl: 'Pediatrische veiligheid AI',
+          no: 'Pediatrisk sikkerhet AI',
+          sv: 'Pediatrisk säkerhet AI'
+        }
+      }
+    }
+  },
+
   // Profile Screen Translations
   profile: {
     // Headers

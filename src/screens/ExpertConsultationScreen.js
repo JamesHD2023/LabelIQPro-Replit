@@ -165,7 +165,7 @@ const ExpertConsultationScreen = () => {
         const expertSelectionMessage = {
           id: Date.now() + 1,
           type: 'expert-selection',
-          content: 'I found multiple experts who can help with your question. Which would you prefer?',
+          content: t('expert.multipleExpertsFound'),
           routing: routing,
           timestamp: new Date().toISOString()
         };
@@ -179,7 +179,7 @@ const ExpertConsultationScreen = () => {
         const fallbackMessage = {
           id: Date.now() + 1,
           type: 'system',
-          content: "I'm not sure which expert would be best for your question. Could you provide more details or choose an expert from the list below?",
+          content: t('expert.noExpertMatch'),
           experts: smartExpertRouter.getAllExperts(),
           timestamp: new Date().toISOString()
         };
@@ -193,7 +193,7 @@ const ExpertConsultationScreen = () => {
       const errorMessage = {
         id: Date.now() + 1,
         type: 'error',
-        content: 'Sorry, I encountered an error processing your question. Please try again.',
+        content: t('expert.processingError'),
         timestamp: new Date().toISOString()
       };
 
@@ -242,7 +242,7 @@ const ExpertConsultationScreen = () => {
         const errorMessage = {
           id: Date.now() + 2,
           type: 'error',
-          content: 'The expert is currently unavailable. Please try again later.',
+          content: t('expert.expertUnavailable'),
           timestamp: new Date().toISOString()
         };
 
@@ -264,7 +264,7 @@ const ExpertConsultationScreen = () => {
       allergist: {
         content: `As an AI Allergist Assistant, I can provide information about potential allergic reactions. Based on your question about "${query}", I'd recommend checking for common allergens and cross-reactions. If you're experiencing symptoms, please consult with a healthcare professional and monitor them closely. Have emergency medication ready if prescribed by your doctor.
 
-*Disclaimer: This is AI-generated information for educational purposes only and does not replace professional medical advice.*`,
+*{t('expert.disclaimer')}*`,
         suggestions: [
           "Check ingredient labels carefully",
           "Consider allergy testing if symptoms persist",
@@ -274,7 +274,7 @@ const ExpertConsultationScreen = () => {
       dermatologist: {
         content: `As an AI Dermatology Consultant, I can provide information about skin health and ingredient safety. Regarding "${query}", skin reactions can vary greatly between individuals. I'd suggest patch testing new products and avoiding known irritants. If you're experiencing persistent skin issues, please consult with a dermatologist.
 
-*Disclaimer: This is AI-generated information for educational purposes only and does not replace professional medical advice.*`,
+*{t('expert.disclaimer')}*`,
         suggestions: [
           "Perform patch tests before full use",
           "Use fragrance-free alternatives",
@@ -284,7 +284,7 @@ const ExpertConsultationScreen = () => {
       gastroenterologist: {
         content: `As an AI Digestive Health Advisor, I can provide information about gut health and food sensitivities. Regarding your concerns about "${query}", the digestive system can be sensitive to various food ingredients. I recommend keeping a food diary to identify triggers and eating smaller, more frequent meals. For persistent symptoms, please consult with a gastroenterologist or healthcare provider.
 
-*Disclaimer: This is AI-generated information for educational purposes only and does not replace professional medical advice.*`,
+*{t('expert.disclaimer')}*`,
         suggestions: [
           "Keep a detailed food diary",
           "Try elimination diets under medical guidance",
@@ -297,7 +297,7 @@ const ExpertConsultationScreen = () => {
     const defaultResponse = {
       content: `Thank you for your question about "${query}". As an AI Health Assistant, I'd recommend taking a cautious approach and consulting with healthcare professionals for personalized advice. Here are some general guidelines that might help.
 
-*Disclaimer: This is AI-generated information for educational purposes only and does not replace professional medical advice.*`,
+*{t('expert.disclaimer')}*`,
       suggestions: [
         "Consult with healthcare professionals",
         "Research reputable medical sources",
@@ -418,7 +418,7 @@ const ExpertConsultationScreen = () => {
                       <div className="content">{message.content}</div>
                       {message.suggestions && (
                         <div className="suggestions">
-                          <h4>Recommendations:</h4>
+                          <h4>{t('expert.recommendations')}</h4>
                           <ul>
                             {message.suggestions.map((suggestion, index) => (
                               <li key={index}>{suggestion}</li>
@@ -457,7 +457,7 @@ const ExpertConsultationScreen = () => {
                             <div>
                               <span className="expert-name">{message.routing.routing.primary.expert.name}</span>
                               <span className="expert-title">{message.routing.routing.primary.expert.title}</span>
-                              <span className="confidence">Recommended ({message.routing.routing.primary.confidence})</span>
+                              <span className="confidence">{t('expert.recommended')} ({message.routing.routing.primary.confidence})</span>
                             </div>
                           </button>
                         )}
@@ -553,7 +553,7 @@ const ExpertConsultationScreen = () => {
             className="send-button"
             onClick={() => handleQuerySubmit()}
             disabled={!query.trim() || isProcessing}
-            title="Send message"
+            title={t('expert.sendMessage')}
           >
             {isProcessing ? '⏳' : '➤'}
           </button>

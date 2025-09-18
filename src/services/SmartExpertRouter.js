@@ -2,14 +2,15 @@
  * Smart Expert Router Service
  * Intelligently routes user queries to the most appropriate AI expert
  */
+import { t, getCurrentLanguage } from '../utils/translations';
 
 class SmartExpertRouter {
   constructor() {
     // Expert specialization mapping
     this.experts = {
       allergist: {
-        name: 'AI Allergist Assistant',
-        title: 'Allergy & Immunology AI',
+        name: t('expert.experts.allergist.name', getCurrentLanguage()),
+        title: t('expert.experts.allergist.title', getCurrentLanguage()),
         avatar: '🤧',
         specialties: ['allergies', 'immunology', 'cross-reactions', 'anaphylaxis'],
         keywords: [
@@ -20,8 +21,8 @@ class SmartExpertRouter {
         confidence: 0.9
       },
       dermatologist: {
-        name: 'AI Dermatology Consultant',
-        title: 'Skin Health AI',
+        name: t('expert.experts.dermatologist.name', getCurrentLanguage()),
+        title: t('expert.experts.dermatologist.title', getCurrentLanguage()),
         avatar: '🧴',
         specialties: ['skin', 'dermatitis', 'cosmetics', 'topical reactions'],
         keywords: [
@@ -32,8 +33,8 @@ class SmartExpertRouter {
         confidence: 0.85
       },
       gastroenterologist: {
-        name: 'AI Digestive Health Advisor',
-        title: 'Gut Health AI',
+        name: t('expert.experts.gastroenterologist.name', getCurrentLanguage()),
+        title: t('expert.experts.gastroenterologist.title', getCurrentLanguage()),
         avatar: '🫃',
         specialties: ['digestive', 'gut health', 'food intolerance', 'IBS'],
         keywords: [
@@ -44,8 +45,8 @@ class SmartExpertRouter {
         confidence: 0.8
       },
       endocrinologist: {
-        name: 'AI Metabolic Health Specialist',
-        title: 'Hormone & Metabolism AI',
+        name: t('expert.experts.endocrinologist.name', getCurrentLanguage()),
+        title: t('expert.experts.endocrinologist.title', getCurrentLanguage()),
         avatar: '🩸',
         specialties: ['hormones', 'diabetes', 'metabolism', 'blood sugar'],
         keywords: [
@@ -56,8 +57,8 @@ class SmartExpertRouter {
         confidence: 0.85
       },
       toxicologist: {
-        name: 'AI Chemical Safety Analyst',
-        title: 'Toxicology AI',
+        name: t('expert.experts.toxicologist.name', getCurrentLanguage()),
+        title: t('expert.experts.toxicologist.title', getCurrentLanguage()),
         avatar: '⚗️',
         specialties: ['chemical safety', 'toxicity', 'interactions', 'exposure'],
         keywords: [
@@ -68,8 +69,8 @@ class SmartExpertRouter {
         confidence: 0.75
       },
       nutritionist: {
-        name: 'AI Nutrition Advisor',
-        title: 'Digital Nutritionist',
+        name: t('expert.experts.nutritionist.name', getCurrentLanguage()),
+        title: t('expert.experts.nutritionist.title', getCurrentLanguage()),
         avatar: '🥗',
         specialties: ['nutrition', 'diet', 'wellness', 'supplements'],
         keywords: [
@@ -80,8 +81,8 @@ class SmartExpertRouter {
         confidence: 0.8
       },
       pediatrician: {
-        name: 'AI Child Health Specialist',
-        title: 'Pediatric Safety AI',
+        name: t('expert.experts.pediatrician.name', getCurrentLanguage()),
+        title: t('expert.experts.pediatrician.title', getCurrentLanguage()),
         avatar: '👶',
         specialties: ['child safety', 'infant nutrition', 'development'],
         keywords: [
