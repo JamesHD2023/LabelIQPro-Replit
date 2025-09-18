@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../utils/translations';
 import { cameraService } from '../services/CameraService';
 import { ocrService } from '../services/OCRService';
 import { ingredientParser } from '../services/IngredientParser';
@@ -14,7 +15,7 @@ import './CameraScreen.css';
 const CameraScreen = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
 
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
@@ -198,7 +199,7 @@ const CameraScreen = () => {
 
   const processImage = async (imageBlob) => {
     try {
-      setProcessingStep(t('camera.processing.preparing') || 'Preparing image...');
+      setProcessingStep(t('camera.processing.preparing', currentLanguage));
       setProcessingProgress(10);
 
       // Convert to base64 for processing
@@ -209,7 +210,7 @@ const CameraScreen = () => {
       if (category === 'food') {
         if (scanningMode === 'prepared-meal') {
           // Use AI-powered food recognition for prepared meals
-          setProcessingStep(t('camera.processing.analyzing') || 'Analyzing meal...');
+          setProcessingStep(t('camera.processing.analyzing', currentLanguage));
           setProcessingProgress(30);
 
           const mealAnalysis = await foodRecognitionService.recognizeMeal(base64Image, {
@@ -219,11 +220,11 @@ const CameraScreen = () => {
           });
 
           if (mealAnalysis.components.length === 0 && !mealAnalysis.fallback) {
-            setError(t('camera.errors.noFoodFound') || 'No food items detected in image');
+            setError(t('camera.errors.noFoodFound', currentLanguage));
             return;
           }
 
-          setProcessingStep(t('camera.processing.nutrition') || 'Calculating nutrition...');
+          setProcessingStep(t('camera.processing.nutrition', currentLanguage));
           setProcessingProgress(60);
 
           // Get nutritional analysis
@@ -232,7 +233,7 @@ const CameraScreen = () => {
             mealAnalysis.portions
           );
 
-          setProcessingStep(t('camera.processing.health') || 'Assessing health impact...');
+          setProcessingStep(t('camera.processing.health', currentLanguage));
           setProcessingProgress(80);
 
           // Get health impact assessment
@@ -265,17 +266,17 @@ const CameraScreen = () => {
           };
         } else {
           // Use OCR for ingredient lists (existing functionality)
-          setProcessingStep(t('camera.processing.extracting') || 'Extracting text...');
+          setProcessingStep(t('camera.processing.extracting', currentLanguage));
           setProcessingProgress(40);
 
           const ocrResult = await ocrService.extractText(base64Image);
 
           if (!ocrResult.text || ocrResult.text.trim().length === 0) {
-            setError(t('camera.errors.noTextFound'));
+            setError(t('camera.errors.noTextFound', currentLanguage));
             return;
           }
 
-          setProcessingStep(t('camera.processing.parsing') || 'Parsing ingredients...');
+          setProcessingStep(t('camera.processing.parsing', currentLanguage));
           setProcessingProgress(70);
 
           // Parse ingredients
@@ -285,7 +286,7 @@ const CameraScreen = () => {
           );
 
           if (!parsedIngredients || parsedIngredients.length === 0) {
-            setError(t('camera.errors.noIngredientsFound'));
+            setError(t('camera.errors.noIngredientsFound', currentLanguage));
             return;
           }
 
@@ -303,7 +304,7 @@ const CameraScreen = () => {
         }
       } else {
         // Use OCR for ingredient lists (cosmetics, household products)
-        setProcessingStep(t('camera.processing.extracting') || 'Extracting text...');
+        setProcessingStep(t('camera.processing.extracting', currentLanguage));
         setProcessingProgress(40);
 
         const ocrResult = await ocrService.extractText(base64Image);
@@ -313,7 +314,7 @@ const CameraScreen = () => {
           return;
         }
 
-        setProcessingStep(t('camera.processing.parsing') || 'Parsing ingredients...');
+        setProcessingStep(t('camera.processing.parsing', currentLanguage));
         setProcessingProgress(70);
 
         // Parse ingredients
@@ -340,7 +341,7 @@ const CameraScreen = () => {
         };
       }
 
-      setProcessingStep(t('camera.processing.complete') || 'Complete!');
+      setProcessingStep(t('camera.processing.complete', currentLanguage));
       setProcessingProgress(100);
 
       // Add to calorie tracking if it's a meal scan
@@ -374,12 +375,12 @@ const CameraScreen = () => {
       // Enhanced error handling for vision API failures
       if (err.message.includes('vision') || err.message.includes('API')) {
         if (category === 'food' && scanningMode === 'prepared-meal') {
-          setError(t('camera.errors.visionApiFailed') || 'AI food recognition failed. Try taking a clearer photo or switch to ingredient list mode.');
+          setError(t('camera.errors.visionApiFailed', currentLanguage));
         } else {
-          setError(t('camera.errors.ocrFailed') || 'Text extraction failed. Try taking a clearer photo.');
+          setError(t('camera.errors.ocrFailed', currentLanguage));
         }
       } else {
-        setError(t('camera.errors.processingFailed'));
+        setError(t('camera.errors.processingFailed', currentLanguage));
       }
 
       // Reset processing state
@@ -417,21 +418,21 @@ const CameraScreen = () => {
     if (category !== 'food') {
       return {
         icon: '📝',
-        title: t('camera.mode.ingredientList.title') || 'Ingredient List',
-        description: t('camera.mode.ingredientList.description') || 'Scan text from product labels'
+        title: t('camera.mode.ingredientList.title', currentLanguage),
+        description: t('camera.mode.ingredientList.description', currentLanguage)
       };
     }
 
     return scanningMode === 'ingredient-list'
       ? {
           icon: '📝',
-          title: t('camera.mode.ingredientList.title') || 'Ingredient List',
-          description: t('camera.mode.ingredientList.description') || 'Scan text from food labels'
+          title: t('camera.mode.ingredientList.title', currentLanguage),
+          description: t('camera.mode.ingredientList.description', currentLanguage)
         }
       : {
           icon: '🍽️',
-          title: t('camera.mode.preparedMeal.title') || 'Prepared Meal',
-          description: t('camera.mode.preparedMeal.description') || 'Analyze prepared meals with AI'
+          title: t('camera.mode.preparedMeal.title', currentLanguage),
+          description: t('camera.mode.preparedMeal.description', currentLanguage)
         };
   };
 
@@ -442,7 +443,7 @@ const CameraScreen = () => {
           <span className="close-icon">✕</span>
         </button>
         <div className="header-content">
-          <h2>{category === 'food' ? 'Scan Food' : 'Scan Label'}</h2>
+          <h2>{category === 'food' ? t('camera.scanFood', currentLanguage) : t('camera.scanLabel', currentLanguage)}</h2>
           {category === 'food' && (
             <div className="mode-selector">
               <button
@@ -476,7 +477,7 @@ const CameraScreen = () => {
               className="retry-button"
               onClick={initializeCamera}
             >
-              Retry
+              {t('camera.retry', currentLanguage)}
             </button>
           </div>
         ) : (
@@ -522,8 +523,8 @@ const CameraScreen = () => {
                 <div className="scan-instructions">
                   <p>
                     {category === 'food'
-                      ? t(`camera.instructions.${scanningMode}`) || getScanningModeConfig().description
-                      : t(`camera.instructions.${category}`)
+                      ? t(`camera.instructions.${scanningMode}`, currentLanguage)
+                      : t(`camera.instructions.${category}`, currentLanguage)
                     }
                   </p>
                 </div>
@@ -586,7 +587,7 @@ const CameraScreen = () => {
             <div className="processing-spinner large"></div>
             <div className="processing-info">
               <p className="processing-step">
-                {processingStep || t('camera.processing')}
+                {processingStep}
               </p>
               <div className="progress-bar">
                 <div

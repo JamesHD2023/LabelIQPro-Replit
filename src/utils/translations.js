@@ -1049,6 +1049,281 @@ export const translations = {
     }
   },
 
+  // Camera Screen Translations
+  camera: {
+    // Mode configurations
+    mode: {
+      ingredientList: {
+        title: {
+          en: 'Ingredient List',
+          de: 'Zutatenliste',
+          fr: 'Liste d\'ingrédients',
+          es: 'Lista de ingredientes',
+          pt: 'Lista de ingredientes',
+          nl: 'Ingrediëntenlijst',
+          no: 'Ingrediensliste',
+          sv: 'Ingredienslista'
+        },
+        description: {
+          en: 'Scan text from product labels',
+          de: 'Scannen Sie Text von Produktetiketten',
+          fr: 'Scanner le texte des étiquettes de produits',
+          es: 'Escanear texto de las etiquetas de productos',
+          pt: 'Digitalizar texto de rótulos de produtos',
+          nl: 'Scan tekst van productlabels',
+          no: 'Skann tekst fra produktetiketter',
+          sv: 'Skanna text från produktetiketter'
+        }
+      },
+      preparedMeal: {
+        title: {
+          en: 'Prepared Meal',
+          de: 'Zubereitete Mahlzeit',
+          fr: 'Repas préparé',
+          es: 'Comida preparada',
+          pt: 'Refeição preparada',
+          nl: 'Bereide maaltijd',
+          no: 'Tilberedt måltid',
+          sv: 'Tillagad måltid'
+        },
+        description: {
+          en: 'Analyze prepared meals with AI',
+          de: 'Analysiere zubereitete Mahlzeiten mit KI',
+          fr: 'Analyser les repas préparés avec l\'IA',
+          es: 'Analizar comidas preparadas con IA',
+          pt: 'Analisar refeições preparadas com IA',
+          nl: 'Analyseer bereide maaltijden met AI',
+          no: 'Analyser tilberedte måltider med AI',
+          sv: 'Analysera tillagade måltider med AI'
+        }
+      }
+    },
+
+    // Processing steps
+    processing: {
+      preparing: {
+        en: 'Preparing image...',
+        de: 'Bild wird vorbereitet...',
+        fr: 'Préparation de l\'image...',
+        es: 'Preparando imagen...',
+        pt: 'Preparando imagem...',
+        nl: 'Afbeelding voorbereiden...',
+        no: 'Forbereder bilde...',
+        sv: 'Förbereder bild...'
+      },
+      analyzing: {
+        en: 'Analyzing meal...',
+        de: 'Mahlzeit wird analysiert...',
+        fr: 'Analyse du repas...',
+        es: 'Analizando comida...',
+        pt: 'Analisando refeição...',
+        nl: 'Maaltijd analyseren...',
+        no: 'Analyserer måltid...',
+        sv: 'Analyserar måltid...'
+      },
+      extracting: {
+        en: 'Extracting text...',
+        de: 'Text wird extrahiert...',
+        fr: 'Extraction du texte...',
+        es: 'Extrayendo texto...',
+        pt: 'Extraindo texto...',
+        nl: 'Tekst extraheren...',
+        no: 'Trekker ut tekst...',
+        sv: 'Extraherar text...'
+      },
+      parsing: {
+        en: 'Parsing ingredients...',
+        de: 'Zutaten werden analysiert...',
+        fr: 'Analyse des ingrédients...',
+        es: 'Analizando ingredientes...',
+        pt: 'Analisando ingredientes...',
+        nl: 'Ingrediënten analyseren...',
+        no: 'Analyserer ingredienser...',
+        sv: 'Analyserar ingredienser...'
+      },
+      nutrition: {
+        en: 'Calculating nutrition...',
+        de: 'Nährwerte werden berechnet...',
+        fr: 'Calcul de la nutrition...',
+        es: 'Calculando nutrición...',
+        pt: 'Calculando nutrição...',
+        nl: 'Voeding berekenen...',
+        no: 'Beregner ernæring...',
+        sv: 'Beräknar näring...'
+      },
+      health: {
+        en: 'Assessing health impact...',
+        de: 'Gesundheitsauswirkungen werden bewertet...',
+        fr: 'Évaluation de l\'impact sur la santé...',
+        es: 'Evaluando impacto en la salud...',
+        pt: 'Avaliando impacto na saúde...',
+        nl: 'Gezondheidsimpact beoordelen...',
+        no: 'Vurderer helsepåvirkning...',
+        sv: 'Bedömer hälsopåverkan...'
+      },
+      complete: {
+        en: 'Complete!',
+        de: 'Fertig!',
+        fr: 'Terminé!',
+        es: '¡Completado!',
+        pt: 'Completo!',
+        nl: 'Voltooid!',
+        no: 'Fullført!',
+        sv: 'Klar!'
+      }
+    },
+
+    // Instructions
+    instructions: {
+      'ingredient-list': {
+        en: 'Align ingredient list within the frame and tap to scan',
+        de: 'Richten Sie die Zutatenliste im Rahmen aus und tippen Sie zum Scannen',
+        fr: 'Alignez la liste d\'ingrédients dans le cadre et appuyez pour scanner',
+        es: 'Aline la lista de ingredientes en el marco y toque para escanear',
+        pt: 'Alinhe a lista de ingredientes no quadro e toque para digitalizar',
+        nl: 'Lijn de ingrediëntenlijst uit in het frame en tik om te scannen',
+        no: 'Juster ingredienslisten innenfor rammen og trykk for å skanne',
+        sv: 'Rikta in ingredienslistan i ramen och tryck för att skanna'
+      },
+      'prepared-meal': {
+        en: 'Center the prepared meal in view and tap to analyze',
+        de: 'Zentrieren Sie die zubereitete Mahlzeit im Bild und tippen Sie zum Analysieren',
+        fr: 'Centrez le repas préparé dans la vue et appuyez pour analyser',
+        es: 'Centre la comida preparada en la vista y toque para analizar',
+        pt: 'Centre a refeição preparada na visualização e toque para analisar',
+        nl: 'Centreer de bereide maaltijd in beeld en tik om te analyseren',
+        no: 'Sentrer det tilberedte måltidet i visningen og trykk for å analysere',
+        sv: 'Centrera den tillagade måltiden i vyn och tryck för att analysera'
+      },
+      food: {
+        en: 'Align the product label within the frame',
+        de: 'Richten Sie das Produktetikett im Rahmen aus',
+        fr: 'Alignez l\'étiquette du produit dans le cadre',
+        es: 'Aline la etiqueta del producto en el marco',
+        pt: 'Alinhe o rótulo do produto no quadro',
+        nl: 'Lijn het productlabel uit in het frame',
+        no: 'Juster produktetiketten innenfor rammen',
+        sv: 'Rikta in produktetiketten i ramen'
+      },
+      cosmetic: {
+        en: 'Align the cosmetic label within the frame',
+        de: 'Richten Sie das Kosmetiketikett im Rahmen aus',
+        fr: 'Alignez l\'étiquette cosmétique dans le cadre',
+        es: 'Aline la etiqueta cosmética en el marco',
+        pt: 'Alinhe o rótulo cosmético no quadro',
+        nl: 'Lijn het cosmetica label uit in het frame',
+        no: 'Juster kosmetikketiketten innenfor rammen',
+        sv: 'Rikta in kosmetiketiketten i ramen'
+      },
+      household: {
+        en: 'Align the household product label within the frame',
+        de: 'Richten Sie das Haushaltsprodukt-Etikett im Rahmen aus',
+        fr: 'Alignez l\'étiquette du produit ménager dans le cadre',
+        es: 'Aline la etiqueta del producto doméstico en el marco',
+        pt: 'Alinhe o rótulo do produto doméstico no quadro',
+        nl: 'Lijn het huishoudproduct label uit in het frame',
+        no: 'Juster husholdningsprodukt-etiketten innenfor rammen',
+        sv: 'Rikta in hushållsproduktetiketten i ramen'
+      }
+    },
+
+    // Error messages
+    errors: {
+      processingFailed: {
+        en: 'Processing failed. Please try again.',
+        de: 'Verarbeitung fehlgeschlagen. Bitte versuchen Sie es erneut.',
+        fr: 'Échec du traitement. Veuillez réessayer.',
+        es: 'Error de procesamiento. Por favor, inténtelo de nuevo.',
+        pt: 'Falha no processamento. Por favor, tente novamente.',
+        nl: 'Verwerking mislukt. Probeer het opnieuw.',
+        no: 'Behandlingen mislyktes. Prøv igjen.',
+        sv: 'Behandlingen misslyckades. Försök igen.'
+      },
+      noTextFound: {
+        en: 'No text found in image. Try taking a clearer photo.',
+        de: 'Kein Text im Bild gefunden. Versuchen Sie ein klareres Foto.',
+        fr: 'Aucun texte trouvé dans l\'image. Essayez de prendre une photo plus claire.',
+        es: 'No se encontró texto en la imagen. Intente tomar una foto más clara.',
+        pt: 'Nenhum texto encontrado na imagem. Tente tirar uma foto mais clara.',
+        nl: 'Geen tekst gevonden in afbeelding. Probeer een scherpere foto.',
+        no: 'Ingen tekst funnet i bildet. Prøv å ta et klarere bilde.',
+        sv: 'Ingen text hittades i bilden. Försök ta ett tydligare foto.'
+      },
+      noIngredientsFound: {
+        en: 'No ingredients detected. Please try a different image.',
+        de: 'Keine Zutaten erkannt. Bitte versuchen Sie ein anderes Bild.',
+        fr: 'Aucun ingrédient détecté. Veuillez essayer une autre image.',
+        es: 'No se detectaron ingredientes. Por favor, pruebe con una imagen diferente.',
+        pt: 'Nenhum ingrediente detectado. Por favor, tente uma imagem diferente.',
+        nl: 'Geen ingrediënten gedetecteerd. Probeer een andere afbeelding.',
+        no: 'Ingen ingredienser oppdaget. Prøv et annet bilde.',
+        sv: 'Inga ingredienser upptäcktes. Försök med en annan bild.'
+      },
+      noFoodFound: {
+        en: 'No food items detected in image',
+        de: 'Keine Lebensmittel im Bild erkannt',
+        fr: 'Aucun aliment détecté dans l\'image',
+        es: 'No se detectaron alimentos en la imagen',
+        pt: 'Nenhum alimento detectado na imagem',
+        nl: 'Geen voedingsmiddelen gedetecteerd in afbeelding',
+        no: 'Ingen matvarer oppdaget i bildet',
+        sv: 'Inga livsmedelsprodukter upptäcktes i bilden'
+      },
+      visionApiFailed: {
+        en: 'AI food recognition failed. Try taking a clearer photo or switch to ingredient list mode.',
+        de: 'KI-Lebensmittelerkennung fehlgeschlagen. Versuchen Sie ein klareres Foto oder wechseln Sie zum Zutatenlisten-Modus.',
+        fr: 'La reconnaissance alimentaire IA a échoué. Essayez de prendre une photo plus claire ou passez au mode liste d\'ingrédients.',
+        es: 'El reconocimiento de alimentos IA falló. Intente tomar una foto más clara o cambie al modo de lista de ingredientes.',
+        pt: 'Reconhecimento de alimentos IA falhou. Tente tirar uma foto mais clara ou mude para o modo lista de ingredientes.',
+        nl: 'AI voedselherkenning mislukt. Probeer een scherpere foto of schakel over naar ingrediëntenlijst modus.',
+        no: 'AI mat-gjenkjenning mislyktes. Prøv å ta et klarere bilde eller bytt til ingrediensliste-modus.',
+        sv: 'AI-matidentifiering misslyckades. Försök ta ett tydligare foto eller byt till ingredienslista-läge.'
+      },
+      ocrFailed: {
+        en: 'Text extraction failed. Try taking a clearer photo.',
+        de: 'Textextraktion fehlgeschlagen. Versuchen Sie ein klareres Foto.',
+        fr: 'Extraction de texte échouée. Essayez de prendre une photo plus claire.',
+        es: 'Extracción de texto falló. Intente tomar una foto más clara.',
+        pt: 'Extração de texto falhou. Tente tirar uma foto mais clara.',
+        nl: 'Tekstextractie mislukt. Probeer een scherpere foto.',
+        no: 'Tekstutvinning mislyktes. Prøv å ta et klarere bilde.',
+        sv: 'Textextrahering misslyckades. Försök ta ett tydligare foto.'
+      }
+    },
+
+    // Headers and titles
+    scanFood: {
+      en: 'Scan Food',
+      de: 'Lebensmittel scannen',
+      fr: 'Scanner alimentation',
+      es: 'Escanear alimento',
+      pt: 'Digitalizar alimento',
+      nl: 'Voeding scannen',
+      no: 'Skann mat',
+      sv: 'Skanna mat'
+    },
+    scanLabel: {
+      en: 'Scan Label',
+      de: 'Etikett scannen',
+      fr: 'Scanner étiquette',
+      es: 'Escanear etiqueta',
+      pt: 'Digitalizar rótulo',
+      nl: 'Label scannen',
+      no: 'Skann etikett',
+      sv: 'Skanna etikett'
+    },
+    retry: {
+      en: 'Retry',
+      de: 'Wiederholen',
+      fr: 'Réessayer',
+      es: 'Reintentar',
+      pt: 'Tentar novamente',
+      nl: 'Opnieuw proberen',
+      no: 'Prøv igjen',
+      sv: 'Försök igen'
+    }
+  },
+
   // Profile Screen Translations
   profile: {
     // Headers
