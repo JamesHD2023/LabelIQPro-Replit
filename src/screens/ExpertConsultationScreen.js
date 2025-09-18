@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../utils/translations';
 import { smartExpertRouter } from '../services/SmartExpertRouter';
 import { offlineService } from '../services/OfflineService';
 import './ExpertConsultationScreen.css';
@@ -8,7 +9,7 @@ import './ExpertConsultationScreen.css';
 const ExpertConsultationScreen = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
 
   // State management
   const [query, setQuery] = useState('');
@@ -165,7 +166,7 @@ const ExpertConsultationScreen = () => {
         const expertSelectionMessage = {
           id: Date.now() + 1,
           type: 'expert-selection',
-          content: t('expert.multipleExpertsFound'),
+          content: t('expert.multipleExpertsFound', currentLanguage),
           routing: routing,
           timestamp: new Date().toISOString()
         };
@@ -179,7 +180,7 @@ const ExpertConsultationScreen = () => {
         const fallbackMessage = {
           id: Date.now() + 1,
           type: 'system',
-          content: t('expert.noExpertMatch'),
+          content: t('expert.noExpertMatch', currentLanguage),
           experts: smartExpertRouter.getAllExperts(),
           timestamp: new Date().toISOString()
         };
@@ -193,7 +194,7 @@ const ExpertConsultationScreen = () => {
       const errorMessage = {
         id: Date.now() + 1,
         type: 'error',
-        content: t('expert.processingError'),
+        content: t('expert.processingError', currentLanguage),
         timestamp: new Date().toISOString()
       };
 
@@ -242,7 +243,7 @@ const ExpertConsultationScreen = () => {
         const errorMessage = {
           id: Date.now() + 2,
           type: 'error',
-          content: t('expert.expertUnavailable'),
+          content: t('expert.expertUnavailable', currentLanguage),
           timestamp: new Date().toISOString()
         };
 
@@ -264,7 +265,7 @@ const ExpertConsultationScreen = () => {
       allergist: {
         content: `As an AI Allergist Assistant, I can provide information about potential allergic reactions. Based on your question about "${query}", I'd recommend checking for common allergens and cross-reactions. If you're experiencing symptoms, please consult with a healthcare professional and monitor them closely. Have emergency medication ready if prescribed by your doctor.
 
-*{t('expert.disclaimer')}*`,
+*{t('expert.disclaimer', currentLanguage)}*`,
         suggestions: [
           "Check ingredient labels carefully",
           "Consider allergy testing if symptoms persist",
@@ -274,7 +275,7 @@ const ExpertConsultationScreen = () => {
       dermatologist: {
         content: `As an AI Dermatology Consultant, I can provide information about skin health and ingredient safety. Regarding "${query}", skin reactions can vary greatly between individuals. I'd suggest patch testing new products and avoiding known irritants. If you're experiencing persistent skin issues, please consult with a dermatologist.
 
-*{t('expert.disclaimer')}*`,
+*{t('expert.disclaimer', currentLanguage)}*`,
         suggestions: [
           "Perform patch tests before full use",
           "Use fragrance-free alternatives",
@@ -284,7 +285,7 @@ const ExpertConsultationScreen = () => {
       gastroenterologist: {
         content: `As an AI Digestive Health Advisor, I can provide information about gut health and food sensitivities. Regarding your concerns about "${query}", the digestive system can be sensitive to various food ingredients. I recommend keeping a food diary to identify triggers and eating smaller, more frequent meals. For persistent symptoms, please consult with a gastroenterologist or healthcare provider.
 
-*{t('expert.disclaimer')}*`,
+*{t('expert.disclaimer', currentLanguage)}*`,
         suggestions: [
           "Keep a detailed food diary",
           "Try elimination diets under medical guidance",
@@ -297,7 +298,7 @@ const ExpertConsultationScreen = () => {
     const defaultResponse = {
       content: `Thank you for your question about "${query}". As an AI Health Assistant, I'd recommend taking a cautious approach and consulting with healthcare professionals for personalized advice. Here are some general guidelines that might help.
 
-*{t('expert.disclaimer')}*`,
+*{t('expert.disclaimer', currentLanguage)}*`,
       suggestions: [
         "Consult with healthcare professionals",
         "Research reputable medical sources",
@@ -345,7 +346,7 @@ const ExpertConsultationScreen = () => {
           ←
         </button>
         <div className="header-content">
-          <h1 className="header-title">🩺 Ask Expert</h1>
+          <h1 className="header-title">🩺 {t('expert.askExpert', currentLanguage)}</h1>
           {selectedExpert && (
             <div className="selected-expert">
               <span className="expert-avatar">{selectedExpert.expert.avatar}</span>
@@ -368,8 +369,8 @@ const ExpertConsultationScreen = () => {
           <div className="welcome-screen">
             <div className="welcome-content">
               <div className="welcome-icon">🩺</div>
-              <h2>Ask Our Medical Experts</h2>
-              <p>Get personalized advice from AI specialists about ingredient safety, health effects, and more.</p>
+              <h2>{t('expert.askMedicalExperts', currentLanguage)}</h2>
+              <p>{t('expert.personalizedAdvice', currentLanguage)}</p>
 
               <div className="expert-grid">
                 {smartExpertRouter.getAllExperts().map(expert => (
@@ -386,15 +387,15 @@ const ExpertConsultationScreen = () => {
               </div>
 
               <div className="quick-questions">
-                <h3>{t('expert.quickQuestions')}</h3>
-                <button onClick={() => handleFollowUp(t('expert.safeSensitiveSkin'))}>
-                  {t('expert.safeSensitiveSkin')}
+                <h3>{t('expert.quickQuestions', currentLanguage)}</h3>
+                <button onClick={() => handleFollowUp(t('expert.safeSensitiveSkin', currentLanguage))}>
+                  {t('expert.safeSensitiveSkin', currentLanguage)}
                 </button>
-                <button onClick={() => handleFollowUp(t('expert.allergyRisks'))}>
-                  {t('expert.allergyRisks')}
+                <button onClick={() => handleFollowUp(t('expert.allergyRisks', currentLanguage))}>
+                  {t('expert.allergyRisks', currentLanguage)}
                 </button>
-                <button onClick={() => handleFollowUp(t('expert.digestiveIssues'))}>
-                  {t('expert.digestiveIssues')}
+                <button onClick={() => handleFollowUp(t('expert.digestiveIssues', currentLanguage))}>
+                  {t('expert.digestiveIssues', currentLanguage)}
                 </button>
               </div>
             </div>
@@ -418,7 +419,7 @@ const ExpertConsultationScreen = () => {
                       <div className="content">{message.content}</div>
                       {message.suggestions && (
                         <div className="suggestions">
-                          <h4>{t('expert.recommendations')}</h4>
+                          <h4>{t('expert.recommendations', currentLanguage)}</h4>
                           <ul>
                             {message.suggestions.map((suggestion, index) => (
                               <li key={index}>{suggestion}</li>
@@ -457,7 +458,7 @@ const ExpertConsultationScreen = () => {
                             <div>
                               <span className="expert-name">{message.routing.routing.primary.expert.name}</span>
                               <span className="expert-title">{message.routing.routing.primary.expert.title}</span>
-                              <span className="confidence">{t('expert.recommended')} ({message.routing.routing.primary.confidence})</span>
+                              <span className="confidence">{t('expert.recommended', currentLanguage)} ({message.routing.routing.primary.confidence})</span>
                             </div>
                           </button>
                         )}
@@ -533,7 +534,7 @@ const ExpertConsultationScreen = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleQuerySubmit()}
-            placeholder={t('expert.inputPlaceholder')}
+            placeholder={t('expert.inputPlaceholder', currentLanguage)}
             disabled={isProcessing}
             className="query-input"
           />
@@ -543,7 +544,7 @@ const ExpertConsultationScreen = () => {
               className={`voice-button ${isListening ? 'listening' : ''}`}
               onClick={toggleVoiceInput}
               disabled={isProcessing}
-              title="Voice input"
+              title={t('expert.voiceInput', currentLanguage)}
             >
               🎤
             </button>
@@ -553,7 +554,7 @@ const ExpertConsultationScreen = () => {
             className="send-button"
             onClick={() => handleQuerySubmit()}
             disabled={!query.trim() || isProcessing}
-            title={t('expert.sendMessage')}
+            title={t('expert.sendMessage', currentLanguage)}
           >
             {isProcessing ? '⏳' : '➤'}
           </button>
@@ -561,7 +562,7 @@ const ExpertConsultationScreen = () => {
 
         {isListening && (
           <div className="voice-indicator">
-            🎤 Listening... Speak your question
+            🎤 {t('expert.listening', currentLanguage)}
           </div>
         )}
       </div>
