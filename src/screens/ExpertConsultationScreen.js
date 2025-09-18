@@ -386,15 +386,15 @@ const ExpertConsultationScreen = () => {
               </div>
 
               <div className="quick-questions">
-                <h3>Quick Questions</h3>
-                <button onClick={() => handleFollowUp("Is this ingredient safe for sensitive skin?")}>
-                  Is this ingredient safe for sensitive skin?
+                <h3>{t('expert.quickQuestions')}</h3>
+                <button onClick={() => handleFollowUp(t('expert.safeSensitiveSkin'))}>
+                  {t('expert.safeSensitiveSkin')}
                 </button>
-                <button onClick={() => handleFollowUp("What are the allergy risks?")}>
-                  What are the allergy risks?
+                <button onClick={() => handleFollowUp(t('expert.allergyRisks'))}>
+                  {t('expert.allergyRisks')}
                 </button>
-                <button onClick={() => handleFollowUp("Could this cause digestive issues?")}>
-                  Could this cause digestive issues?
+                <button onClick={() => handleFollowUp(t('expert.digestiveIssues'))}>
+                  {t('expert.digestiveIssues')}
                 </button>
               </div>
             </div>
@@ -533,7 +533,7 @@ const ExpertConsultationScreen = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleQuerySubmit()}
-            placeholder="Ask about ingredient safety, health effects, or get expert advice..."
+            placeholder={t('expert.inputPlaceholder')}
             disabled={isProcessing}
             className="query-input"
           />
