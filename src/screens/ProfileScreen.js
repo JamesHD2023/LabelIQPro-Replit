@@ -396,8 +396,7 @@ const ProfileScreen = () => {
               <span>1.0.0</span>
             </div>
             <div className="info-item">
-              <span>{t('profile.builtWith', currentLanguage)}</span>
-              <span>{new Date().getFullYear()}</span>
+              <span>© 2025 James Harvey Media. All Rights Reserved.</span>
             </div>
           </div>
         </section>
