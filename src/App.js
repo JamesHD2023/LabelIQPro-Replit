@@ -84,34 +84,36 @@ function App() {
   // }
 
   return (
-    <Router>
-      <div className="app">
-        <AppShell isOnline={isOnline}>
-          {initError && (
-            <div className="init-error">
-              <div className="error-message">
-                Initialization Error: {initError}
+    <LanguageProvider>
+      <Router>
+        <div className="app">
+          <AppShell isOnline={isOnline}>
+            {initError && (
+              <div className="init-error">
+                <div className="error-message">
+                  Initialization Error: {initError}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          <Routes>
-            <Route path="/" element={<HomeScreen />} />
-            <Route path="/camera" element={<CameraScreen />} />
-            <Route path="/expert" element={<ExpertConsultationScreen />} />
-            <Route path="/learning" element={<LearningScreen />} />
-            <Route path="/results/:scanId" element={<ResultsScreen />} />
-            <Route path="/history" element={<HistoryScreen />} />
-            <Route path="/dashboard" element={<HealthDashboardSimple />} />
-            <Route path="/profile" element={<ProfileScreen />} />
-            <Route path="/insights" element={<InsightsScreen />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </AppShell>
+            <Routes>
+              <Route path="/" element={<HomeScreen />} />
+              <Route path="/camera" element={<CameraScreen />} />
+              <Route path="/expert" element={<ExpertConsultationScreen />} />
+              <Route path="/learning" element={<LearningScreen />} />
+              <Route path="/results/:scanId" element={<ResultsScreen />} />
+              <Route path="/history" element={<HistoryScreen />} />
+              <Route path="/dashboard" element={<HealthDashboardSimple />} />
+              <Route path="/profile" element={<ProfileScreen />} />
+              <Route path="/insights" element={<InsightsScreen />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </AppShell>
 
-        <InstallPrompt />
-      </div>
-    </Router>
+          <InstallPrompt />
+        </div>
+      </Router>
+    </LanguageProvider>
   );
 }
 
