@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-// Translation system removed for stability
 import { offlineService } from '../services/OfflineService';
 import { dailyCalorieTracker } from '../services/DailyCalorieTracker';
-import { supportedLanguages } from '../utils/i18n';
+import { supportedLanguages, t } from '../utils/translations';
+import { useLanguage } from '../contexts/LanguageContext';
 import './ProfileScreen.css';
 
 const ProfileScreen = () => {
-  // Translation system removed for stability
+  const { currentLanguage, changeLanguage } = useLanguage();
   const [profile, setProfile] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
@@ -90,10 +90,10 @@ const ProfileScreen = () => {
     saveProfile(updatedProfile);
   };
 
-  const changeLanguage = async (languageCode) => {
+  const handleLanguageChange = async (languageCode) => {
     try {
-      // Change language in i18n
-      // Language switching disabled for stability
+      // Update language in context
+      changeLanguage(languageCode);
 
       // Save to profile
       const updatedProfile = {
@@ -121,7 +121,7 @@ const ProfileScreen = () => {
   };
 
   const clearAllData = async () => {
-    if (window.confirm('Are you sure you want to clear all data? This cannot be undone.')) {
+    if (window.confirm(t('profile.clearDataConfirm', currentLanguage))) {
       try {
         await offlineService.clearStorage();
         window.location.reload();
@@ -135,7 +135,7 @@ const ProfileScreen = () => {
     return (
       <div className="profile-screen loading">
         <div className="loading-spinner large"></div>
-        <p>Loading profile...</p>
+        <p>{t('profile.loadingProfile', currentLanguage)}</p>
       </div>
     );
   }
@@ -143,21 +143,21 @@ const ProfileScreen = () => {
   return (
     <div className="profile-screen">
       <div className="profile-header">
-        <h1>Profile Settings</h1>
+        <h1>{t('profile.title', currentLanguage)}</h1>
       </div>
 
       <div className="profile-content">
         {/* Personal Information */}
         <section className="profile-section">
-          <h2>Personal Information</h2>
+          <h2>{t('profile.personalInfo', currentLanguage)}</h2>
 
           <div className="setting-group">
             <label className="setting-label">
-              Language
+{t('profile.language', currentLanguage)}
             </label>
             <select
-              value={profile.language || 'en'}
-              onChange={(e) => changeLanguage(e.target.value)}
+              value={profile.language || currentLanguage}
+              onChange={(e) => handleLanguageChange(e.target.value)}
               className="setting-select"
             >
               {Object.entries(supportedLanguages).map(([code, lang]) => (
@@ -177,7 +177,7 @@ const ProfileScreen = () => {
               />
               <span className="toggle-slider"></span>
               <span className="toggle-label">
-                Push Notifications
+{t('profile.pushNotifications', currentLanguage)}
               </span>
             </label>
           </div>
@@ -185,26 +185,26 @@ const ProfileScreen = () => {
 
         {/* Biometric Information for Calorie Tracking */}
         <section className="profile-section">
-          <h2>Biometric Information</h2>
+          <h2>{t('profile.biometricInfo', currentLanguage)}</h2>
           <p className="section-description">
-            Required for accurate daily calorie calculations and personalized recommendations.
+            {t('profile.biometricDescription', currentLanguage)}
           </p>
 
           <div className="setting-group">
-            <label className="setting-label">Units</label>
+            <label className="setting-label">{t('profile.units', currentLanguage)}</label>
             <select
               value={profile.units || 'metric'}
               onChange={(e) => saveProfile({ ...profile, units: e.target.value })}
               className="setting-select"
             >
-              <option value="metric">Metric (kg, cm)</option>
-              <option value="imperial">Imperial (lbs, inches)</option>
+              <option value="metric">{t('profile.metric', currentLanguage)}</option>
+              <option value="imperial">{t('profile.imperial', currentLanguage)}</option>
             </select>
           </div>
 
           <div className="biometric-row">
             <div className="setting-group">
-              <label className="setting-label">Age</label>
+              <label className="setting-label">{t('profile.age', currentLanguage)}</label>
               <input
                 type="number"
                 value={profile.age || ''}
@@ -217,15 +217,15 @@ const ProfileScreen = () => {
             </div>
 
             <div className="setting-group">
-              <label className="setting-label">Gender</label>
+              <label className="setting-label">{t('profile.gender', currentLanguage)}</label>
               <select
                 value={profile.gender || ''}
                 onChange={(e) => saveProfile({ ...profile, gender: e.target.value })}
                 className="setting-select"
               >
-                <option value="">Select gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="">{t('profile.selectGender', currentLanguage)}</option>
+                <option value="male">{t('profile.male', currentLanguage)}</option>
+                <option value="female">{t('profile.female', currentLanguage)}</option>
               </select>
             </div>
           </div>
@@ -233,7 +233,7 @@ const ProfileScreen = () => {
           <div className="biometric-row">
             <div className="setting-group">
               <label className="setting-label">
-                Weight ({profile.units === 'metric' ? 'kg' : 'lbs'})
+{t('profile.weight', currentLanguage)} ({profile.units === 'metric' ? 'kg' : 'lbs'})
               </label>
               <input
                 type="number"
@@ -249,7 +249,7 @@ const ProfileScreen = () => {
 
             <div className="setting-group">
               <label className="setting-label">
-                Height ({profile.units === 'metric' ? 'cm' : 'inches'})
+{t('profile.height', currentLanguage)} ({profile.units === 'metric' ? 'cm' : 'inches'})
               </label>
               <input
                 type="number"
@@ -264,43 +264,43 @@ const ProfileScreen = () => {
           </div>
 
           <div className="setting-group">
-            <label className="setting-label">Activity Level</label>
+            <label className="setting-label">{t('profile.activityLevel', currentLanguage)}</label>
             <select
               value={profile.activityLevel || 'moderate'}
               onChange={(e) => saveProfile({ ...profile, activityLevel: e.target.value })}
               className="setting-select"
             >
-              <option value="sedentary">Sedentary (Little/no exercise)</option>
-              <option value="light">Light (Light exercise 1-3 days/week)</option>
-              <option value="moderate">Moderate (Moderate exercise 3-5 days/week)</option>
-              <option value="active">Active (Heavy exercise 6-7 days/week)</option>
-              <option value="very_active">Very Active (Very heavy exercise, physical job)</option>
+              <option value="sedentary">{t('profile.sedentary', currentLanguage)}</option>
+              <option value="light">{t('profile.light', currentLanguage)}</option>
+              <option value="moderate">{t('profile.moderate', currentLanguage)}</option>
+              <option value="active">{t('profile.active', currentLanguage)}</option>
+              <option value="very_active">{t('profile.veryActive', currentLanguage)}</option>
             </select>
           </div>
 
           <div className="setting-group">
-            <label className="setting-label">Health Goal</label>
+            <label className="setting-label">{t('profile.healthGoal', currentLanguage)}</label>
             <select
               value={profile.goal || 'maintain'}
               onChange={(e) => saveProfile({ ...profile, goal: e.target.value })}
               className="setting-select"
             >
-              <option value="lose_weight">Lose Weight (500 cal deficit)</option>
-              <option value="maintain">Maintain Weight</option>
-              <option value="gain_weight">Gain Weight (500 cal surplus)</option>
+              <option value="lose_weight">{t('profile.loseWeight', currentLanguage)}</option>
+              <option value="maintain">{t('profile.maintainWeight', currentLanguage)}</option>
+              <option value="gain_weight">{t('profile.gainWeight', currentLanguage)}</option>
             </select>
           </div>
 
           {profile.age && profile.weight && profile.height && profile.gender && (
-            <CalorieEstimatePreview profile={profile} />
+            <CalorieEstimatePreview profile={profile} currentLanguage={currentLanguage} />
           )}
         </section>
 
         {/* Allergies & Sensitivities */}
         <section className="profile-section">
-          <h2>Allergies & Dietary Restrictions</h2>
+          <h2>{t('profile.allergiesTitle', currentLanguage)}</h2>
           <p className="section-description">
-            Add your allergies and dietary restrictions for personalized recommendations
+            {t('profile.allergiesDescription', currentLanguage)}
           </p>
 
           <div className="tag-list">
@@ -310,7 +310,7 @@ const ProfileScreen = () => {
                 <button
                   onClick={() => removeAllergy(index)}
                   className="tag-remove"
-                  aria-label="Remove allergy"
+                  aria-label={t('profile.removeAllergy', currentLanguage)}
                 >
                   ✕
                 </button>
@@ -319,9 +319,9 @@ const ProfileScreen = () => {
           </div>
 
           <div className="quick-allergies">
-            <h3>Common Allergies</h3>
+            <h3>{t('profile.commonAllergies', currentLanguage)}</h3>
             <div className="allergy-buttons">
-              {['Nuts', 'Dairy', 'Eggs', 'Gluten', 'Soy', 'Shellfish'].map((allergen) => (
+              {[t('profile.nuts', currentLanguage), t('profile.dairy', currentLanguage), t('profile.eggs', currentLanguage), t('profile.gluten', currentLanguage), t('profile.soy', currentLanguage), t('profile.shellfish', currentLanguage)].map((allergen, index) => (
                 <button
                   key={allergen}
                   className="allergy-button"
@@ -337,18 +337,18 @@ const ProfileScreen = () => {
 
         {/* Privacy & Data */}
         <section className="profile-section">
-          <h2>Privacy & Storage</h2>
+          <h2>{t('profile.privacyTitle', currentLanguage)}</h2>
 
           {storageInfo && (
             <div className="storage-info">
-              <h3>Storage Usage</h3>
+              <h3>{t('profile.storageUsage', currentLanguage)}</h3>
               <div className="storage-details">
                 <div className="storage-item">
-                  <span>Used</span>
+                  <span>{t('profile.used', currentLanguage)}</span>
                   <span>{formatBytes(storageInfo.usage)}</span>
                 </div>
                 <div className="storage-item">
-                  <span>Available</span>
+                  <span>{t('profile.available', currentLanguage)}</span>
                   <span>{formatBytes(storageInfo.quota)}</span>
                 </div>
               </div>
@@ -367,23 +367,23 @@ const ProfileScreen = () => {
             className="danger-button"
             onClick={clearAllData}
           >
-            Clear All Data
+{t('profile.clearAllData', currentLanguage)}
           </button>
           <p className="warning-text">
-            This will permanently delete all your scan history and settings
+{t('profile.clearDataWarning', currentLanguage)}
           </p>
         </section>
 
         {/* App Info */}
         <section className="profile-section">
-          <h2>About LabelIQ.Pro</h2>
+          <h2>{t('profile.aboutTitle', currentLanguage)}</h2>
           <div className="app-info">
             <div className="info-item">
-              <span>Version</span>
+              <span>{t('profile.version', currentLanguage)}</span>
               <span>1.0.0</span>
             </div>
             <div className="info-item">
-              <span>Built with</span>
+              <span>{t('profile.builtWith', currentLanguage)}</span>
               <span>{new Date().getFullYear()}</span>
             </div>
           </div>
@@ -393,7 +393,7 @@ const ProfileScreen = () => {
       {isSaving && (
         <div className="saving-indicator">
           <div className="loading-spinner"></div>
-          <span>Saving...</span>
+          <span>{t('profile.saving', currentLanguage)}</span>
         </div>
       )}
     </div>
@@ -409,8 +409,8 @@ function formatBytes(bytes) {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
 }
 
-// Calorie Estimate Preview Component
-const CalorieEstimatePreview = ({ profile }) => {
+// Calorie Estimate Preview Component  
+const CalorieEstimatePreview = ({ profile, currentLanguage }) => {
   const [calorieEstimate, setCalorieEstimate] = useState(null);
 
   useEffect(() => {
@@ -478,19 +478,19 @@ const CalorieEstimatePreview = ({ profile }) => {
 
   return (
     <div className="calorie-preview">
-      <h3>Estimated Daily Calorie Need</h3>
+      <h3>{t('profile.estimatedDailyCalories', currentLanguage)}</h3>
       <div className="calorie-breakdown">
         <div className="calorie-item">
-          <span className="calorie-label">BMR (Base Metabolic Rate):</span>
-          <span className="calorie-value">{calorieEstimate.bmr} calories</span>
+          <span className="calorie-label">{t('profile.bmr', currentLanguage)}:</span>
+          <span className="calorie-value">{calorieEstimate.bmr} {t('profile.calories', currentLanguage)}</span>
         </div>
         <div className="calorie-item">
-          <span className="calorie-label">TDEE (Total Daily Energy):</span>
-          <span className="calorie-value">{calorieEstimate.tdee} calories</span>
+          <span className="calorie-label">{t('profile.tdee', currentLanguage)}:</span>
+          <span className="calorie-value">{calorieEstimate.tdee} {t('profile.calories', currentLanguage)}</span>
         </div>
         <div className="calorie-item main">
-          <span className="calorie-label">Daily Target ({profile.goal.replace('_', ' ')}):</span>
-          <span className="calorie-value main">{calorieEstimate.dailyNeed} calories</span>
+          <span className="calorie-label">{t('profile.dailyTarget', currentLanguage)} ({profile.goal.replace('_', ' ')}):</span>
+          <span className="calorie-value main">{calorieEstimate.dailyNeed} {t('profile.calories', currentLanguage)}</span>
         </div>
       </div>
 
@@ -501,8 +501,8 @@ const CalorieEstimatePreview = ({ profile }) => {
           </span>
           <span>
             {profile.goal === 'lose_weight'
-              ? '500 calorie deficit for 1 lb/week weight loss'
-              : '500 calorie surplus for 1 lb/week weight gain'
+              ? t('profile.weightLossNote', currentLanguage)
+              : t('profile.weightGainNote', currentLanguage)
             }
           </span>
         </div>
