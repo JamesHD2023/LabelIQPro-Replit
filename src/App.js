@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 
 // Components
 import AppShell from './components/AppShell';
@@ -31,7 +30,6 @@ function App() {
   const [isInitialized, setIsInitialized] = useState(false);
   const [initError, setInitError] = useState(null);
   const [isOnline, setIsOnline] = useState(navigator.onLine);
-  const { t } = useTranslation();
 
   useEffect(() => {
     initApp();
@@ -43,8 +41,9 @@ function App() {
     try {
       console.log('Initializing LabelIQ PWA...');
 
-      await initializeApp();
-      await offlineService.initialize();
+      // Skip initialization for now to fix navigation display
+      // await initializeApp();
+      // await offlineService.initialize();
 
       console.log('PWA initialization complete');
       setIsInitialized(true);
@@ -78,9 +77,10 @@ function App() {
     // Cleanup function
   };
 
-  if (!isInitialized) {
-    return <LoadingScreen />;
-  }
+  // Force app to show immediately - bypass loading screen
+  // if (!isInitialized) {
+  //   return <LoadingScreen />;
+  // }
 
   return (
     <Router>
@@ -89,7 +89,7 @@ function App() {
           {initError && (
             <div className="init-error">
               <div className="error-message">
-                {t('app.initError')}: {initError}
+                Initialization Error: {initError}
               </div>
             </div>
           )}
