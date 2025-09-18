@@ -862,6 +862,193 @@ export const translations = {
     }
   },
 
+  // History Screen Translations
+  history: {
+    // Header
+    scanHistory: {
+      en: 'Scan History',
+      de: 'Scan-Verlauf',
+      fr: 'Historique des scans',
+      es: 'Historial de escaneos',
+      pt: 'Histórico de digitalizações',
+      nl: 'Scan geschiedenis',
+      no: 'Skannehistorikk',
+      sv: 'Skanningshistorik'
+    },
+
+    // Loading States
+    loadingHistory: {
+      en: 'Loading your scan history...',
+      de: 'Ihr Scan-Verlauf wird geladen...',
+      fr: 'Chargement de votre historique de scans...',
+      es: 'Cargando su historial de escaneos...',
+      pt: 'Carregando seu histórico de digitalizações...',
+      nl: 'Uw scan geschiedenis wordt geladen...',
+      no: 'Laster din skannehistorikk...',
+      sv: 'Laddar din skanningshistorik...'
+    },
+
+    // Filter Buttons
+    filterAll: {
+      en: 'All',
+      de: 'Alle',
+      fr: 'Tous',
+      es: 'Todos',
+      pt: 'Todos',
+      nl: 'Alles',
+      no: 'Alle',
+      sv: 'Alla'
+    },
+    filterFood: {
+      en: 'Food',
+      de: 'Lebensmittel',
+      fr: 'Alimentation',
+      es: 'Alimentación',
+      pt: 'Alimentação',
+      nl: 'Voeding',
+      no: 'Mat',
+      sv: 'Mat'
+    },
+    filterCosmetic: {
+      en: 'Cosmetic',
+      de: 'Kosmetik',
+      fr: 'Cosmétique',
+      es: 'Cosmético',
+      pt: 'Cosmético',
+      nl: 'Cosmetica',
+      no: 'Kosmetikk',
+      sv: 'Kosmetik'
+    },
+    filterHousehold: {
+      en: 'Household',
+      de: 'Haushalt',
+      fr: 'Ménager',
+      es: 'Hogar',
+      pt: 'Doméstico',
+      nl: 'Huishouden',
+      no: 'Husholdning',
+      sv: 'Hushåll'
+    },
+
+    // Error Messages
+    loadError: {
+      en: 'Failed to load scan history. Please try again.',
+      de: 'Scan-Verlauf konnte nicht geladen werden. Bitte versuchen Sie es erneut.',
+      fr: 'Échec du chargement de l\'historique des scans. Veuillez réessayer.',
+      es: 'Error al cargar el historial de escaneos. Por favor, inténtelo de nuevo.',
+      pt: 'Falha ao carregar o histórico de digitalizações. Por favor, tente novamente.',
+      nl: 'Scan geschiedenis kon niet worden geladen. Probeer het opnieuw.',
+      no: 'Kunne ikke laste skannehistorikk. Prøv igjen.',
+      sv: 'Kunde inte ladda skanningshistorik. Försök igen.'
+    },
+    retry: {
+      en: 'Retry',
+      de: 'Wiederholen',
+      fr: 'Réessayer',
+      es: 'Reintentar',
+      pt: 'Tentar novamente',
+      nl: 'Opnieuw proberen',
+      no: 'Prøv igjen',
+      sv: 'Försök igen'
+    },
+
+    // Empty State
+    noScans: {
+      en: 'No Scans Yet',
+      de: 'Noch keine Scans',
+      fr: 'Aucun scan encore',
+      es: 'Aún no hay escaneos',
+      pt: 'Ainda não há digitalizações',
+      nl: 'Nog geen scans',
+      no: 'Ingen skanninger ennå',
+      sv: 'Inga skanningar än'
+    },
+    startScanning: {
+      en: 'Start scanning products to see your history here',
+      de: 'Beginnen Sie mit dem Scannen von Produkten, um Ihren Verlauf hier zu sehen',
+      fr: 'Commencez à scanner des produits pour voir votre historique ici',
+      es: 'Comience a escanear productos para ver su historial aquí',
+      pt: 'Comece a digitalizar produtos para ver seu histórico aqui',
+      nl: 'Begin met scannen van producten om uw geschiedenis hier te zien',
+      no: 'Start å skanne produkter for å se historikken din her',
+      sv: 'Börja skanna produkter för att se din historik här'
+    },
+    startScanningButton: {
+      en: 'Start Scanning',
+      de: 'Scannen beginnen',
+      fr: 'Commencer le scan',
+      es: 'Comenzar escaneo',
+      pt: 'Começar digitalização',
+      nl: 'Begin scannen',
+      no: 'Start skanning',
+      sv: 'Börja skanna'
+    },
+
+    // Scan Item Details
+    ingredientsCount: {
+      en: '{count} ingredients',
+      de: '{count} Inhaltsstoffe',
+      fr: '{count} ingrédients',
+      es: '{count} ingredientes',
+      pt: '{count} ingredientes',
+      nl: '{count} ingrediënten',
+      no: '{count} ingredienser',
+      sv: '{count} ingredienser'
+    },
+    deleteScan: {
+      en: 'Delete scan',
+      de: 'Scan löschen',
+      fr: 'Supprimer le scan',
+      es: 'Eliminar escaneo',
+      pt: 'Excluir digitalização',
+      nl: 'Scan verwijderen',
+      no: 'Slett skanning',
+      sv: 'Ta bort skanning'
+    },
+    confirmDelete: {
+      en: 'Are you sure you want to delete this scan?',
+      de: 'Sind Sie sicher, dass Sie diesen Scan löschen möchten?',
+      fr: 'Êtes-vous sûr de vouloir supprimer ce scan?',
+      es: '¿Está seguro de que desea eliminar este escaneo?',
+      pt: 'Tem certeza de que deseja excluir esta digitalização?',
+      nl: 'Weet u zeker dat u deze scan wilt verwijderen?',
+      no: 'Er du sikker på at du vil slette denne skanningen?',
+      sv: 'Är du säker på att du vill ta bort denna skanning?'
+    },
+
+    // Category Labels
+    categoryFood: {
+      en: 'Food',
+      de: 'Lebensmittel',
+      fr: 'Alimentation',
+      es: 'Alimentación', 
+      pt: 'Alimentação',
+      nl: 'Voeding',
+      no: 'Mat',
+      sv: 'Mat'
+    },
+    categoryCosmetic: {
+      en: 'Cosmetic',
+      de: 'Kosmetik',
+      fr: 'Cosmétique',
+      es: 'Cosmético',
+      pt: 'Cosmético',
+      nl: 'Cosmetica',
+      no: 'Kosmetikk',
+      sv: 'Kosmetik'
+    },
+    categoryHousehold: {
+      en: 'Household',
+      de: 'Haushalt',
+      fr: 'Ménager',
+      es: 'Hogar',
+      pt: 'Doméstico',
+      nl: 'Huishouden',
+      no: 'Husholdning',
+      sv: 'Hushåll'
+    }
+  },
+
   // Profile Screen Translations
   profile: {
     // Headers
