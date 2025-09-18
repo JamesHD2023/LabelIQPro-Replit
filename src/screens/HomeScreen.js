@@ -98,18 +98,6 @@ const HomeScreen = () => {
           ))}
         </div>
 
-        <div className="selected-category-info">
-          <h3>{selectedOption?.title}</h3>
-          <div className="category-examples">
-            <p>{t('home.examples')}:</p>
-            <ul>
-              {selectedOption?.examples.map((example, index) => (
-                <li key={index}>{example}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
         <button
           className="scan-button primary-button"
           onClick={handleScan}
