@@ -1,4 +1,5 @@
 import { offlineService } from './OfflineService';
+import { t, getCurrentLanguage } from '../utils/translations';
 
 /**
  * DailyCalorieTracker - Tracks daily calorie intake with 24-hour rolling periods
@@ -198,15 +199,15 @@ class DailyCalorieTracker {
         warnings.push({
           type: 'warning',
           level: 'high',
-          message: `You've exceeded your daily calorie goal by ${Math.round(currentCalories - targetCalories)} calories`,
-          recommendation: 'Consider lighter meals for the rest of the day or increase physical activity'
+          message: t('calorieTracker.warnings.exceededCalories', getCurrentLanguage()).replace('{calories}', Math.round(currentCalories - targetCalories)),
+          recommendation: t('calorieTracker.warnings.lighterMeals', getCurrentLanguage())
         });
       } else if (percentOfTarget > 100) {
         warnings.push({
           type: 'info',
           level: 'medium',
-          message: `You've reached your daily calorie goal (${Math.round(percentOfTarget)}%)`,
-          recommendation: 'Try to maintain this level for the rest of the day'
+          message: t('calorieTracker.warnings.reachedGoal', getCurrentLanguage()).replace('{percent}', Math.round(percentOfTarget)),
+          recommendation: t('calorieTracker.warnings.maintainLevel', getCurrentLanguage())
         });
       }
 
@@ -215,8 +216,8 @@ class DailyCalorieTracker {
         warnings.push({
           type: 'warning',
           level: 'medium',
-          message: `You're significantly under your daily calorie goal (${Math.round(percentOfTarget)}%)`,
-          recommendation: 'Consider adding healthy snacks or larger portions to meet your nutritional needs'
+          message: t('calorieTracker.warnings.significantlyUnder', getCurrentLanguage()).replace('{percent}', Math.round(percentOfTarget)),
+          recommendation: t('calorieTracker.warnings.healthySnacks', getCurrentLanguage())
         });
       }
 
@@ -226,8 +227,8 @@ class DailyCalorieTracker {
         warnings.push({
           type: 'tip',
           level: 'low',
-          message: 'Late evening calories can affect sleep quality',
-          recommendation: 'Consider lighter options if you need to eat before bed'
+          message: t('calorieTracker.warnings.lateEveningCalories', getCurrentLanguage()),
+          recommendation: t('calorieTracker.warnings.lighterOptions', getCurrentLanguage())
         });
       }
 

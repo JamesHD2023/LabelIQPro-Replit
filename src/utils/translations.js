@@ -412,6 +412,90 @@ export const translations = {
       nl: 'Aanbevelingen',
       no: 'Anbefalinger',
       sv: 'Rekommendationer'
+    },
+
+    // Warning Messages
+    warnings: {
+      exceededCalories: {
+        en: 'You\'ve exceeded your daily calorie goal by {calories} calories',
+        de: 'Sie haben Ihr tägliches Kalorienziel um {calories} Kalorien überschritten',
+        fr: 'Vous avez dépassé votre objectif calorique quotidien de {calories} calories',
+        es: 'Ha superado su objetivo diario de calorías en {calories} calorías',
+        pt: 'Você excedeu sua meta diária de calorias em {calories} calorias',
+        nl: 'U heeft uw dagelijkse caloriedoel met {calories} calorieën overschreden',
+        no: 'Du har overskredet ditt daglige kalorimål med {calories} kalorier',
+        sv: 'Du har överskridit ditt dagliga kalorimål med {calories} kalorier'
+      },
+      lighterMeals: {
+        en: 'Consider lighter meals for the rest of the day or increase physical activity',
+        de: 'Erwägen Sie leichtere Mahlzeiten für den Rest des Tages oder erhöhen Sie die körperliche Aktivität',
+        fr: 'Envisagez des repas plus légers pour le reste de la journée ou augmentez l\'activité physique',
+        es: 'Considere comidas más ligeras para el resto del día o aumente la actividad física',
+        pt: 'Considere refeições mais leves para o resto do dia ou aumente a atividade física',
+        nl: 'Overweeg lichtere maaltijden voor de rest van de dag of verhoog de lichaamsbeweging',
+        no: 'Vurder lettere måltider for resten av dagen eller øk fysisk aktivitet',
+        sv: 'Överväg lättare måltider för resten av dagen eller öka fysisk aktivitet'
+      },
+      reachedGoal: {
+        en: 'You\'ve reached your daily calorie goal ({percent}%)',
+        de: 'Sie haben Ihr tägliches Kalorienziel erreicht ({percent}%)',
+        fr: 'Vous avez atteint votre objectif calorique quotidien ({percent}%)',
+        es: 'Ha alcanzado su objetivo diario de calorías ({percent}%)',
+        pt: 'Você atingiu sua meta diária de calorias ({percent}%)',
+        nl: 'U heeft uw dagelijkse caloriedoel bereikt ({percent}%)',
+        no: 'Du har nådd ditt daglige kalorimål ({percent}%)',
+        sv: 'Du har nått ditt dagliga kalorimål ({percent}%)'
+      },
+      maintainLevel: {
+        en: 'Try to maintain this level for the rest of the day',
+        de: 'Versuchen Sie, dieses Niveau für den Rest des Tages beizubehalten',
+        fr: 'Essayez de maintenir ce niveau pour le reste de la journée',
+        es: 'Trate de mantener este nivel por el resto del día',
+        pt: 'Tente manter este nível pelo resto do dia',
+        nl: 'Probeer dit niveau voor de rest van de dag te behouden',
+        no: 'Prøv å opprettholde dette nivået for resten av dagen',
+        sv: 'Försök att behålla denna nivå för resten av dagen'
+      },
+      significantlyUnder: {
+        en: 'You\'re significantly under your daily calorie goal ({percent}%)',
+        de: 'Sie liegen deutlich unter Ihrem täglichen Kalorienziel ({percent}%)',
+        fr: 'Vous êtes significativement en dessous de votre objectif calorique quotidien ({percent}%)',
+        es: 'Está significativamente por debajo de su objetivo diario de calorías ({percent}%)',
+        pt: 'Você está significativamente abaixo de sua meta diária de calorias ({percent}%)',
+        nl: 'U ligt significant onder uw dagelijkse caloriedoel ({percent}%)',
+        no: 'Du er betydelig under ditt daglige kalorimål ({percent}%)',
+        sv: 'Du ligger betydligt under ditt dagliga kalorimål ({percent}%)'
+      },
+      healthySnacks: {
+        en: 'Consider adding healthy snacks or larger portions to meet your nutritional needs',
+        de: 'Erwägen Sie gesunde Snacks oder größere Portionen, um Ihren Ernährungsbedürfnissen gerecht zu werden',
+        fr: 'Envisagez d\'ajouter des collations saines ou de plus grandes portions pour répondre à vos besoins nutritionnels',
+        es: 'Considere agregar bocadillos saludables o porciones más grandes para satisfacer sus necesidades nutricionales',
+        pt: 'Considere adicionar lanches saudáveis ou porções maiores para atender às suas necessidades nutricionais',
+        nl: 'Overweeg het toevoegen van gezonde snacks of grotere porties om aan uw voedingsbehoeften te voldoen',
+        no: 'Vurder å legge til sunne snacks eller større porsjoner for å dekke dine ernæringsbehov',
+        sv: 'Överväg att lägga till nyttiga mellanmål eller större portioner för att möta dina näringsbehov'
+      },
+      lateEveningCalories: {
+        en: 'Late evening calories can affect sleep quality',
+        de: 'Späte Abendkalorien können die Schlafqualität beeinträchtigen',
+        fr: 'Les calories tardives le soir peuvent affecter la qualité du sommeil',
+        es: 'Las calorías tardías de la noche pueden afectar la calidad del sueño',
+        pt: 'Calorias tardias à noite podem afetar a qualidade do sono',
+        nl: 'Late avond calorieën kunnen de slaapkwaliteit beïnvloeden',
+        no: 'Seine kveldskalorier kan påvirke søvnkvaliteten',
+        sv: 'Sena kvällskalorier kan påverka sömnkvaliteten'
+      },
+      lighterOptions: {
+        en: 'Consider lighter options if you need to eat before bed',
+        de: 'Erwägen Sie leichtere Optionen, wenn Sie vor dem Schlafengehen essen müssen',
+        fr: 'Envisagez des options plus légères si vous devez manger avant de vous coucher',
+        es: 'Considere opciones más ligeras si necesita comer antes de acostarse',
+        pt: 'Considere opções mais leves se precisar comer antes de dormir',
+        nl: 'Overweeg lichtere opties als u voor het slapen moet eten',
+        no: 'Vurder lettere alternativer hvis du må spise før sengetid',
+        sv: 'Överväg lättare alternativ om du behöver äta innan du går och lägger dig'
+      }
     }
   },
 
