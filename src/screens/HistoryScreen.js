@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+// Translation system removed for stability
 import { offlineService } from '../services/OfflineService';
 import SafetyBadge from '../components/SafetyBadge';
 import './HistoryScreen.css';
 
 const HistoryScreen = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  // Translation system removed for stability
 
   const [scanHistory, setScanHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +25,7 @@ const HistoryScreen = () => {
       setScanHistory(history);
     } catch (err) {
       console.error('Failed to load history:', err);
-      setError(t('history.errors.loadFailed'));
+      setError('Failed to load scan history. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -44,7 +44,7 @@ const HistoryScreen = () => {
 
   const handleDelete = async (scanId, e) => {
     e.stopPropagation();
-    if (window.confirm(t('history.confirmDelete'))) {
+    if (window.confirm('Are you sure you want to delete this scan?')) {
       try {
         await offlineService.deleteScanResult(scanId);
         setScanHistory(prev => prev.filter(scan => scan.id !== scanId));
@@ -58,7 +58,7 @@ const HistoryScreen = () => {
     return (
       <div className="history-screen loading">
         <div className="loading-spinner large"></div>
-        <p>{t('history.loading')}</p>
+        <p>Loading your scan history...</p>
       </div>
     );
   }
@@ -66,31 +66,31 @@ const HistoryScreen = () => {
   return (
     <div className="history-screen">
       <div className="history-header">
-        <h1>{t('history.title')}</h1>
+        <h1>Scan History</h1>
         <div className="filter-buttons">
           <button
             className={`filter-button ${filter === 'all' ? 'active' : ''}`}
             onClick={() => setFilter('all')}
           >
-            {t('history.filters.all')}
+            All
           </button>
           <button
             className={`filter-button ${filter === 'food' ? 'active' : ''}`}
             onClick={() => setFilter('food')}
           >
-            {t('history.filters.food')}
+            Food
           </button>
           <button
             className={`filter-button ${filter === 'cosmetic' ? 'active' : ''}`}
             onClick={() => setFilter('cosmetic')}
           >
-            {t('history.filters.cosmetic')}
+            Cosmetic
           </button>
           <button
             className={`filter-button ${filter === 'household' ? 'active' : ''}`}
             onClick={() => setFilter('household')}
           >
-            {t('history.filters.household')}
+            Household
           </button>
         </div>
       </div>
@@ -100,20 +100,20 @@ const HistoryScreen = () => {
           <div className="error-message">
             <span className="error-icon">⚠️</span>
             <p>{error}</p>
-            <button onClick={loadHistory}>{t('history.retry')}</button>
+            <button onClick={loadHistory}>Retry</button>
           </div>
         )}
 
         {filteredHistory.length === 0 && !error ? (
           <div className="empty-history">
             <div className="empty-icon">📋</div>
-            <h2>{t('history.empty.title')}</h2>
-            <p>{t('history.empty.description')}</p>
+            <h2>No Scans Yet</h2>
+            <p>Start scanning products to see your history here</p>
             <button
               className="primary-button"
               onClick={() => navigate('/camera')}
             >
-              {t('history.empty.startScanning')}
+              Start Scanning
             </button>
           </div>
         ) : (
@@ -127,7 +127,7 @@ const HistoryScreen = () => {
                 <div className="scan-info">
                   <div className="scan-header">
                     <span className={`category-badge ${scan.category}`}>
-                      {t(`categories.${scan.category}`)}
+                      {scan.category || 'Food'}
                     </span>
                     <span className="scan-date">
                       {new Date(scan.timestamp).toLocaleDateString()}
@@ -135,7 +135,7 @@ const HistoryScreen = () => {
                   </div>
                   <div className="scan-details">
                     <p className="ingredient-count">
-                      {scan.ingredients?.length || 0} {t('history.ingredients')}
+                      {scan.ingredients?.length || 0} ingredients
                     </p>
                     {scan.rawText && (
                       <p className="scan-preview">
@@ -153,7 +153,7 @@ const HistoryScreen = () => {
                   <button
                     className="delete-button"
                     onClick={(e) => handleDelete(scan.id, e)}
-                    aria-label={t('history.delete')}
+                    aria-label="Delete scan"
                   >
                     🗑️
                   </button>

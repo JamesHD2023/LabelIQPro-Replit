@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+// Translation system removed for stability
 import { offlineService } from '../services/OfflineService';
 import { dailyCalorieTracker } from '../services/DailyCalorieTracker';
 import { supportedLanguages } from '../utils/i18n';
 import './ProfileScreen.css';
 
 const ProfileScreen = () => {
-  const { t, i18n } = useTranslation();
+  // Translation system removed for stability
   const [profile, setProfile] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
@@ -36,17 +36,14 @@ const ProfileScreen = () => {
         dietaryPreferences: [],
 
         // App Settings
-        language: i18n.language || 'en',
+        language: 'en',
         notifications: true
       };
 
       const finalProfile = userProfile || defaultProfile;
       setProfile(finalProfile);
 
-      // Set language if it differs from current
-      if (finalProfile.language && finalProfile.language !== i18n.language) {
-        await i18n.changeLanguage(finalProfile.language);
-      }
+      // Language switching disabled for stability
     } catch (error) {
       console.error('Failed to load profile:', error);
     } finally {
@@ -96,7 +93,7 @@ const ProfileScreen = () => {
   const changeLanguage = async (languageCode) => {
     try {
       // Change language in i18n
-      await i18n.changeLanguage(languageCode);
+      // Language switching disabled for stability
 
       // Save to profile
       const updatedProfile = {
@@ -124,7 +121,7 @@ const ProfileScreen = () => {
   };
 
   const clearAllData = async () => {
-    if (window.confirm(t('profile.clearData.confirm'))) {
+    if (window.confirm('Are you sure you want to clear all data? This cannot be undone.')) {
       try {
         await offlineService.clearStorage();
         window.location.reload();
@@ -138,7 +135,7 @@ const ProfileScreen = () => {
     return (
       <div className="profile-screen loading">
         <div className="loading-spinner large"></div>
-        <p>{t('profile.loading')}</p>
+        <p>Loading profile...</p>
       </div>
     );
   }
@@ -146,17 +143,17 @@ const ProfileScreen = () => {
   return (
     <div className="profile-screen">
       <div className="profile-header">
-        <h1>{t('profile.title')}</h1>
+        <h1>Profile Settings</h1>
       </div>
 
       <div className="profile-content">
         {/* Personal Information */}
         <section className="profile-section">
-          <h2>{t('profile.personalInfo.title')}</h2>
+          <h2>Personal Information</h2>
 
           <div className="setting-group">
             <label className="setting-label">
-              {t('profile.language')}
+              Language
             </label>
             <select
               value={profile.language || 'en'}
@@ -180,7 +177,7 @@ const ProfileScreen = () => {
               />
               <span className="toggle-slider"></span>
               <span className="toggle-label">
-                {t('profile.personalInfo.notifications')}
+                Push Notifications
               </span>
             </label>
           </div>
@@ -301,9 +298,9 @@ const ProfileScreen = () => {
 
         {/* Allergies & Sensitivities */}
         <section className="profile-section">
-          <h2>{t('profile.allergies.title')}</h2>
+          <h2>Allergies & Dietary Restrictions</h2>
           <p className="section-description">
-            {t('profile.allergies.description')}
+            Add your allergies and dietary restrictions for personalized recommendations
           </p>
 
           <div className="tag-list">
@@ -313,7 +310,7 @@ const ProfileScreen = () => {
                 <button
                   onClick={() => removeAllergy(index)}
                   className="tag-remove"
-                  aria-label={t('profile.allergies.remove')}
+                  aria-label="Remove allergy"
                 >
                   ✕
                 </button>
@@ -322,7 +319,7 @@ const ProfileScreen = () => {
           </div>
 
           <div className="quick-allergies">
-            <h3>{t('profile.allergies.common')}</h3>
+            <h3>Common Allergies</h3>
             <div className="allergy-buttons">
               {['Nuts', 'Dairy', 'Eggs', 'Gluten', 'Soy', 'Shellfish'].map((allergen) => (
                 <button
@@ -340,18 +337,18 @@ const ProfileScreen = () => {
 
         {/* Privacy & Data */}
         <section className="profile-section">
-          <h2>{t('profile.privacy.title')}</h2>
+          <h2>Privacy & Storage</h2>
 
           {storageInfo && (
             <div className="storage-info">
-              <h3>{t('profile.privacy.storage')}</h3>
+              <h3>Storage Usage</h3>
               <div className="storage-details">
                 <div className="storage-item">
-                  <span>{t('profile.privacy.used')}</span>
+                  <span>Used</span>
                   <span>{formatBytes(storageInfo.usage)}</span>
                 </div>
                 <div className="storage-item">
-                  <span>{t('profile.privacy.quota')}</span>
+                  <span>Available</span>
                   <span>{formatBytes(storageInfo.quota)}</span>
                 </div>
               </div>
@@ -370,23 +367,23 @@ const ProfileScreen = () => {
             className="danger-button"
             onClick={clearAllData}
           >
-            {t('profile.privacy.clearAllData')}
+            Clear All Data
           </button>
           <p className="warning-text">
-            {t('profile.privacy.clearWarning')}
+            This will permanently delete all your scan history and settings
           </p>
         </section>
 
         {/* App Info */}
         <section className="profile-section">
-          <h2>{t('profile.about.title')}</h2>
+          <h2>About LabelIQ.Pro</h2>
           <div className="app-info">
             <div className="info-item">
-              <span>{t('profile.about.version')}</span>
+              <span>Version</span>
               <span>1.0.0</span>
             </div>
             <div className="info-item">
-              <span>{t('profile.about.built')}</span>
+              <span>Built with</span>
               <span>{new Date().getFullYear()}</span>
             </div>
           </div>
@@ -396,7 +393,7 @@ const ProfileScreen = () => {
       {isSaving && (
         <div className="saving-indicator">
           <div className="loading-spinner"></div>
-          <span>{t('profile.saving')}</span>
+          <span>Saving...</span>
         </div>
       )}
     </div>
