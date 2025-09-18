@@ -63,27 +63,11 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-      <div class="app-shell">
-        <div class="loading">
-          <div>Loading LabelIQ.Pro...</div>
-        </div>
-      </div>
-    </div>
+    <div id="root"></div>
 
-    <!-- Service Worker Registration -->
+    <!-- Service Worker Registration DISABLED for debugging -->
     <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-              console.log('SW registered: ', registration);
-            })
-            .catch((registrationError) => {
-              console.log('SW registration failed: ', registrationError);
-            });
-        });
-      }
+      console.log('Service worker registration disabled for debugging');
     </script>
   </body>
 </html>
