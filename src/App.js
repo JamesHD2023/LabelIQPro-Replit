@@ -8,7 +8,7 @@ import LoadingScreen from './components/LoadingScreen';
 
 // Screens
 import HomeScreen from './screens/HomeScreen';
-import CameraScreen from './screens/CameraScreen';
+// import CameraScreen from './screens/CameraScreen'; // Temporarily disabled due to compilation issues
 import ResultsScreen from './screens/ResultsScreen';
 import HistoryScreen from './screens/HistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
@@ -96,7 +96,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<HomeScreen />} />
-            <Route path="/camera" element={<CameraScreen />} />
+            <Route path="/camera" element={<div>Camera Screen - Under Maintenance</div>} />
             <Route path="/expert" element={<ExpertConsultationScreen />} />
             <Route path="/learning" element={<LearningScreen />} />
             <Route path="/results/:scanId" element={<ResultsScreen />} />

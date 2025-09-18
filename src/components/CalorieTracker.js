@@ -161,7 +161,7 @@ const CalorieTracker = ({ onScanRequest }) => {
     </div>
   );
 
-  const renderHistoryView = () => {
+  const HistoryView = () => {
     const [history, setHistory] = useState([]);
     const [historyLoading, setHistoryLoading] = useState(true);
 
@@ -221,7 +221,7 @@ const CalorieTracker = ({ onScanRequest }) => {
     );
   };
 
-  const renderInsightsView = () => {
+  const InsightsView = () => {
     const [insights, setInsights] = useState(null);
     const [weeklySummary, setWeeklySummary] = useState(null);
     const [insightsLoading, setInsightsLoading] = useState(true);
@@ -351,8 +351,8 @@ const CalorieTracker = ({ onScanRequest }) => {
 
       <div className="tracker-content">
         {view === 'today' && renderTodayView()}
-        {view === 'history' && renderHistoryView()}
-        {view === 'insights' && renderInsightsView()}
+        {view === 'history' && <HistoryView />}
+        {view === 'insights' && <InsightsView />}
       </div>
     </div>
   );
