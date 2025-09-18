@@ -586,6 +586,431 @@ export const translations = {
       no: 'Fjern allergi',
       sv: 'Ta bort allergi'
     }
+  },
+
+  // Dashboard Screen Translations
+  dashboard: {
+    // Header
+    healthScore: {
+      en: 'Health Score',
+      de: 'Gesundheitswert',
+      fr: 'Score de Santé',
+      es: 'Puntuación de Salud',
+      pt: 'Pontuação de Saúde',
+      nl: 'Gezondheidsscore',
+      no: 'Helsescore',
+      sv: 'Hälsopoäng'
+    },
+    improving: {
+      en: 'improving',
+      de: 'verbessernd',
+      fr: 'amélioration',
+      es: 'mejorando',
+      pt: 'melhorando',
+      nl: 'verbeterend',
+      no: 'forbedrer seg',
+      sv: 'förbättras'
+    },
+
+    // Tab Navigation
+    overview: {
+      en: 'Overview',
+      de: 'Übersicht',
+      fr: 'Aperçu',
+      es: 'Resumen',
+      pt: 'Visão Geral',
+      nl: 'Overzicht',
+      no: 'Oversikt',
+      sv: 'Översikt'
+    },
+    nutrition: {
+      en: 'Nutrition',
+      de: 'Ernährung',
+      fr: 'Nutrition',
+      es: 'Nutrición',
+      pt: 'Nutrição',
+      nl: 'Voeding',
+      no: 'Ernæring',
+      sv: 'Näring'
+    },
+    safety: {
+      en: 'Safety',
+      de: 'Sicherheit',
+      fr: 'Sécurité',
+      es: 'Seguridad',
+      pt: 'Segurança',
+      nl: 'Veiligheid',
+      no: 'Sikkerhet',
+      sv: 'Säkerhet'
+    },
+    impact: {
+      en: 'Impact',
+      de: 'Auswirkung',
+      fr: 'Impact',
+      es: 'Impacto',
+      pt: 'Impacto',
+      nl: 'Impact',
+      no: 'Innvirkning',
+      sv: 'Påverkan'
+    },
+
+    // Overview Tab
+    totalScans: {
+      en: 'Total Scans',
+      de: 'Gesamt-Scans',
+      fr: 'Scans Totaux',
+      es: 'Escaneos Totales',
+      pt: 'Varreduras Totais',
+      nl: 'Totale Scans',
+      no: 'Totale Skanninger',
+      sv: 'Totala Skanningar'
+    },
+    ingredientScans: {
+      en: 'Ingredient Scans',
+      de: 'Zutat-Scans',
+      fr: 'Scans d\'Ingrédients',
+      es: 'Escaneos de Ingredientes',
+      pt: 'Varreduras de Ingredientes',
+      nl: 'Ingrediënt Scans',
+      no: 'Ingrediens Skanninger',
+      sv: 'Ingrediens Skanningar'
+    },
+    mealAnalysis: {
+      en: 'Meal Analysis',
+      de: 'Mahlzeit-Analyse',
+      fr: 'Analyse des Repas',
+      es: 'Análisis de Comidas',
+      pt: 'Análise de Refeições',
+      nl: 'Maaltijd Analyse',
+      no: 'Måltidsanalyse',
+      sv: 'Måltidsanalys'
+    },
+    healthImprovement: {
+      en: 'Health Improvement',
+      de: 'Gesundheitsverbesserung',
+      fr: 'Amélioration de la Santé',
+      es: 'Mejora de la Salud',
+      pt: 'Melhoria da Saúde',
+      nl: 'Gezondheidsverbetering',
+      no: 'Helseforbedring',
+      sv: 'Hälsoförbättring'
+    },
+    thisMonth: {
+      en: 'This month',
+      de: 'Diesen Monat',
+      fr: 'Ce mois-ci',
+      es: 'Este mes',
+      pt: 'Este mês',
+      nl: 'Deze maand',
+      no: 'Denne måneden',
+      sv: 'Denna månad'
+    },
+    productsAnalyzed: {
+      en: 'Products analyzed',
+      de: 'Produkte analysiert',
+      fr: 'Produits analysés',
+      es: 'Productos analizados',
+      pt: 'Produtos analisados',
+      nl: 'Producten geanalyseerd',
+      no: 'Produkter analysert',
+      sv: 'Produkter analyserade'
+    },
+    foodsIdentified: {
+      en: 'Foods identified',
+      de: 'Lebensmittel identifiziert',
+      fr: 'Aliments identifiés',
+      es: 'Alimentos identificados',
+      pt: 'Alimentos identificados',
+      nl: 'Voedingsmiddelen geïdentificeerd',
+      no: 'Mat identifisert',
+      sv: 'Livsmedel identifierade'
+    },
+    thisWeek: {
+      en: 'This week',
+      de: 'Diese Woche',
+      fr: 'Cette semaine',
+      es: 'Esta semana',
+      pt: 'Esta semana',
+      nl: 'Deze week',
+      no: 'Denne uken',
+      sv: 'Denna vecka'
+    },
+    goalProgress: {
+      en: 'Goal Progress',
+      de: 'Ziel-Fortschritt',
+      fr: 'Progrès des Objectifs',
+      es: 'Progreso de Objetivos',
+      pt: 'Progresso dos Objetivos',
+      nl: 'Doelvoortgang',
+      no: 'Målframgang',
+      sv: 'Målframsteg'
+    },
+    calorieGoals: {
+      en: 'Calorie Goals',
+      de: 'Kalorien-Ziele',
+      fr: 'Objectifs Caloriques',
+      es: 'Objetivos de Calorías',
+      pt: 'Objetivos de Calorias',
+      nl: 'Calorie Doelen',
+      no: 'Kalorimål',
+      sv: 'Kalorimål'
+    },
+    nutritionQuality: {
+      en: 'Nutrition Quality',
+      de: 'Ernährungsqualität',
+      fr: 'Qualité Nutritionnelle',
+      es: 'Calidad Nutricional',
+      pt: 'Qualidade Nutricional',
+      nl: 'Voedingskwaliteit',
+      no: 'Ernæringskvalitet',
+      sv: 'Näringskvalitet'
+    },
+    safetyScore: {
+      en: 'Safety Score',
+      de: 'Sicherheitswert',
+      fr: 'Score de Sécurité',
+      es: 'Puntuación de Seguridad',
+      pt: 'Pontuação de Segurança',
+      nl: 'Veiligheidsscore',
+      no: 'Sikkerhetsscore',
+      sv: 'Säkerhetspoäng'
+    },
+
+    // Nutrition Tab
+    dailyNutritionTracking: {
+      en: 'Daily Nutrition Tracking',
+      de: 'Tägliche Ernährungsverfolgung',
+      fr: 'Suivi Nutritionnel Quotidien',
+      es: 'Seguimiento Nutricional Diario',
+      pt: 'Rastreamento Nutricional Diário',
+      nl: 'Dagelijkse Voedingsvervolging',
+      no: 'Daglig Ernæringssporing',
+      sv: 'Daglig Näringsspårning'
+    },
+    calories: {
+      en: 'Calories',
+      de: 'Kalorien',
+      fr: 'Calories',
+      es: 'Calorías',
+      pt: 'Calorias',
+      nl: 'Calorieën',
+      no: 'Kalorier',
+      sv: 'Kalorier'
+    },
+    target: {
+      en: 'Target',
+      de: 'Ziel',
+      fr: 'Objectif',
+      es: 'Objetivo',
+      pt: 'Meta',
+      nl: 'Doel',
+      no: 'Mål',
+      sv: 'Mål'
+    },
+    macrosDistribution: {
+      en: 'Macros Distribution',
+      de: 'Makro-Verteilung',
+      fr: 'Répartition des Macros',
+      es: 'Distribución de Macros',
+      pt: 'Distribuição de Macros',
+      nl: 'Macro Verdeling',
+      no: 'Makro Fordeling',
+      sv: 'Makrofördelning'
+    },
+    carbs: {
+      en: 'Carbs',
+      de: 'Kohlenhydrate',
+      fr: 'Glucides',
+      es: 'Carbohidratos',
+      pt: 'Carboidratos',
+      nl: 'Koolhydraten',
+      no: 'Karbohydrater',
+      sv: 'Kolhydrater'
+    },
+    protein: {
+      en: 'Protein',
+      de: 'Protein',
+      fr: 'Protéines',
+      es: 'Proteínas',
+      pt: 'Proteínas',
+      nl: 'Eiwitten',
+      no: 'Protein',
+      sv: 'Protein'
+    },
+    fat: {
+      en: 'Fat',
+      de: 'Fett',
+      fr: 'Lipides',
+      es: 'Grasas',
+      pt: 'Gorduras',
+      nl: 'Vetten',
+      no: 'Fett',
+      sv: 'Fett'
+    },
+
+    // Safety Tab
+    mostConcerningIngredients: {
+      en: 'Most Concerning Ingredients',
+      de: 'Bedenklichste Inhaltsstoffe',
+      fr: 'Ingrédients les Plus Préoccupants',
+      es: 'Ingredientes Más Preocupantes',
+      pt: 'Ingredientes Mais Preocupantes',
+      nl: 'Meest Zorgwekkende Ingrediënten',
+      no: 'Mest Bekymringsfulle Ingredienser',
+      sv: 'Mest Oroväckande Ingredienser'
+    },
+    highRisk: {
+      en: 'High Risk',
+      de: 'Hohes Risiko',
+      fr: 'Risque Élevé',
+      es: 'Alto Riesgo',
+      pt: 'Alto Risco',
+      nl: 'Hoog Risico',
+      no: 'Høy Risiko',
+      sv: 'Hög Risk'
+    },
+    mediumRisk: {
+      en: 'Medium Risk',
+      de: 'Mittleres Risiko',
+      fr: 'Risque Moyen',
+      es: 'Riesgo Medio',
+      pt: 'Risco Médio',
+      nl: 'Gemiddeld Risico',
+      no: 'Middels Risiko',
+      sv: 'Medel Risk'
+    },
+    improvementSuggestions: {
+      en: 'Improvement Suggestions',
+      de: 'Verbesserungsvorschläge',
+      fr: 'Suggestions d\'Amélioration',
+      es: 'Sugerencias de Mejora',
+      pt: 'Sugestões de Melhoria',
+      nl: 'Verbeteringsuggesties',
+      no: 'Forbedringsforslag',
+      sv: 'Förbättringsförslag'
+    },
+    reduceProcessedFoods: {
+      en: 'Reduce processed foods consumption',
+      de: 'Verbrauche weniger verarbeitete Lebensmittel',
+      fr: 'Réduire la consommation d\'aliments transformés',
+      es: 'Reducir el consumo de alimentos procesados',
+      pt: 'Reduzir o consumo de alimentos processados',
+      nl: 'Verminder het verbruik van bewerkte voeding',
+      no: 'Reduser konsum av bearbeidet mat',
+      sv: 'Minska konsumtionen av bearbetade livsmedel'
+    },
+    chooseOrganic: {
+      en: 'Choose organic alternatives when possible',
+      de: 'Wähle organische Alternativen wenn möglich',
+      fr: 'Choisir des alternatives biologiques quand possible',
+      es: 'Elegir alternativas orgánicas cuando sea posible',
+      pt: 'Escolher alternativas orgânicas quando possível',
+      nl: 'Kies biologische alternatieven wanneer mogelijk',
+      no: 'Velg økologiske alternativer når mulig',
+      sv: 'Välj ekologiska alternativ när möjligt'
+    },
+    readLabels: {
+      en: 'Read ingredient labels more carefully',
+      de: 'Lies Zutatenlisten sorgfältiger',
+      fr: 'Lire les étiquettes d\'ingrédients plus attentivement',
+      es: 'Leer las etiquetas de ingredientes más cuidadosamente',
+      pt: 'Ler os rótulos de ingredientes com mais cuidado',
+      nl: 'Lees ingrediëntenlabels zorgvuldiger',
+      no: 'Les ingrediensetiketter mer nøye',
+      sv: 'Läs ingrediensetiketter mer noggrant'
+    },
+
+    // Impact Tab
+    healthImpactAnalysis: {
+      en: 'Health Impact Analysis',
+      de: 'Gesundheits-Auswirkungsanalyse',
+      fr: 'Analyse de l\'Impact sur la Santé',
+      es: 'Análisis de Impacto en la Salud',
+      pt: 'Análise de Impacto na Saúde',
+      nl: 'Gezondheidsimpact Analyse',
+      no: 'Helsekonsekvensanalyse',
+      sv: 'Hälsopåverkan Analys'
+    },
+    cardiovascularHealth: {
+      en: 'Cardiovascular Health',
+      de: 'Herz-Kreislauf-Gesundheit',
+      fr: 'Santé Cardiovasculaire',
+      es: 'Salud Cardiovascular',
+      pt: 'Saúde Cardiovascular',
+      nl: 'Cardiovasculaire Gezondheid',
+      no: 'Kardiovaskulær Helse',
+      sv: 'Kardiovaskulär Hälsa'
+    },
+    metabolicHealth: {
+      en: 'Metabolic Health',
+      de: 'Stoffwechsel-Gesundheit',
+      fr: 'Santé Métabolique',
+      es: 'Salud Metabólica',
+      pt: 'Saúde Metabólica',
+      nl: 'Metabolische Gezondheid',
+      no: 'Metabolsk Helse',
+      sv: 'Metabolisk Hälsa'
+    },
+    improvingTrend: {
+      en: 'Improving trend',
+      de: 'Verbesserungstrend',
+      fr: 'Tendance d\'amélioration',
+      es: 'Tendencia de mejora',
+      pt: 'Tendência de melhoria',
+      nl: 'Verbeterende trend',
+      no: 'Forbedringstrend',
+      sv: 'Förbättrande trend'
+    },
+    stableImprovement: {
+      en: 'Stable improvement',
+      de: 'Stabile Verbesserung',
+      fr: 'Amélioration stable',
+      es: 'Mejora estable',
+      pt: 'Melhoria estável',
+      nl: 'Stabiele verbetering',
+      no: 'Stabil forbedring',
+      sv: 'Stabil förbättring'
+    },
+    personalizedRecommendations: {
+      en: 'Personalized Recommendations',
+      de: 'Personalisierte Empfehlungen',
+      fr: 'Recommandations Personnalisées',
+      es: 'Recomendaciones Personalizadas',
+      pt: 'Recomendações Personalizadas',
+      nl: 'Gepersonaliseerde Aanbevelingen',
+      no: 'Personlig Tilpassede Anbefalinger',
+      sv: 'Personliga Rekommendationer'
+    },
+    increaseVegetables: {
+      en: 'Increase vegetables in your daily meals',
+      de: 'Erhöhe Gemüse in deinen täglichen Mahlzeiten',
+      fr: 'Augmenter les légumes dans vos repas quotidiens',
+      es: 'Aumentar las verduras en las comidas diarias',
+      pt: 'Aumentar vegetais nas refeições diárias',
+      nl: 'Verhoog groenten in je dagelijkse maaltijden',
+      no: 'Øk grønnsaker i de daglige måltidene',
+      sv: 'Öka grönsaker i dina dagliga måltider'
+    },
+    reduceSodium: {
+      en: 'Reduce sodium intake by 20%',
+      de: 'Reduziere die Natriumaufnahme um 20%',
+      fr: 'Réduire l\'apport en sodium de 20%',
+      es: 'Reducir la ingesta de sodio en un 20%',
+      pt: 'Reduzir a ingestão de sódio em 20%',
+      nl: 'Verminder natriuminname met 20%',
+      no: 'Reduser natriuminntak med 20%',
+      sv: 'Minska natriumintag med 20%'
+    },
+    addWholeGrains: {
+      en: 'Add more whole grains to your diet',
+      de: 'Füge mehr Vollkornprodukte deiner Ernährung hinzu',
+      fr: 'Ajouter plus de grains entiers à votre alimentation',
+      es: 'Agregar más granos integrales a su dieta',
+      pt: 'Adicionar mais grãos integrais à dieta',
+      nl: 'Voeg meer volkoren producten toe aan je dieet',
+      no: 'Legg til mer fullkorn i kostholdet',
+      sv: 'Lägg till mer fullkorn i din kost'
+    }
   }
 };
 
