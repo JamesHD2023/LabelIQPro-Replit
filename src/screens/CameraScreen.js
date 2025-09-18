@@ -458,8 +458,6 @@ const CameraScreen = () => {
                 <span className="toggle-arrow">⇄</span>
               </button>
             </div>
-
-{/* AR Mode Controls - temporarily disabled for testing */}
           )}
         </div>
         <button className="flip-button" onClick={toggleCamera}>

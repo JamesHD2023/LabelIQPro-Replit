@@ -1,6 +1,7 @@
 import { apiOrchestrator } from './APIOrchestrator';
 import { offlineService } from './OfflineService';
 import { MealAnalysisUtils } from './MealAnalysisServiceUtils';
+import { FoodRecognitionUtils } from './FoodRecognitionServiceUtils';
 
 class MealAnalysisService {
   constructor() {
