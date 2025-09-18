@@ -10,6 +10,8 @@
   "navigation": {
     "home": "Home",
     "camera": "Scan",
+    "scan": "Scan",
+    "expert": "Expert",
     "history": "History",
     "profile": "Profile",
     "insights": "Insights",
