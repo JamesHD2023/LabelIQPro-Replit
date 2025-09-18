@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "LabelIQ",
+    "name": "LabelIQ.Pro",
     "tagline": "Smart ingredient analysis",
     "loading": "Loading...",
     "error": "An error occurred",
@@ -17,9 +17,13 @@
     "dashboard": "Dashboard"
   },
   "home": {
-    "welcome": "Welcome to LabelIQ",
+    "welcome": "Welcome to LabelIQ.Pro",
     "subtitle": "Scan any product to analyze ingredients and get health insights",
+    "selectCategory": "What would you like to scan?",
+    "selectCategorySubtitle": "Choose a category to get started with your analysis",
     "scanProduct": "Scan Product",
+    "startScan": "Start Scanning",
+    "examples": "Examples",
     "quickStart": "Quick Start Guide",
     "recentScans": "Recent Scans",
     "noRecentScans": "No recent scans",
@@ -27,16 +31,68 @@
       "food": "Food Products",
       "cosmetics": "Cosmetics",
       "household": "Household Products"
+    },
+    "scanOptions": {
+      "food": {
+        "title": "Food Products",
+        "subtitle": "Analyze ingredients in food items and get nutritional insights",
+        "examples": [
+          "Packaged snacks and cereals",
+          "Beverages and drinks",
+          "Frozen and canned foods"
+        ]
+      },
+      "cosmetic": {
+        "title": "Cosmetics & Beauty",
+        "subtitle": "Check ingredients in skincare, makeup, and personal care products",
+        "examples": [
+          "Skincare creams and serums",
+          "Makeup and foundations",
+          "Shampoos and body care"
+        ]
+      },
+      "household": {
+        "title": "Household Products",
+        "subtitle": "Analyze cleaning products and household chemicals for safety",
+        "examples": [
+          "Cleaning supplies and detergents",
+          "Air fresheners and sprays",
+          "Laundry and dishwashing products"
+        ]
+      }
+    },
+    "quickActions": {
+      "history": "View History",
+      "insights": "Health Insights"
     }
   },
   "camera": {
     "title": "Scan Product Label",
+    "titles": {
+      "food": "Scan Food Product",
+      "cosmetic": "Scan Cosmetic Product", 
+      "household": "Scan Household Product"
+    },
     "instruction": "Point your camera at the ingredient list",
     "capture": "Capture",
     "gallery": "Choose from Gallery",
     "analyzing": "Analyzing ingredients...",
     "permission": "Camera permission required",
-    "error": "Camera error occurred"
+    "error": "Camera error occurred",
+    "retry": "Try Again",
+    "errors": {
+      "initFailed": "Failed to initialize camera"
+    },
+    "mode": {
+      "ingredientList": {
+        "title": "Ingredient List",
+        "description": "Scan product ingredient labels"
+      },
+      "preparedMeal": {
+        "title": "Prepared Meal",
+        "description": "Analyze prepared meals with AI"
+      }
+    }
   },
   "results": {
     "title": "Analysis Results",
@@ -115,7 +171,7 @@
   "sharing": {
     "title": "Share Results",
     "platforms": "Choose Platform",
-    "message": "Check out my ingredient analysis from LabelIQ!",
+    "message": "Check out my ingredient analysis from LabelIQ.Pro!",
     "success": "Shared successfully",
     "error": "Failed to share"
   },

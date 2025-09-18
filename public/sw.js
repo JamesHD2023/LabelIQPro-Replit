@@ -111,7 +111,7 @@ self.addEventListener('sync', (event) => {
 // Push notifications
 self.addEventListener('push', (event) => {
   const options = {
-    body: event.data ? event.data.text() : 'New notification from LabelIQ',
+    body: event.data ? event.data.text() : 'New notification from LabelIQ.Pro',
     icon: '/logo192.png',
     badge: '/badge.png',
     vibrate: [100, 50, 100],
@@ -134,7 +134,7 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(
-    self.registration.showNotification('LabelIQ', options)
+    self.registration.showNotification('LabelIQ.Pro', options)
   );
 });
 
@@ -187,7 +187,7 @@ async function syncScanResults() {
 // Helper function to open IndexedDB
 function openDB() {
   return new Promise((resolve, reject) => {
-    const request = indexedDB.open('LabelIQDB', 1);
+    const request = indexedDB.open('LabelIQ.ProDB', 1);
 
     request.onerror = () => reject(request.error);
     request.onsuccess = () => resolve(request.result);

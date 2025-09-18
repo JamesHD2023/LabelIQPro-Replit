@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "LabelIQ",
+    "name": "LabelIQ.Pro",
     "tagline": "Intelligente Inhaltsstoffanalyse",
     "loading": "Wird geladen...",
     "error": "Ein Fehler ist aufgetreten",
@@ -17,9 +17,13 @@
     "dashboard": "Dashboard"
   },
   "home": {
-    "welcome": "Willkommen bei LabelIQ",
+    "welcome": "Willkommen bei LabelIQ.Pro",
     "subtitle": "Scannen Sie jedes Produkt, um Inhaltsstoffe zu analysieren und Gesundheitseinblicke zu erhalten",
+    "selectCategory": "Was möchten Sie scannen?",
+    "selectCategorySubtitle": "Wählen Sie eine Kategorie, um mit der Analyse zu beginnen",
     "scanProduct": "Produkt scannen",
+    "startScan": "Scannen starten",
+    "examples": "Beispiele",
     "quickStart": "Schnellstart-Anleitung",
     "recentScans": "Letzte Scans",
     "noRecentScans": "Keine letzten Scans",
@@ -27,6 +31,39 @@
       "food": "Lebensmittel",
       "cosmetics": "Kosmetik",
       "household": "Haushaltsprodukte"
+    },
+    "scanOptions": {
+      "food": {
+        "title": "Lebensmittel",
+        "subtitle": "Inhaltsstoffe in Lebensmitteln analysieren und Nährwertinformationen erhalten",
+        "examples": [
+          "Verpackte Snacks und Müsli",
+          "Getränke und Drinks",
+          "Tiefkühl- und Konservenprodukte"
+        ]
+      },
+      "cosmetic": {
+        "title": "Kosmetik & Beauty",
+        "subtitle": "Inhaltsstoffe in Hautpflege, Make-up und Körperpflegeprodukten prüfen",
+        "examples": [
+          "Hautpflegecremes und Seren",
+          "Make-up und Foundations",
+          "Shampoos und Körperpflege"
+        ]
+      },
+      "household": {
+        "title": "Haushaltsprodukte",
+        "subtitle": "Reinigungsprodukte und Haushaltschemikalien auf Sicherheit analysieren",
+        "examples": [
+          "Reinigungsmittel und Waschmittel",
+          "Lufterfrischer und Sprays",
+          "Wäsche- und Spülprodukte"
+        ]
+      }
+    },
+    "quickActions": {
+      "history": "Verlauf anzeigen",
+      "insights": "Gesundheitseinblicke"
     }
   },
   "camera": {

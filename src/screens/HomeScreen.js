@@ -68,7 +68,7 @@ const HomeScreen = () => {
         <div className="hero-content">
           <h1 className="app-title">
             <span className="app-icon">🔍</span>
-            LabelIQ
+            {t('app.name')}
           </h1>
           <p className="app-subtitle">
             {t('home.subtitle')}
