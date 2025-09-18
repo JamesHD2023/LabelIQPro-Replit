@@ -1709,6 +1709,66 @@ export const translations = {
       no: 'Skalldyr',
       sv: 'Skaldjur'
     },
+    nickel: {
+      en: 'Nickel',
+      de: 'Nickel',
+      fr: 'Nickel',
+      es: 'Níquel',
+      pt: 'Níquel',
+      nl: 'Nikkel',
+      no: 'Nikkel',
+      sv: 'Nickel'
+    },
+    fragrances: {
+      en: 'Fragrances',
+      de: 'Duftstoffe',
+      fr: 'Parfums',
+      es: 'Fragancias',
+      pt: 'Fragrâncias',
+      nl: 'Geurstoffen',
+      no: 'Parfyme',
+      sv: 'Parfymer'
+    },
+    latex: {
+      en: 'Latex',
+      de: 'Latex',
+      fr: 'Latex',
+      es: 'Látex',
+      pt: 'Látex',
+      nl: 'Latex',
+      no: 'Latex',
+      sv: 'Latex'
+    },
+    preservatives: {
+      en: 'Preservatives',
+      de: 'Konservierungsstoffe',
+      fr: 'Conservateurs',
+      es: 'Conservantes',
+      pt: 'Conservantes',
+      nl: 'Conserveermiddelen',
+      no: 'Konserveringsmidler',
+      sv: 'Konserveringsmedel'
+    },
+    lanolin: {
+      en: 'Lanolin',
+      de: 'Lanolin',
+      fr: 'Lanoline',
+      es: 'Lanolina',
+      pt: 'Lanolina',
+      nl: 'Lanoline',
+      no: 'Lanolin',
+      sv: 'Lanolin'
+    },
+    cosmetics: {
+      en: 'Cosmetics',
+      de: 'Kosmetika',
+      fr: 'Cosmétiques',
+      es: 'Cosméticos',
+      pt: 'Cosméticos',
+      nl: 'Cosmetica',
+      no: 'Kosmetikk',
+      sv: 'Kosmetika'
+    },
     
     // Storage and Actions
     storageUsage: {

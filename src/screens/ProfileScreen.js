@@ -321,7 +321,20 @@ const ProfileScreen = () => {
           <div className="quick-allergies">
             <h3>{t('profile.commonAllergies', currentLanguage)}</h3>
             <div className="allergy-buttons">
-              {[t('profile.nuts', currentLanguage), t('profile.dairy', currentLanguage), t('profile.eggs', currentLanguage), t('profile.gluten', currentLanguage), t('profile.soy', currentLanguage), t('profile.shellfish', currentLanguage)].map((allergen, index) => (
+              {[
+                t('profile.nuts', currentLanguage), 
+                t('profile.dairy', currentLanguage), 
+                t('profile.eggs', currentLanguage), 
+                t('profile.gluten', currentLanguage), 
+                t('profile.soy', currentLanguage), 
+                t('profile.shellfish', currentLanguage),
+                t('profile.nickel', currentLanguage),
+                t('profile.fragrances', currentLanguage),
+                t('profile.latex', currentLanguage),
+                t('profile.preservatives', currentLanguage),
+                t('profile.lanolin', currentLanguage),
+                t('profile.cosmetics', currentLanguage)
+              ].map((allergen, index) => (
                 <button
                   key={allergen}
                   className="allergy-button"
