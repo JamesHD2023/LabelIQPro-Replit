@@ -1,33 +1,34 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../utils/translations';
 import CalorieTracker from '../components/CalorieTracker';
 import './HomeScreen.css';
 
 const HomeScreen = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('food');
 
   const scanOptions = [
     {
       id: 'food',
-      title: t('home.scanOptions.food.title'),
-      subtitle: t('home.scanOptions.food.subtitle'),
+      title: t('home.scanOptions.food.title', currentLanguage),
+      subtitle: t('home.scanOptions.food.subtitle', currentLanguage),
       icon: '🍎',
       gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
     },
     {
       id: 'cosmetic',
-      title: t('home.scanOptions.cosmetic.title'),
-      subtitle: t('home.scanOptions.cosmetic.subtitle'),
+      title: t('home.scanOptions.cosmetic.title', currentLanguage),
+      subtitle: t('home.scanOptions.cosmetic.subtitle', currentLanguage),
       icon: '💄',
       gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
     },
     {
       id: 'household',
-      title: t('home.scanOptions.household.title'),
-      subtitle: t('home.scanOptions.household.subtitle'),
+      title: t('home.scanOptions.household.title', currentLanguage),
+      subtitle: t('home.scanOptions.household.subtitle', currentLanguage),
       icon: '🧽',
       gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
     }
@@ -53,18 +54,18 @@ const HomeScreen = () => {
         <div className="hero-content">
           <h1 className="app-title">
             <span className="app-icon">🔍</span>
-            {t('app.name')}
+            {t('app.name', currentLanguage)}
           </h1>
           <p className="app-subtitle">
-            {t('home.subtitle')}
+            {t('home.subtitle', currentLanguage)}
           </p>
         </div>
       </div>
 
       <div className="content-section">
         <div className="section-header">
-          <h2>{t('home.selectCategory')}</h2>
-          <p>{t('home.selectCategorySubtitle')}</p>
+          <h2>{t('home.selectCategory', currentLanguage)}</h2>
+          <p>{t('home.selectCategorySubtitle', currentLanguage)}</p>
         </div>
 
         <div className="scan-options">
@@ -88,7 +89,7 @@ const HomeScreen = () => {
           onClick={handleScan}
         >
           <span className="button-icon">📷</span>
-          {t('home.startScan')}
+          {t('home.startScan', currentLanguage)}
         </button>
 
         <div className="quick-actions">
@@ -97,14 +98,14 @@ const HomeScreen = () => {
             onClick={() => navigate('/history')}
           >
             <span className="action-icon">📋</span>
-            {t('home.quickActions.history')}
+            {t('home.quickActions.history', currentLanguage)}
           </button>
           <button
             className="quick-action"
             onClick={() => navigate('/insights')}
           >
             <span className="action-icon">📊</span>
-            {t('home.quickActions.insights')}
+            {t('home.quickActions.insights', currentLanguage)}
           </button>
         </div>
 

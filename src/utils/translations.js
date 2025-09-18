@@ -13,6 +13,154 @@ export const supportedLanguages = {
 };
 
 export const translations = {
+  // App-wide translations
+  app: {
+    name: {
+      en: 'LabelIQ.Pro',
+      de: 'LabelIQ.Pro',
+      fr: 'LabelIQ.Pro',
+      es: 'LabelIQ.Pro',
+      pt: 'LabelIQ.Pro',
+      nl: 'LabelIQ.Pro',
+      no: 'LabelIQ.Pro',
+      sv: 'LabelIQ.Pro'
+    }
+  },
+
+  // Home Screen translations
+  home: {
+    subtitle: {
+      en: 'Scan any product to analyze ingredients and get health insights',
+      de: 'Scannen Sie jedes Produkt, um Inhaltsstoffe zu analysieren und Gesundheitseinblicke zu erhalten',
+      fr: 'Scannez n\'importe quel produit pour analyser les ingrédients et obtenir des informations de santé',
+      es: 'Escanea cualquier producto para analizar ingredientes y obtener información de salud',
+      pt: 'Escaneie qualquer produto para analisar ingredientes e obter insights de saúde',
+      nl: 'Scan elk product om ingrediënten te analyseren en gezondheidsinzichten te krijgen',
+      no: 'Skann hvilket som helst produkt for å analysere ingredienser og få helseinnsikt',
+      sv: 'Skanna vilken produkt som helst för att analysera ingredienser och få hälsoinsikter'
+    },
+    selectCategory: {
+      en: 'What would you like to scan?',
+      de: 'Was möchten Sie scannen?',
+      fr: 'Que souhaitez-vous scanner ?',
+      es: '¿Qué le gustaría escanear?',
+      pt: 'O que você gostaria de escanear?',
+      nl: 'Wat wilt u scannen?',
+      no: 'Hva vil du skanne?',
+      sv: 'Vad vill du skanna?'
+    },
+    selectCategorySubtitle: {
+      en: 'Choose a category to get started with your analysis',
+      de: 'Wählen Sie eine Kategorie, um mit Ihrer Analyse zu beginnen',
+      fr: 'Choisissez une catégorie pour commencer votre analyse',
+      es: 'Elija una categoría para comenzar con su análisis',
+      pt: 'Escolha uma categoria para começar sua análise',
+      nl: 'Kies een categorie om te beginnen met uw analyse',
+      no: 'Velg en kategori for å komme i gang med analysen',
+      sv: 'Välj en kategori för att komma igång med din analys'
+    },
+    startScan: {
+      en: 'Start Scanning',
+      de: 'Scannen starten',
+      fr: 'Commencer le scan',
+      es: 'Comenzar escaneo',
+      pt: 'Iniciar escaneamento',
+      nl: 'Begin met scannen',
+      no: 'Start skanning',
+      sv: 'Börja skanna'
+    },
+    scanOptions: {
+      food: {
+        title: {
+          en: 'Food Products',
+          de: 'Lebensmittel',
+          fr: 'Produits alimentaires',
+          es: 'Productos alimentarios',
+          pt: 'Produtos alimentares',
+          nl: 'Voedingsproducten',
+          no: 'Matprodukter',
+          sv: 'Livsmedelsprodukter'
+        },
+        subtitle: {
+          en: 'Analyze ingredients in food items and get nutritional insights',
+          de: 'Analysieren Sie Inhaltsstoffe in Lebensmitteln und erhalten Sie Ernährungseinblicke',
+          fr: 'Analysez les ingrédients des aliments et obtenez des informations nutritionnelles',
+          es: 'Analice ingredientes en alimentos y obtenga información nutricional',
+          pt: 'Analise ingredientes em alimentos e obtenha insights nutricionais',
+          nl: 'Analyseer ingrediënten in voedingsmiddelen en krijg voedingsinzichten',
+          no: 'Analyser ingredienser i matvarer og få ernæringsinnsikt',
+          sv: 'Analysera ingredienser i livsmedel och få näringsinsikter'
+        }
+      },
+      cosmetic: {
+        title: {
+          en: 'Cosmetics & Beauty',
+          de: 'Kosmetik & Schönheit',
+          fr: 'Cosmétiques et beauté',
+          es: 'Cosméticos y belleza',
+          pt: 'Cosméticos e beleza',
+          nl: 'Cosmetica en schoonheid',
+          no: 'Kosmetikk og skjønnhet',
+          sv: 'Kosmetika och skönhet'
+        },
+        subtitle: {
+          en: 'Check ingredients in skincare, makeup, and personal care products',
+          de: 'Überprüfen Sie Inhaltsstoffe in Hautpflege, Make-up und Körperpflegeprodukten',
+          fr: 'Vérifiez les ingrédients des soins de la peau, maquillage et produits de soins personnels',
+          es: 'Verifique ingredientes en cuidado de la piel, maquillaje y productos de cuidado personal',
+          pt: 'Verifique ingredientes em cuidados da pele, maquiagem e produtos de cuidado pessoal',
+          nl: 'Controleer ingrediënten in huidverzorging, make-up en persoonlijke verzorgingsproducten',
+          no: 'Sjekk ingredienser i hudpleie, sminke og personlige pleieprodukter',
+          sv: 'Kontrollera ingredienser i hudvård, smink och personliga vårdprodukter'
+        }
+      },
+      household: {
+        title: {
+          en: 'Household Products',
+          de: 'Haushaltsprodukte',
+          fr: 'Produits ménagers',
+          es: 'Productos domésticos',
+          pt: 'Produtos domésticos',
+          nl: 'Huishoudproducten',
+          no: 'Husholdningsprodukter',
+          sv: 'Hushållsprodukter'
+        },
+        subtitle: {
+          en: 'Analyze cleaning products and household chemicals for safety',
+          de: 'Analysieren Sie Reinigungsprodukte und Haushaltschemikalien auf Sicherheit',
+          fr: 'Analysez les produits de nettoyage et les produits chimiques ménagers pour la sécurité',
+          es: 'Analice productos de limpieza y químicos domésticos para seguridad',
+          pt: 'Analise produtos de limpeza e produtos químicos domésticos para segurança',
+          nl: 'Analyseer schoonmaakproducten en huishoudchemicaliën op veiligheid',
+          no: 'Analyser rengjøringsprodukter og husholdningskjemikalier for sikkerhet',
+          sv: 'Analysera rengöringsprodukter och hushållskemikalier för säkerhet'
+        }
+      }
+    },
+    quickActions: {
+      history: {
+        en: 'View History',
+        de: 'Verlauf anzeigen',
+        fr: 'Voir l\'historique',
+        es: 'Ver historial',
+        pt: 'Ver histórico',
+        nl: 'Geschiedenis bekijken',
+        no: 'Se historikk',
+        sv: 'Visa historik'
+      },
+      insights: {
+        en: 'Health Insights',
+        de: 'Gesundheitseinblicke',
+        fr: 'Informations de santé',
+        es: 'Información de salud',
+        pt: 'Insights de saúde',
+        nl: 'Gezondheidsinzichten',
+        no: 'Helseinnsikt',
+        sv: 'Hälsoinsikter'
+      }
+    }
+  },
+
   // Profile Screen Translations
   profile: {
     // Headers
