@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { register as registerSW } from './utils/serviceWorkerRegistration';
+import reportWebVitals from './utils/reportWebVitals';
 
-console.log('Starting React app...');
+// Initialize i18n
+import './utils/i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,4 +15,8 @@ root.render(
   </React.StrictMode>
 );
 
-console.log('React app mounted successfully!');
+// Register service worker for PWA functionality
+registerSW();
+
+// Web vitals reporting
+reportWebVitals(console.log);
