@@ -1,48 +1,46 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import './Navigation.css';
 
 const Navigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { t } = useTranslation();
 
   const navItems = [
     {
       path: '/',
       icon: '🏠',
-      label: t('navigation.home', { defaultValue: 'Home' }),
+      label: 'Home',
       id: 'home'
     },
     {
       path: '/camera',
       icon: '📷',
-      label: t('navigation.scan', { defaultValue: 'Scan' }),
+      label: 'Scan',
       id: 'camera'
     },
     {
       path: '/expert',
       icon: '🩺',
-      label: t('navigation.expert', { defaultValue: 'Expert' }),
+      label: 'Expert',
       id: 'expert'
     },
     {
       path: '/history',
       icon: '📋',
-      label: t('navigation.history', { defaultValue: 'History' }),
+      label: 'History',
       id: 'history'
     },
     {
       path: '/dashboard',
       icon: '💊',
-      label: t('navigation.dashboard', { defaultValue: 'Dashboard' }),
+      label: 'Dashboard',
       id: 'dashboard'
     },
     {
       path: '/profile',
       icon: '👤',
-      label: t('navigation.profile', { defaultValue: 'Profile' }),
+      label: 'Profile',
       id: 'profile'
     }
   ];
