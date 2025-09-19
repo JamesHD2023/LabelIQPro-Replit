@@ -1972,6 +1972,16 @@ export const translations = {
   // Dashboard Screen Translations
   dashboard: {
     // Header
+    title: {
+      en: 'Health Dashboard',
+      de: 'Gesundheits-Dashboard',
+      fr: 'Tableau de Bord Santé',
+      es: 'Panel de Salud',
+      pt: 'Painel de Saúde',
+      nl: 'Gezondheid Dashboard',
+      no: 'Helse Dashboard',
+      sv: 'Hälso Dashboard'
+    },
     healthScore: {
       en: 'Health Score',
       de: 'Gesundheitswert',
