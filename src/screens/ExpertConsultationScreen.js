@@ -386,7 +386,7 @@ const ExpertConsultationScreen = () => {
               <p>{t('expert.personalizedAdvice', currentLanguage)}</p>
 
               <div className="expert-grid">
-                {smartExpertRouter.getAllExperts().map(expert => (
+                {smartExpertRouter.getAllExperts(currentLanguage).map(expert => (
                   <div
                     key={expert.id}
                     className="expert-card"

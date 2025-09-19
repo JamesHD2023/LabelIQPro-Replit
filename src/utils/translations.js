@@ -555,6 +555,164 @@ export const translations = {
       sv: 'Få personlig rådgivning från AI-specialister om ingredienssäkerhet, hälsoeffekter och mer.'
     },
 
+    // Expert Specialists
+    experts: {
+      allergist: {
+        name: {
+          en: 'AI Allergist Assistant',
+          de: 'KI-Allergologe Assistent',
+          fr: 'Assistant Allergologue IA',
+          es: 'Asistente Alergólogo IA',
+          pt: 'Assistente Alergista IA',
+          nl: 'AI Allergoloog Assistent',
+          no: 'AI Allergolog Assistent',
+          sv: 'AI Allergolog Assistent'
+        },
+        title: {
+          en: 'Allergy & Immunology AI',
+          de: 'Allergie & Immunologie KI',
+          fr: 'IA Allergie & Immunologie',
+          es: 'IA Alergia e Inmunología',
+          pt: 'IA Alergia e Imunologia',
+          nl: 'AI Allergie & Immunologie',
+          no: 'Allergi & Immunologi AI',
+          sv: 'Allergi & Immunologi AI'
+        }
+      },
+      dermatologist: {
+        name: {
+          en: 'AI Dermatology Consultant',
+          de: 'KI-Dermatologie Berater',
+          fr: 'Consultant Dermatologie IA',
+          es: 'Consultor Dermatología IA',
+          pt: 'Consultor Dermatologia IA',
+          nl: 'AI Dermatologie Consultant',
+          no: 'AI Dermatologi Konsulent',
+          sv: 'AI Dermatologi Konsulent'
+        },
+        title: {
+          en: 'Skin Health AI',
+          de: 'Hautgesundheit KI',
+          fr: 'IA Santé de la Peau',
+          es: 'IA Salud de la Piel',
+          pt: 'IA Saúde da Pele',
+          nl: 'AI Huidgezondheid',
+          no: 'Hudhelse AI',
+          sv: 'Hudhälsa AI'
+        }
+      },
+      gastroenterologist: {
+        name: {
+          en: 'AI Digestive Health Advisor',
+          de: 'KI-Verdauungsgesundheit Berater',
+          fr: 'Conseiller Santé Digestive IA',
+          es: 'Asesor Salud Digestiva IA',
+          pt: 'Conselheiro Saúde Digestiva IA',
+          nl: 'AI Spijsvertering Gezondheid Adviseur',
+          no: 'AI Fordøyelseshelse Rådgiver',
+          sv: 'AI Matsmältningshälsa Rådgivare'
+        },
+        title: {
+          en: 'Gut Health AI',
+          de: 'Darmgesundheit KI',
+          fr: 'IA Santé Intestinale',
+          es: 'IA Salud Intestinal',
+          pt: 'IA Saúde Intestinal',
+          nl: 'AI Darmgezondheid',
+          no: 'Tarmhelse AI',
+          sv: 'Tarmhälsa AI'
+        }
+      },
+      endocrinologist: {
+        name: {
+          en: 'AI Metabolic Health Specialist',
+          de: 'KI-Stoffwechselgesundheit Spezialist',
+          fr: 'Spécialiste Santé Métabolique IA',
+          es: 'Especialista Salud Metabólica IA',
+          pt: 'Especialista Saúde Metabólica IA',
+          nl: 'AI Metabole Gezondheid Specialist',
+          no: 'AI Metabolsk Helse Spesialist',
+          sv: 'AI Metabolisk Hälsa Specialist'
+        },
+        title: {
+          en: 'Hormone & Metabolism AI',
+          de: 'Hormon & Stoffwechsel KI',
+          fr: 'IA Hormone & Métabolisme',
+          es: 'IA Hormona y Metabolismo',
+          pt: 'IA Hormônio e Metabolismo',
+          nl: 'AI Hormoon & Metabolisme',
+          no: 'Hormon & Stoffskifte AI',
+          sv: 'Hormon & Ämnesomsättning AI'
+        }
+      },
+      toxicologist: {
+        name: {
+          en: 'AI Chemical Safety Analyst',
+          de: 'KI-Chemikaliensicherheit Analyst',
+          fr: 'Analyste Sécurité Chimique IA',
+          es: 'Analista Seguridad Química IA',
+          pt: 'Analista Segurança Química IA',
+          nl: 'AI Chemische Veiligheid Analist',
+          no: 'AI Kjemisk Sikkerhet Analytiker',
+          sv: 'AI Kemisk Säkerhetsanalytiker'
+        },
+        title: {
+          en: 'Toxicology AI',
+          de: 'Toxikologie KI',
+          fr: 'IA Toxicologie',
+          es: 'IA Toxicología',
+          pt: 'IA Toxicologia',
+          nl: 'AI Toxicologie',
+          no: 'Toksikologi AI',
+          sv: 'Toxikologi AI'
+        }
+      },
+      nutritionist: {
+        name: {
+          en: 'AI Nutrition Advisor',
+          de: 'KI-Ernährungsberater',
+          fr: 'Conseiller Nutrition IA',
+          es: 'Asesor Nutrición IA',
+          pt: 'Conselheiro Nutrição IA',
+          nl: 'AI Voeding Adviseur',
+          no: 'AI Ernæring Rådgiver',
+          sv: 'AI Näringskonsult'
+        },
+        title: {
+          en: 'Digital Nutritionist',
+          de: 'Digitaler Ernährungsberater',
+          fr: 'Nutritionniste Numérique',
+          es: 'Nutricionista Digital',
+          pt: 'Nutricionista Digital',
+          nl: 'Digitale Voedingsdeskundige',
+          no: 'Digital Ernæringsfysiolog',
+          sv: 'Digital Näringsexpert'
+        }
+      },
+      pediatrician: {
+        name: {
+          en: 'AI Child Health Specialist',
+          de: 'KI-Kindergesundheit Spezialist',
+          fr: 'Spécialiste Santé Enfant IA',
+          es: 'Especialista Salud Infantil IA',
+          pt: 'Especialista Saúde Infantil IA',
+          nl: 'AI Kindergezondheid Specialist',
+          no: 'AI Barnehelse Spesialist',
+          sv: 'AI Barnhälsa Specialist'
+        },
+        title: {
+          en: 'Pediatric Safety AI',
+          de: 'Pädiatrische Sicherheit KI',
+          fr: 'IA Sécurité Pédiatrique',
+          es: 'IA Seguridad Pediátrica',
+          pt: 'IA Segurança Pediátrica',
+          nl: 'AI Pediatrische Veiligheid',
+          no: 'Pediatrisk Sikkerhet AI',
+          sv: 'Pediatrisk Säkerhet AI'
+        }
+      }
+    },
+
     // Quick Questions
     quickQuestions: {
       en: 'Quick Questions',

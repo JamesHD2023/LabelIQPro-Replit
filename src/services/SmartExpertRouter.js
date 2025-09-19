@@ -6,11 +6,9 @@ import { t, getCurrentLanguage } from '../utils/translations';
 
 class SmartExpertRouter {
   constructor() {
-    // Expert specialization mapping
+    // Expert specialization mapping (without cached translations)
     this.experts = {
       allergist: {
-        name: t('expert.experts.allergist.name', getCurrentLanguage()),
-        title: t('expert.experts.allergist.title', getCurrentLanguage()),
         avatar: '🤧',
         specialties: ['allergies', 'immunology', 'cross-reactions', 'anaphylaxis'],
         keywords: [
@@ -21,8 +19,6 @@ class SmartExpertRouter {
         confidence: 0.9
       },
       dermatologist: {
-        name: t('expert.experts.dermatologist.name', getCurrentLanguage()),
-        title: t('expert.experts.dermatologist.title', getCurrentLanguage()),
         avatar: '🧴',
         specialties: ['skin', 'dermatitis', 'cosmetics', 'topical reactions'],
         keywords: [
@@ -33,8 +29,6 @@ class SmartExpertRouter {
         confidence: 0.85
       },
       gastroenterologist: {
-        name: t('expert.experts.gastroenterologist.name', getCurrentLanguage()),
-        title: t('expert.experts.gastroenterologist.title', getCurrentLanguage()),
         avatar: '🫃',
         specialties: ['digestive', 'gut health', 'food intolerance', 'IBS'],
         keywords: [
@@ -45,8 +39,6 @@ class SmartExpertRouter {
         confidence: 0.8
       },
       endocrinologist: {
-        name: t('expert.experts.endocrinologist.name', getCurrentLanguage()),
-        title: t('expert.experts.endocrinologist.title', getCurrentLanguage()),
         avatar: '🩸',
         specialties: ['hormones', 'diabetes', 'metabolism', 'blood sugar'],
         keywords: [
@@ -57,8 +49,6 @@ class SmartExpertRouter {
         confidence: 0.85
       },
       toxicologist: {
-        name: t('expert.experts.toxicologist.name', getCurrentLanguage()),
-        title: t('expert.experts.toxicologist.title', getCurrentLanguage()),
         avatar: '⚗️',
         specialties: ['chemical safety', 'toxicity', 'interactions', 'exposure'],
         keywords: [
@@ -69,8 +59,6 @@ class SmartExpertRouter {
         confidence: 0.75
       },
       nutritionist: {
-        name: t('expert.experts.nutritionist.name', getCurrentLanguage()),
-        title: t('expert.experts.nutritionist.title', getCurrentLanguage()),
         avatar: '🥗',
         specialties: ['nutrition', 'diet', 'wellness', 'supplements'],
         keywords: [
@@ -81,8 +69,6 @@ class SmartExpertRouter {
         confidence: 0.8
       },
       pediatrician: {
-        name: t('expert.experts.pediatrician.name', getCurrentLanguage()),
-        title: t('expert.experts.pediatrician.title', getCurrentLanguage()),
         avatar: '👶',
         specialties: ['child safety', 'infant nutrition', 'development'],
         keywords: [
@@ -397,11 +383,13 @@ class SmartExpertRouter {
   }
 
   /**
-   * Get all available experts
+   * Get all available experts with dynamic translations
    */
-  getAllExperts() {
+  getAllExperts(language = getCurrentLanguage()) {
     return Object.entries(this.experts).map(([id, expert]) => ({
       id,
+      name: t(`expert.experts.${id}.name`, language),
+      title: t(`expert.experts.${id}.title`, language),
       ...expert
     }));
   }
