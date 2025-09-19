@@ -22,7 +22,7 @@
   background: linear-gradient(135deg, #7dd3fc 0%, #a7f3d0 100%);
   color: #000;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 0;
   position: relative;
 }
@@ -176,10 +176,11 @@
 /* Welcome Screen */
 .welcome-screen {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: 100%;
   text-align: center;
+  padding-top: 2rem;
 }
 
 .welcome-content {
@@ -209,7 +210,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin: 1rem 0 2rem 0;
 }
 
 .expert-card {
