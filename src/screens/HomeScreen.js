@@ -59,7 +59,7 @@ const HomeScreen = () => {
           </h1>
           <div className="brand-tagline">
             <p className="tagline-main">{t('home.subtitle', currentLanguage)}</p>
-            <p className="tagline-sub">Ingredient & Product Intelligence: Consumed, Ingested, or Applied</p>
+            <p className="tagline-sub">Ingredient & Product Intelligence: in Contact, Ingested or Applied</p>
           </div>
         </div>
       </div>
