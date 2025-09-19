@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../utils/translations';
 import CalorieTracker from '../components/CalorieTracker';
+import ipiciaLogo from '../assets/ipicia-logo.png';
 import './HomeScreen.css';
 
 const HomeScreen = () => {
@@ -53,7 +54,7 @@ const HomeScreen = () => {
       >
         <div className="hero-content">
           <h1 className="app-title">
-            <span className="app-icon">🔍</span>
+            <img src={ipiciaLogo} alt="IPICIA" className="app-icon" />
             {t('app.name', currentLanguage)}
           </h1>
           <div className="brand-tagline">
