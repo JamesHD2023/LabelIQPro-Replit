@@ -4,6 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../utils/translations';
 import { smartExpertRouter } from '../services/SmartExpertRouter';
 import { offlineService } from '../services/OfflineService';
+import ipiciaLogo from '../assets/ipicia-logo-yellow.png';
 import './ExpertConsultationScreen.css';
 
 const ExpertConsultationScreen = () => {
@@ -342,11 +343,23 @@ const ExpertConsultationScreen = () => {
   return (
     <div className="expert-consultation">
       <div className="expert-header">
-        <button className="back-button" onClick={() => navigate(-1)}>
-          ←
-        </button>
+        <div className="brand-header">
+          <h1 className="app-title">
+            <img src={ipiciaLogo} alt="IPICIA" className="app-icon" />
+            IPICIA.COM
+          </h1>
+          <div className="brand-tagline">
+            <p className="tagline-main">Scan it - every choice matters!</p>
+            <p className="tagline-sub">Ingredient & Product Intelligence: Consumed, Ingested, or Applied</p>
+          </div>
+          <div className="page-title">
+            <h2>🩺 {t('expert.askExpert', currentLanguage)}</h2>
+          </div>
+          <button className="back-button" onClick={() => navigate(-1)}>
+            ←
+          </button>
+        </div>
         <div className="header-content">
-          <h1 className="header-title">🩺 {t('expert.askExpert', currentLanguage)}</h1>
           {selectedExpert && (
             <div className="selected-expert">
               <span className="expert-avatar">{selectedExpert.expert.avatar}</span>

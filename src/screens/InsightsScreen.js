@@ -4,6 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../utils/translations';
 import { offlineService } from '../services/OfflineService';
 import SafetyBadge from '../components/SafetyBadge';
+import ipiciaLogo from '../assets/ipicia-logo-yellow.png';
 import './InsightsScreen.css';
 
 const InsightsScreen = () => {
@@ -150,7 +151,17 @@ const InsightsScreen = () => {
   return (
     <div className="insights-screen">
       <div className="insights-header">
-        <h1>{t('insights.title', currentLanguage)}</h1>
+        <h1 className="app-title">
+          <img src={ipiciaLogo} alt="IPICIA" className="app-icon" />
+          IPICIA.COM
+        </h1>
+        <div className="brand-tagline">
+          <p className="tagline-main">Scan it - every choice matters!</p>
+          <p className="tagline-sub">Ingredient & Product Intelligence: Consumed, Ingested, or Applied</p>
+        </div>
+        <div className="page-title">
+          <h2>{t('insights.title', currentLanguage)}</h2>
+        </div>
         <div className="time-range-selector">
           <select
             value={timeRange}

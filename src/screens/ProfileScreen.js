@@ -3,6 +3,7 @@ import { offlineService } from '../services/OfflineService';
 import { dailyCalorieTracker } from '../services/DailyCalorieTracker';
 import { supportedLanguages, t } from '../utils/translations';
 import { useLanguage } from '../contexts/LanguageContext';
+import ipiciaLogo from '../assets/ipicia-logo-yellow.png';
 import './ProfileScreen.css';
 
 const ProfileScreen = () => {
@@ -143,7 +144,17 @@ const ProfileScreen = () => {
   return (
     <div className="profile-screen">
       <div className="profile-header">
-        <h1>{t('profile.title', currentLanguage)}</h1>
+        <h1 className="app-title">
+          <img src={ipiciaLogo} alt="IPICIA" className="app-icon" />
+          IPICIA.COM
+        </h1>
+        <div className="brand-tagline">
+          <p className="tagline-main">Scan it - every choice matters!</p>
+          <p className="tagline-sub">Ingredient & Product Intelligence: Consumed, Ingested, or Applied</p>
+        </div>
+        <div className="page-title">
+          <h2>{t('profile.title', currentLanguage)}</h2>
+        </div>
       </div>
 
       <div className="profile-content">

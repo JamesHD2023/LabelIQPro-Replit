@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../utils/translations';
+import ipiciaLogo from '../assets/ipicia-logo-yellow.png';
 import './HealthDashboard.css';
 
 /**
@@ -23,6 +24,19 @@ const HealthDashboardSimple = () => {
     <div className="health-dashboard">
       {/* Header with Health Score */}
       <header className="dashboard-header">
+        <div className="brand-header">
+          <h1 className="app-title">
+            <img src={ipiciaLogo} alt="IPICIA" className="app-icon" />
+            IPICIA.COM
+          </h1>
+          <div className="brand-tagline">
+            <p className="tagline-main">Scan it - every choice matters!</p>
+            <p className="tagline-sub">Ingredient & Product Intelligence: Consumed, Ingested, or Applied</p>
+          </div>
+          <div className="page-title">
+            <h2>{t('dashboard.title', currentLanguage)}</h2>
+          </div>
+        </div>
         <div className="header-content">
           <div className="health-score-section">
             <div className="score-display">

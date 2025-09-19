@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../utils/translations';
+import ipiciaLogo from '../assets/ipicia-logo-yellow.png';
 import './HealthDashboard.css';
 import healthAnalyticsService from '../services/HealthAnalyticsService';
 
@@ -8,6 +11,8 @@ import healthAnalyticsService from '../services/HealthAnalyticsService';
  * Provides comprehensive health tracking, nutrition analysis, and personalized recommendations
  */
 const HealthDashboard = ({ userId, userProfile }) => {
+  const { currentLanguage } = useLanguage();
+  
   // State management
   const [activeTab, setActiveTab] = useState('overview');
   const [timeRange, setTimeRange] = useState('7d');
@@ -126,6 +131,7 @@ const HealthDashboard = ({ userId, userProfile }) => {
 
 // Header Component
 const DashboardHeader = ({ healthScore, trendDirection, onRefresh, refreshing }) => {
+  const { currentLanguage } = useLanguage();
   const getScoreColor = (score) => {
     if (score >= 85) return '#4CAF50';
     if (score >= 70) return '#FF9800';
@@ -142,6 +148,19 @@ const DashboardHeader = ({ healthScore, trendDirection, onRefresh, refreshing })
 
   return (
     <header className="dashboard-header">
+      <div className="brand-header">
+        <h1 className="app-title">
+          <img src={ipiciaLogo} alt="IPICIA" className="app-icon" />
+          IPICIA.COM
+        </h1>
+        <div className="brand-tagline">
+          <p className="tagline-main">Scan it - every choice matters!</p>
+          <p className="tagline-sub">Ingredient & Product Intelligence: Consumed, Ingested, or Applied</p>
+        </div>
+        <div className="page-title">
+          <h2>{t('dashboard.title', currentLanguage)}</h2>
+        </div>
+      </div>
       <div className="header-content">
         <div className="health-score-section">
           <div className="score-display">
