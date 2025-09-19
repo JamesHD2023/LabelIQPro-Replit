@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../utils/translations';
 import CalorieTracker from '../components/CalorieTracker';
-import ipiciaLogo from '../assets/ipicia-logo.png';
+import ipiciaLogo from '../assets/ipicia-logo-yellow.png';
 import './HomeScreen.css';
 
 const HomeScreen = () => {
