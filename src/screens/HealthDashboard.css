@@ -35,7 +35,7 @@
   margin: 0 0 1rem 0;
   font-size: 2rem;
   font-weight: 600;
-  color: white;
+  color: #FAD24C;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -51,7 +51,7 @@
 .dashboard-header .brand-header .tagline-main {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #F5CE4A;
+  color: #E80808;
   margin: 0 0 0.5rem 0;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }

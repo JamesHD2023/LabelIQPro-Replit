@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: white;
+  color: #FAD24C;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -44,7 +44,7 @@
 .tagline-main {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #F5CE4A;
+  color: #E80808;
   margin-bottom: 0.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }

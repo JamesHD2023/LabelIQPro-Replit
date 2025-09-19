@@ -51,6 +51,10 @@ externalPort = 3002
 localPort = 43995
 externalPort = 3000
 
+[[ports]]
+localPort = 45707
+externalPort = 3003
+
 [deployment]
 deploymentTarget = "autoscale"
 run = ["npx", "serve", "-s", "build", "-l", "5000"]
