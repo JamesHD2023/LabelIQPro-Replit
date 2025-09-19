@@ -149,8 +149,8 @@ const ProfileScreen = () => {
           IPICIA.COM
         </h1>
         <div className="brand-tagline">
-          <p className="tagline-main">Scan it - every choice matters!</p>
-          <p className="tagline-sub">Ingredient & Product Intelligence: in Contact, Ingested or Applied</p>
+          <p className="tagline-main">{t('home.subtitle', currentLanguage)}</p>
+          <p className="tagline-sub">{t('home.taglineSub', currentLanguage)}</p>
         </div>
         <div className="page-title">
           <h2>{t('profile.title', currentLanguage)}</h2>

@@ -39,6 +39,16 @@ export const translations = {
       no: 'Skann det - hvert valg betyr noe!',
       sv: 'Skanna det - varje val räknas!'
     },
+    taglineSub: {
+      en: 'Ingredient & Product Intelligence: in Contact, Ingested or Applied',
+      de: 'Inhaltsstoff- & Produktintelligenz: in Kontakt, Eingenommen oder Angewendet',
+      fr: 'Intelligence des Ingrédients & Produits : en Contact, Ingéré ou Appliqué',
+      es: 'Inteligencia de Ingredientes y Productos: en Contacto, Ingerido o Aplicado',
+      pt: 'Inteligência de Ingredientes e Produtos: em Contato, Ingerido ou Aplicado',
+      nl: 'Ingrediënt & Product Intelligentie: in Contact, Ingenomen of Toegepast',
+      no: 'Ingrediens- & Produktintelligens: i Kontakt, Inntatt eller Påført',
+      sv: 'Ingrediens- & Produktintelligens: i Kontakt, Intaget eller Applicerat'
+    },
     selectCategory: {
       en: 'What would you like to scan?',
       de: 'Was möchten Sie scannen?',
