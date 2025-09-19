@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../utils/translations';
 import CalorieTracker from '../components/CalorieTracker';
-import ipiciaBanner from '../assets/ipicia-banner.png';
 import './HomeScreen.css';
 
 const HomeScreen = () => {
@@ -53,13 +52,10 @@ const HomeScreen = () => {
         style={{ background: selectedOption?.gradient }}
       >
         <div className="hero-content">
-          <div className="brand-banner">
-            <img 
-              src={ipiciaBanner} 
-              alt="IPICIA.COM - Scan it - every choice matters!" 
-              className="ipicia-banner"
-            />
-          </div>
+          <h1 className="app-title">
+            <span className="app-icon">🔍</span>
+            {t('app.name', currentLanguage)}
+          </h1>
           <div className="brand-tagline">
             <p className="tagline-main">{t('home.subtitle', currentLanguage)}</p>
             <p className="tagline-sub">Ingredient & Product Intelligence: Consumed, Ingested, or Applied</p>
