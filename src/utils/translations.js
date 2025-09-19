@@ -2917,11 +2917,9 @@ export const translations = {
       nl: 'Profiel',
       no: 'Profil',
       sv: 'Profil'
-    }
-  },
+    },
 
-  // Expert translations
-  expert: {
+    // Expert specialists
     experts: {
       allergist: {
         name: {
