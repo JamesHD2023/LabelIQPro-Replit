@@ -1,8 +1,8 @@
-# LabelIQ PWA
+# IPICIA.COM PWA
 
 ## Overview
 
-LabelIQ is a comprehensive Progressive Web App that provides intelligent food and product label analysis using AI-powered ingredient recognition and health assessment. The application enables users to scan product labels through their camera, extract ingredient lists using OCR technology, and receive detailed health scoring, nutritional analysis, and personalized recommendations. The PWA architecture ensures full offline functionality with service worker caching, making it accessible even without internet connectivity.
+IPICIA.COM is a comprehensive Progressive Web App that provides intelligent food and product label analysis using AI-powered ingredient recognition and health assessment. "Scan it - every choice matters!" - Ingredient & Product Intelligence: Consumed, Ingested, or Applied. The application enables users to scan product labels through their camera, extract ingredient lists using OCR technology, and receive detailed health scoring, nutritional analysis, and personalized recommendations. The PWA architecture ensures full offline functionality with service worker caching, making it accessible even without internet connectivity.
 
 ## User Preferences
 
@@ -15,7 +15,7 @@ Preferred communication style: Simple, everyday language.
 - **Progressive Web App (PWA)** implementation with full offline support via service workers
 - **React Router DOM** for client-side navigation between scanning, results, history, and profile screens
 - **Framer Motion** for smooth animations and enhanced user experience
-- **CSS Grid/Flexbox** responsive design system with CSS custom properties for theming
+- **CSS Grid/Flexbox** responsive design system with IPICIA brand gradient theming (cyan-to-green color scheme)
 - **Internationalization (i18n)** supporting 8 languages (English, German, French, Spanish, Portuguese, Dutch, Norwegian, Swedish)
 
 ### Camera and Image Processing

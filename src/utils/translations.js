@@ -16,28 +16,28 @@ export const translations = {
   // App-wide translations
   app: {
     name: {
-      en: 'LabelIQ.Pro',
-      de: 'LabelIQ.Pro',
-      fr: 'LabelIQ.Pro',
-      es: 'LabelIQ.Pro',
-      pt: 'LabelIQ.Pro',
-      nl: 'LabelIQ.Pro',
-      no: 'LabelIQ.Pro',
-      sv: 'LabelIQ.Pro'
+      en: 'IPICIA.COM',
+      de: 'IPICIA.COM',
+      fr: 'IPICIA.COM',
+      es: 'IPICIA.COM',
+      pt: 'IPICIA.COM',
+      nl: 'IPICIA.COM',
+      no: 'IPICIA.COM',
+      sv: 'IPICIA.COM'
     }
   },
 
   // Home Screen translations
   home: {
     subtitle: {
-      en: 'Smart Ingredient Analysis',
-      de: 'Intelligente Inhaltsstoffanalyse',
-      fr: 'Analyse Intelligente des Ingrédients',
-      es: 'Análisis Inteligente de Ingredientes',
-      pt: 'Análise Inteligente de Ingredientes',
-      nl: 'Slimme Ingrediëntenanalyse',
-      no: 'Smart Ingrediensanalyse',
-      sv: 'Smart Ingrediensanalys'
+      en: 'Scan it - every choice matters!',
+      de: 'Scanne es - jede Wahl zählt!',
+      fr: 'Scannez-le - chaque choix compte !',
+      es: '¡Escanéalo - cada elección importa!',
+      pt: 'Escaneie - toda escolha importa!',
+      nl: 'Scan het - elke keuze telt!',
+      no: 'Skann det - hvert valg betyr noe!',
+      sv: 'Skanna det - varje val räknas!'
     },
     selectCategory: {
       en: 'What would you like to scan?',

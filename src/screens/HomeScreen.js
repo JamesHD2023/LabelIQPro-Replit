@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../utils/translations';
 import CalorieTracker from '../components/CalorieTracker';
+import ipiciaBanner from '../assets/ipicia-banner.png';
 import './HomeScreen.css';
 
 const HomeScreen = () => {
@@ -16,21 +17,21 @@ const HomeScreen = () => {
       title: t('home.scanOptions.food.title', currentLanguage),
       subtitle: t('home.scanOptions.food.subtitle', currentLanguage),
       icon: '🍎',
-      gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+      gradient: 'linear-gradient(135deg, #7dd3fc 0%, #a7f3d0 100%)'
     },
     {
       id: 'cosmetic',
       title: t('home.scanOptions.cosmetic.title', currentLanguage),
       subtitle: t('home.scanOptions.cosmetic.subtitle', currentLanguage),
       icon: '💄',
-      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+      gradient: 'linear-gradient(135deg, #a7f3d0 0%, #fde047 100%)'
     },
     {
       id: 'household',
       title: t('home.scanOptions.household.title', currentLanguage),
       subtitle: t('home.scanOptions.household.subtitle', currentLanguage),
       icon: '🧽',
-      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+      gradient: 'linear-gradient(135deg, #7dd3fc 0%, #fde047 100%)'
     }
   ];
 
@@ -52,14 +53,17 @@ const HomeScreen = () => {
         style={{ background: selectedOption?.gradient }}
       >
         <div className="hero-content">
-          <h1 className="app-title">
-            <span className="app-icon">🔍</span>
-            <span className="app-name-label">Label</span>
-            <span className="app-name-iq">IQ.Pro</span>
-          </h1>
-          <p className="app-subtitle">
-            {t('home.subtitle', currentLanguage)}
-          </p>
+          <div className="brand-banner">
+            <img 
+              src={ipiciaBanner} 
+              alt="IPICIA.COM - Scan it - every choice matters!" 
+              className="ipicia-banner"
+            />
+          </div>
+          <div className="brand-tagline">
+            <p className="tagline-main">{t('home.subtitle', currentLanguage)}</p>
+            <p className="tagline-sub">Ingredient & Product Intelligence: Consumed, Ingested, or Applied</p>
+          </div>
         </div>
       </div>
 
