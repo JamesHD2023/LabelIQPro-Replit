@@ -65,6 +65,40 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.filter-button {
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.filter-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.filter-button.active {
+  background: #F5CE4A;
+  border-color: #F5CE4A;
+  color: #000;
+  font-weight: 600;
+}
+
 .history-controls {
   display: flex;
   gap: 1rem;
