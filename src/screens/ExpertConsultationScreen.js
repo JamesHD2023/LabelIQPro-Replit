@@ -353,7 +353,7 @@ const ExpertConsultationScreen = () => {
             <p className="tagline-sub">Ingredient & Product Intelligence: Consumed, Ingested, or Applied</p>
           </div>
           <div className="page-title">
-            <h2>🩺 {t('expert.askExpert', currentLanguage)}</h2>
+            <h2>🩺 {t('expert.askAnExpert', currentLanguage)}</h2>
           </div>
           <button className="back-button" onClick={() => navigate(-1)}>
             ←

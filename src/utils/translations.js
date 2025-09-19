@@ -512,6 +512,16 @@ export const translations = {
       no: 'Spør ekspert',
       sv: 'Fråga expert'
     },
+    askAnExpert: {
+      en: 'Ask An Expert',
+      de: 'Einen Experten fragen',
+      fr: 'Demander à un expert',
+      es: 'Consultar a un experto',
+      pt: 'Perguntar a um especialista',
+      nl: 'Een expert vragen',
+      no: 'Spør en ekspert',
+      sv: 'Fråga en expert'
+    },
 
     // Welcome Screen
     askMedicalExperts: {
