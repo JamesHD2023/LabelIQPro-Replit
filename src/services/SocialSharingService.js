@@ -4,9 +4,9 @@
  */
 class SocialSharingService {
   constructor() {
-    this.appName = 'LabelIQ.Pro';
-    this.appUrl = 'https://labeliq.pro'; // Updated to Pro domain
-    this.hashtags = '#LabelIQPro #HealthyEating #FoodScanning #Nutrition #AIHealth';
+    this.appName = 'IPICIA.COM';
+    this.appUrl = 'https://ipicia.com'; // IPICIA.COM domain
+    this.hashtags = '#IPICIA #HealthyEating #FoodScanning #Nutrition #AIHealth';
 
     // Platform-specific configurations
     this.platforms = {

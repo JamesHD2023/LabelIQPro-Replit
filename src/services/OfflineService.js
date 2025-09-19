@@ -3,7 +3,7 @@ import { openDB } from 'idb';
 class OfflineService {
   constructor() {
     this.db = null;
-    this.dbName = 'LabelIQDB';
+    this.dbName = 'IPICIADB';
     this.version = 1;
 
     // Retention policies

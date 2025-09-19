@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-console.log('🚀 Starting LabelIQ.Pro...');
+console.log('🚀 Starting IPICIA.COM...');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,4 +12,4 @@ root.render(
   </React.StrictMode>
 );
 
-console.log('✅ LabelIQ.Pro mounted successfully!');
+console.log('✅ IPICIA.COM mounted successfully!');

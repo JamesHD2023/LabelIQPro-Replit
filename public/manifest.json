@@ -1,7 +1,7 @@
 {
-  "short_name": "LabelIQ.Pro",
-  "name": "LabelIQ.Pro - AI Ingredient Scanner",
-  "description": "AI-powered ingredient scanner for food, cosmetics, and household products",
+  "short_name": "IPICIA.COM",
+  "name": "IPICIA.COM - Scan it - every choice matters!",
+  "description": "Ingredient & Product Intelligence: Consumed, Ingested, or Applied - Scan it, every choice matters!",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,7 +21,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#667eea",
+  "theme_color": "#7dd3fc",
   "background_color": "#f8fafc",
   "orientation": "portrait",
   "categories": ["health", "lifestyle", "utilities"],

@@ -40,7 +40,7 @@ function App() {
 
   const initApp = async () => {
     try {
-      console.log('Initializing LabelIQ PWA...');
+      console.log('Initializing IPICIA.COM PWA...');
 
       // Skip initialization for now to fix navigation display
       // await initializeApp();

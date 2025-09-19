@@ -1,4 +1,4 @@
-// Multi-language translations for LabelIQ.Pro
+// Multi-language translations for IPICIA.COM
 // Supporting 8 languages: English, German, French, Spanish, Portuguese, Dutch, Norwegian, Swedish
 
 export const supportedLanguages = {
@@ -1378,14 +1378,14 @@ export const translations = {
       sv: 'Integritet & Lagring'
     },
     aboutTitle: {
-      en: 'About LabelIQ.Pro',
-      de: 'Über LabelIQ.Pro',
-      fr: 'À propos de LabelIQ.Pro',
-      es: 'Acerca de LabelIQ.Pro',
-      pt: 'Sobre LabelIQ.Pro',
-      nl: 'Over LabelIQ.Pro',
-      no: 'Om LabelIQ.Pro',
-      sv: 'Om LabelIQ.Pro'
+      en: 'About IPICIA.COM',
+      de: 'Über IPICIA.COM',
+      fr: 'À propos de IPICIA.COM',
+      es: 'Acerca de IPICIA.COM',
+      pt: 'Sobre IPICIA.COM',
+      nl: 'Over IPICIA.COM',
+      no: 'Om IPICIA.COM',
+      sv: 'Om IPICIA.COM'
     },
     
     // Labels
